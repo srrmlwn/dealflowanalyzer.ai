@@ -1,0 +1,28 @@
+{
+  "mortgage": {
+    "interestRate": 7.5,
+    "downPaymentPercent": 20,
+    "loanTermYears": 30,
+    "points": 0,
+    "closingCostsPercent": 3
+  },
+  "operatingExpenses": {
+    "propertyManagementPercent": 10,
+    "maintenancePercent": 8,
+    "vacancyRate": 5,
+    "insurancePercent": 0.5,
+    "propertyTaxPercent": 1.2,
+    "hoaFees": 0,
+    "utilitiesPercent": 0,
+    "otherExpensesPercent": 2
+  },
+  "appreciation": {
+    "annualAppreciationPercent": 3,
+    "holdingPeriodYears": 10
+  },
+  "rental": {
+    "useHudData": true,
+    "hudDataPath": "./data/hud-rental-data.json",
+    "fallbackRentPercent": 0.8
+  }
+}

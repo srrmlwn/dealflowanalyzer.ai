@@ -1,0 +1,547 @@
+Query Params
+
+location
+(optional)
+43211;43224
+String
+Location details (address, county, neighborhood or Zip code). It is required if the polygon or coordinates is empty.
+
+The maximum number of locations (city, zip code) is 5, separate location by ;
+
+Multi location /propertyExtendedSearch?location=78013;78014;New York, NY
+
+The maximum number of locations is 5
+
+Max length: 100
+
+Please note that for the ZIP Code Type PO Box there will be empty results.
+
+
+External Docs
+page
+(optional)
+Number
+Page number if at the previous response totalPages > 1. Max value is 20.
+
+To be able to access more data, you can break down your request by dividing it into price groups using the minPrice and maxPrice parameters. For example 0 - 100,000, 100,001 - 500,000, 500,001 - 800,000 and so on. This trick will help you to get more data.
+
+Default: 0
+
+External Docs
+status_type
+(optional)
+ForSale
+Enum
+home_type
+(optional)
+Houses
+String
+Property type comma-separated or empty for all types: For Rent
+
+Townhomes
+Houses
+Apartments_Condos_Co-ops
+For others:
+
+Multi-family
+Apartments
+Houses
+Manufactured
+Condos
+LotsLand
+Townhomes
+sort
+(optional)
+String
+For status_type = ForSale OR RecentlySold are available:
+
+Homes_for_You
+Price_High_Low
+Price_Low_High
+Newest
+Bedrooms
+Bathrooms
+Square_Feet
+Lot_Size
+default Homes_for_You
+
+For status_type = ForRent are available:
+
+Verified_Source
+Payment_High_Low
+Payment_Low_High
+Newest
+Bedrooms
+Bathrooms
+Square_Feet
+Lot_Size
+default Verified_Source
+
+
+External Docs
+polygon
+(optional)
+String
+Format: lon lat,lon1 lat1,lon2 lat2 It is required if the location or coordinates is empty. The last pair must be the same as the first pair.
+
+minPrice
+(optional)
+Number
+If status_type = ForSale OR RecentlySold you can filter by min price.
+
+Default: 0
+maxPrice
+(optional)
+250000
+Number
+If status_type = ForSale OR RecentlySold you can filter by max price.
+
+Default: 0
+
+External Docs
+rentMinPrice
+(optional)
+Number
+If status_type = ForRent you can filter by min rent price.
+
+Default: 0
+
+External Docs
+rentMaxPrice
+(optional)
+Number
+If status_type = ForRent you can filter by max rent price.
+
+Default: 0
+
+External Docs
+bathsMin
+(optional)
+Number
+Bathrooms min count
+
+Default: 0
+
+External Docs
+bathsMax
+(optional)
+Number
+Bathrooms max count
+
+Default: 0
+
+External Docs
+bedsMin
+(optional)
+Number
+Bedrooms min count
+
+Default: 0
+
+External Docs
+bedsMax
+(optional)
+Number
+Bedrooms max count
+
+Default: 0
+
+External Docs
+sqftMin
+(optional)
+Number
+Square Feet min value
+
+Default: 0
+sqftMax
+(optional)
+Number
+Square Feet max value.
+
+Default: 0
+buildYearMin
+(optional)
+Number
+Year Built min value.
+
+Default: 0
+buildYearMax
+(optional)
+Number
+Year Built max value.
+
+Default: 0
+daysOn
+(optional)
+String
+Days on Z. Use with status_type='ForSale' or status_type='ForRent' Available values: 1,7,14,30,90,6m,12m,24m,36m
+
+soldInLast
+(optional)
+String
+'Sold In Last' on Z. Use with status_type='RecentlySold'. Available values: 1,7,14,30,90,6m,12m,24m,36m
+
+isBasementFinished
+(optional)
+Number
+Basement filter. Set it to 1 if needed.
+
+Default: 0
+isBasementUnfinished
+(optional)
+Number
+Basement filter. Set it to 1 if needed.
+
+Default: 0
+isPendingUnderContract
+(optional)
+Number
+Pending & Under Contract filter. Set it to 1 if needed.
+
+Default: 0
+isAcceptingBackupOffers
+(optional)
+Number
+Accepting Backup Offers filter. Set it to 1 if needed.
+
+Default: 0
+isComingSoon
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Coming Soon listings are homes that will soon be on the market.. Set it to 1 if needed.
+
+otherListings
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+If set to 1, the results will only include data from the Other Listings tab.
+
+isNewConstruction
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+New Construction filter. Set it to 1 or true if you only need properties with New Construction status.
+
+keywords
+(optional)
+String
+Filter with keywords.
+
+lotSizeMin
+(optional)
+String
+Available values:
+
+1,000 sqft
+2,000 sqft
+3,000 sqft
+4,000 sqft
+5,000 sqft
+7,500 sqft
+1/4 acre/10,890 sqft
+1/2 acre/21,780 sqft
+1 acre/43,560 sqft
+lotSizeMax
+(optional)
+String
+Available values:
+
+1,000 sqft
+2,000 sqft
+3,000 sqft
+4,000 sqft
+5,000 sqft
+7,500 sqft
+1/4 acre/10,890 sqft
+1/2 acre/21,780 sqft
+1 acre/43,560 sqft
+2 acres/87,120 sqft
+5 acres/217,800 sqft
+10 acres/435,600 sqft
+20 acres/871,200 sqft
+50 acres/2,178,000 sqft
+100 acres/4,356,000 sqft
+saleByAgent
+(optional)
+String
+Default - true. To get FSBO set saleByAgent=false&saleByOwner=true&otherListings=true.
+
+saleByOwner
+(optional)
+String
+Default - true. To get only FSBO set saleByAgent=false&saleByOwner=true&otherListings=true
+
+isForSaleForeclosure
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+If you only need to get ForSaleForeclosure set to true or 1.
+
+isWaterfront
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+hasPool
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+hasAirConditioning
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+isCityView
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+isMountainView
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+isWaterView
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+isParkView
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+isOpenHousesOnly
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Must have open house
+
+is3dHome
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Must have 3D Tour
+
+coordinates
+(optional)
+String
+It is required if the location or polygon is empty.
+
+Format: lon lat,diameter. Diameter in miles from 1 to 99 -118.51750373840332 34.007063913440916,20
+
+hoa
+(optional)
+Number
+Max HOA.
+
+Default: 0
+includeHomesWithNoHoaData
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Default - true.
+
+isAuction
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Auctions. Default true.
+
+schools
+(optional)
+String
+Available values: elementary, public, private, middle, charter, high For multiple selection, separate with comma: middle,high
+
+schoolsRating
+(optional)
+String
+Min school ratings. From 1 to 10
+
+includeUnratedSchools
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Include schools with no rating
+
+hasGarage
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Must have a garage. Default value false
+
+parkingSpots
+(optional)
+Number
+Parking Spots. Max value - 4
+
+Default: 0
+isForeclosed
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+isPreForeclosure
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+isEntirePlace
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Default - true. Apply when status_type = 'ForRent'.
+
+Set it to false if you need only a room.
+
+isRoom
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Default - false. Apply when status_type = 'ForRent'
+
+Set it true and isEntirePlace to false if you need only a room.
+
+largeDogsAllowed
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Allows large dogs.
+
+Only For Rent
+
+smallDogsAllowed
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Allows small dogs.
+
+Only For Rent
+
+catsAllowed
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Allows cats.
+
+Only For Rent
+
+noPets
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+No pets.
+
+Only For Rent
+
+moveInDate
+(optional)
+
+mm/dd/yyyy
+Date (yyyy-mm-dd)
+Move-in Date
+
+Only For Rent
+
+parkingAvailable
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+On-site Parking.
+
+Only For Rent
+
+inUnitLaundry
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+In-unit Laundry.
+
+Only For Rent
+
+acceptsApplications
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Accepts Zillow Applications.
+
+Only For Rent
+
+incomeRestricted
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Income restricted.
+
+Only For Rent
+
+hardwoodFloor
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Hardwood Floors.
+
+Only For Rent
+
+disabledAccess
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Disabled Access.
+
+Only For Rent
+
+utilitiesIncluded
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Utilities Included.
+
+Only For Rent
+
+shortTermLease
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Short term lease available.
+
+Only For Rent
+
+furnished
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Furnished.
+
+Only For Rent
+
+outdoorSpace
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Outdoor space.
+
+Only For Rent
+
+controlledAccess
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Controlled access.
+
+Only For Rent
+
+highSpeedInternet
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+High speed internet.
+
+Only For Rent
+
+elevator
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Elevator.
+
+Only For Rent
+
+multiFamilyBuilding
+(optional)
+rapid_do_not_include_in_request_key
+Boolean
+Apartment Community.

@@ -1,0 +1,37 @@
+{
+  "name": "Columbus OH - Test Buybox",
+  "zipCodes": ["43211", "43224"],
+  "propertyTypes": ["SINGLE_FAMILY", "CONDO", "TOWNHOUSE"],
+  "priceRange": {
+    "min": 50000,
+    "max": 300000
+  },
+  "bedrooms": {
+    "min": 2,
+    "max": 4
+  },
+  "bathrooms": {
+    "min": 1,
+    "max": 3
+  },
+  "squareFeet": {
+    "min": 800,
+    "max": 2500
+  },
+  "lotSize": {
+    "min": 3000,
+    "max": 10000
+  },
+  "yearBuilt": {
+    "min": 1950,
+    "max": 2024
+  },
+  "daysOnMarket": "90",
+  "features": {
+    "hasBasement": false,
+    "hasGarage": false,
+    "hasPool": false,
+    "isWaterfront": false,
+    "isNewConstruction": false
+  }
+}

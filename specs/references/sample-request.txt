@@ -1,0 +1,21 @@
+GET https://zillow-com1.p.rapidapi.com/propertyExtendedSearch?location=43211%3B43224&status_type=ForSale&home_type=Houses&maxPrice=250000 HTTP/1.1
+access-control-allow-credentials: true
+access-control-allow-origin: *
+alt-svc: h3=":443"; ma=86400
+cf-cache-status: DYNAMIC
+cf-ray: 97eac6e9f8d85332-PDX
+content-type: application/json; charset=UTF-8
+date: Sat, 13 Sep 2025 21:35:54 GMT
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: RapidAPI-1.2.8
+x-backend-server: b6ad4253e764
+x-ht: 0.502
+x-rapidapi-region: AWS - us-west-2
+x-rapidapi-request-id: f9751c58fd540df635025cf2bf98d524dc3efe74aac0ac507c725f8f614bbc33
+x-rapidapi-version: 1.2.8
+x-ratelimit-requests-limit: 100
+x-ratelimit-requests-remaining: 98
+x-ratelimit-requests-reset: 2006883
+x-request-id: 68c5e3ba0200f
+x-ut: -
+specificMethodHeaders: [object Object]
