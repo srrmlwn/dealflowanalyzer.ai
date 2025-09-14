@@ -49,8 +49,8 @@ The foundation has been set up with:
    ```
 
 This will start:
-- Backend API server on http://localhost:3001
-- Frontend web app on http://localhost:3000
+- Backend API server on http://localhost:8000
+- Frontend web app on http://localhost:8001
 
 ### Configuration
 
@@ -110,7 +110,7 @@ The application uses Zod schemas for type-safe configuration:
 
 Required environment variables:
 - `RAPIDAPI_KEY` - Your RapidAPI key for Zillow API
-- `PORT` - Backend server port (default: 3001)
+- `PORT` - Backend server port (default: 8000)
 - `NODE_ENV` - Environment (development/production)
 
 See `env.template` for all available options.

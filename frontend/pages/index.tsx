@@ -43,7 +43,7 @@ const Home: NextPage = () => {
 
   const fetchConfig = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/config');
+      const response = await fetch('http://localhost:8000/api/config');
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
