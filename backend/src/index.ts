@@ -49,6 +49,10 @@ app.use('/api/properties', propertiesRouter);
 // Scheduler routes
 app.use('/api/scheduler', schedulerRouter);
 
+// Analysis routes
+import analysisRouter from './routes/analysis';
+app.use('/api/analysis', analysisRouter);
+
 // Error handling middleware
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
   console.error('Error:', err);
