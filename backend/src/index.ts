@@ -3,6 +3,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import dotenv from 'dotenv';
 import { config } from './config/config';
+import propertiesRouter from './routes/properties';
+import schedulerRouter from './routes/scheduler';
 
 // Load environment variables
 dotenv.config();
@@ -40,6 +42,12 @@ app.get('/api/config', (_req, res) => {
     });
   }
 });
+
+// Property routes
+app.use('/api/properties', propertiesRouter);
+
+// Scheduler routes
+app.use('/api/scheduler', schedulerRouter);
 
 // Error handling middleware
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
