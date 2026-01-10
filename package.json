@@ -16,18 +16,30 @@
     "test:frontend": "cd frontend && npm test",
     "lint": "npm run lint:backend && npm run lint:frontend",
     "lint:backend": "cd backend && npm run lint",
-    "lint:frontend": "cd frontend && npm run lint"
+    "lint:frontend": "cd frontend && npm run lint",
+    "test:analysis": "cd backend && npm run build && cd .. && npx ts-node scripts/testFinancialAnalysis.ts",
+    "generate:analysis": "cd backend && npm run build && cd .. && npx ts-node scripts/generateAnalysisData.ts",
+    "convert:hud": "npx ts-node scripts/convertHudData.ts"
   },
-  "keywords": ["real-estate", "investment", "analysis", "typescript"],
+  "keywords": [
+    "real-estate",
+    "investment",
+    "analysis",
+    "typescript"
+  ],
   "author": "Sriram",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.2",
+    "ts-node": "^10.9.1",
     "typescript": "^5.3.3"
   },
   "workspaces": [
     "backend",
     "frontend",
     "shared"
-  ]
+  ],
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }
