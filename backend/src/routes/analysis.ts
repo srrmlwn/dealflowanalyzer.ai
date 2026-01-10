@@ -1,4 +1,5 @@
 import { Router, Request, Response } from 'express';
+import { join } from 'path';
 import { FinancialAnalysisService } from '../services/financialAnalysisService';
 import { AnalysisStorageService } from '../services/analysisStorageService';
 import { PropertyService } from '../services/propertyService';
@@ -7,9 +8,13 @@ import { Property, FinancialConfig } from '/Users/sriram/projects/dealflowanalyz
 
 const router = Router();
 
-// Initialize services
-const analysisService = new FinancialAnalysisService('./data/hud-rental-data.json');
-const analysisStorage = new AnalysisStorageService('./data');
+// Initialize services with absolute paths
+const dataPath = join(__dirname, '../../data');
+const analysisService = new FinancialAnalysisService(
+  join(dataPath, 'hud-rental-data.json'),
+  dataPath
+);
+const analysisStorage = new AnalysisStorageService(dataPath);
 
 // Helper function to get financial config
 function getFinancialConfig(): FinancialConfig {
@@ -80,11 +85,11 @@ router.post('/batch', async (req: Request, res: Response): Promise<void> => {
 
     const financialConfig = getFinancialConfig();
     const batchResult = await analysisService.analyzeBatch(properties, financialConfig);
-    
+
     // Save results if requested
     if (saveResults && batchResult.results.length > 0) {
       try {
-        analysisStorage.saveBatchAnalysisResult(batchResult);
+        analysisStorage.saveBatchAnalysisResult(batchResult, undefined, properties);
       } catch (saveError) {
         console.error('Failed to save batch analysis results:', saveError);
         // Continue without failing the request
@@ -143,11 +148,11 @@ router.post('/zipcode', async (req: Request, res: Response): Promise<void> => {
 
     const financialConfig = getFinancialConfig();
     const batchResult = await analysisService.analyzeBatch(properties, financialConfig);
-    
+
     // Save results if requested
     if (saveResults && batchResult.results.length > 0) {
       try {
-        analysisStorage.saveBatchAnalysisResult(batchResult, buyboxName);
+        analysisStorage.saveBatchAnalysisResult(batchResult, buyboxName, properties);
       } catch (saveError) {
         console.error('Failed to save analysis results:', saveError);
         // Continue without failing the request

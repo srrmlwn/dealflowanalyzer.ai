@@ -1,6 +1,7 @@
 import { Property, FinancialConfig, AnalysisResult, ErrorRecord } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types';
 import { FinancialCalculatorService, MortgageCalculation, OperatingExpenses, CashFlowMetrics, ROIMetrics, AppreciationMetrics } from './financialCalculator';
 import { RentalEstimationService, RentalEstimate } from './rentalEstimationService';
+import { RecentlySoldService, PriceComparisonMetrics } from './recentlySoldService';
 
 export interface DetailedAnalysisResult extends Omit<AnalysisResult, 'financialMetrics' | 'rentalEstimate'> {
   financialMetrics: {
@@ -10,11 +11,11 @@ export interface DetailedAnalysisResult extends Omit<AnalysisResult, 'financialM
     monthlyOperatingExpenses: number;
     monthlyCashFlow: number;
     annualCashFlow: number;
-    
+
     // Enhanced breakdown
     operatingExpensesBreakdown: OperatingExpenses;
     mortgageDetails: MortgageCalculation;
-    
+
     // ROI metrics
     cashOnCashReturn: number;
     capRate: number;
@@ -23,20 +24,21 @@ export interface DetailedAnalysisResult extends Omit<AnalysisResult, 'financialM
     totalCashInvested: number;
     grossRentMultiplier: number;
     debtServiceCoverageRatio: number;
-    
+
     // Additional metrics
     netOperatingIncome: number;
     monthlyPrincipalPayment: number;
     monthlyInterestPayment: number;
-    
+
     // Long-term projections
     projectedValue: number;
     totalCashFlowProjected: number;
     totalReturnProjected: number;
     annualizedReturn: number;
   };
-  
+
   rentalEstimate: RentalEstimate;
+  priceComparison?: PriceComparisonMetrics;
 }
 
 export interface BatchAnalysisResult {
@@ -59,10 +61,12 @@ export interface BatchAnalysisResult {
 export class FinancialAnalysisService {
   private financialCalculator: FinancialCalculatorService;
   private rentalEstimationService: RentalEstimationService;
+  private recentlySoldService: RecentlySoldService;
 
-  constructor(hudDataPath?: string) {
+  constructor(hudDataPath?: string, dataPath?: string) {
     this.financialCalculator = new FinancialCalculatorService();
     this.rentalEstimationService = new RentalEstimationService(hudDataPath);
+    this.recentlySoldService = new RecentlySoldService(dataPath);
   }
 
   /**
@@ -70,7 +74,8 @@ export class FinancialAnalysisService {
    */
   async analyzeProperty(
     property: Property,
-    config: FinancialConfig
+    config: FinancialConfig,
+    includePriceComparison: boolean = true
   ): Promise<DetailedAnalysisResult> {
     try {
       // Step 1: Estimate rental income
@@ -112,8 +117,22 @@ export class FinancialAnalysisService {
       
       // Step 7: Assess data quality
       const dataQuality = this.assessDataQuality(property, rentalEstimate);
-      
-      // Step 8: Create detailed analysis result
+
+      // Step 8: Calculate price comparison (optional)
+      let priceComparison: PriceComparisonMetrics | undefined;
+      if (includePriceComparison) {
+        try {
+          // Extract zip code from address
+          const zipMatch = property.address.match(/\b\d{5}\b/);
+          if (zipMatch && zipMatch[0]) {
+            priceComparison = this.recentlySoldService.calculatePriceComparison(property, zipMatch[0]) || undefined;
+          }
+        } catch (error) {
+          console.log(`Could not calculate price comparison for ${property.zpid}:`, error);
+        }
+      }
+
+      // Step 9: Create detailed analysis result
       const result: DetailedAnalysisResult = {
         propertyId: property.zpid,
         analysisDate: new Date().toISOString(),
@@ -124,11 +143,11 @@ export class FinancialAnalysisService {
           monthlyOperatingExpenses: operatingExpenses.total,
           monthlyCashFlow: cashFlowMetrics.monthlyCashFlow,
           annualCashFlow: cashFlowMetrics.annualCashFlow,
-          
+
           // Enhanced breakdown
           operatingExpensesBreakdown: operatingExpenses,
           mortgageDetails: mortgageCalculation,
-          
+
           // ROI metrics
           cashOnCashReturn: roiMetrics.cashOnCashReturn,
           capRate: roiMetrics.capRate,
@@ -137,21 +156,22 @@ export class FinancialAnalysisService {
           totalCashInvested: roiMetrics.totalCashInvested,
           grossRentMultiplier: roiMetrics.grossRentMultiplier,
           debtServiceCoverageRatio: roiMetrics.debtServiceCoverageRatio,
-          
+
           // Additional metrics
           netOperatingIncome: cashFlowMetrics.annualNetOperatingIncome,
           monthlyPrincipalPayment: mortgageCalculation.monthlyPrincipal,
           monthlyInterestPayment: mortgageCalculation.monthlyInterest,
-          
+
           // Long-term projections
           projectedValue: appreciationMetrics.projectedValue,
           totalCashFlowProjected: cashFlowMetrics.annualCashFlow * config.appreciation.holdingPeriodYears,
           totalReturnProjected: appreciationMetrics.totalReturn,
           annualizedReturn: appreciationMetrics.annualizedReturn
         },
-        
+
         rentalEstimate,
-        
+        ...(priceComparison && { priceComparison }),
+
         assumptions: {
           mortgageRate: config.mortgage.interestRate,
           downPaymentPercent: config.mortgage.downPaymentPercent,
@@ -162,10 +182,10 @@ export class FinancialAnalysisService {
           propertyTaxPercent: config.operatingExpenses.propertyTaxPercent,
           annualAppreciationPercent: config.appreciation.annualAppreciationPercent
         },
-        
+
         dataQuality
       };
-      
+
       return result;
       
     } catch (error) {

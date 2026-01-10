@@ -1,6 +1,6 @@
 import { DataStorageService } from './dataStorage';
 import { DetailedAnalysisResult, BatchAnalysisResult } from './financialAnalysisService';
-import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'fs';
+import { writeFileSync, readFileSync, existsSync, mkdirSync, readdirSync } from 'fs';
 import { join } from 'path';
 
 export interface AnalysisSummary {
@@ -101,15 +101,15 @@ export class AnalysisStorageService extends DataStorageService {
   /**
    * Save batch analysis result
    */
-  saveBatchAnalysisResult(batchResult: BatchAnalysisResult, buyboxName?: string): void {
+  saveBatchAnalysisResult(batchResult: BatchAnalysisResult, buyboxName?: string, properties?: any[]): void {
     try {
       // Group results by zip code
-      const resultsByZip = this.groupResultsByZipCode(batchResult.results);
-      
+      const resultsByZip = this.groupResultsByZipCode(batchResult.results, properties);
+
       for (const [zipCode, results] of Object.entries(resultsByZip)) {
         this.saveAnalysisResults(zipCode, results, buyboxName);
       }
-      
+
       console.log(`Saved batch analysis results for ${Object.keys(resultsByZip).length} zip codes`);
     } catch (error) {
       console.error('Error saving batch analysis result:', error);
@@ -257,6 +257,55 @@ export class AnalysisStorageService extends DataStorageService {
   }
 
   /**
+   * Override getAvailableZipCodes to look in analysis path instead of properties path
+   */
+  override getAvailableZipCodes(): string[] {
+    try {
+      const analysisPath = join(this.config.dataPath, 'analysis');
+
+      if (!existsSync(analysisPath)) {
+        return [];
+      }
+
+      const zipCodes = readdirSync(analysisPath, { withFileTypes: true })
+        .filter(dirent => dirent.isDirectory())
+        .map(dirent => dirent.name)
+        .filter(name => name !== 'unknown') // Exclude unknown directory
+        .sort();
+
+      return zipCodes;
+    } catch (error) {
+      console.error('Error getting available zip codes from analysis:', error);
+      return [];
+    }
+  }
+
+  /**
+   * Override getAvailableDates to look in analysis path
+   */
+  override getAvailableDates(zipCode: string): string[] {
+    try {
+      const analysisPath = join(this.config.dataPath, 'analysis');
+      const zipDir = join(analysisPath, zipCode);
+
+      if (!existsSync(zipDir)) {
+        return [];
+      }
+
+      const dates = readdirSync(zipDir, { withFileTypes: true })
+        .filter(dirent => dirent.isDirectory())
+        .map(dirent => dirent.name)
+        .sort()
+        .reverse(); // Most recent first
+
+      return dates;
+    } catch (error) {
+      console.error(`Error getting available dates for zip ${zipCode}:`, error);
+      return [];
+    }
+  }
+
+  /**
    * Helper method to ensure directory exists
    */
   private ensureDirectoryExists(dirPath: string): void {
@@ -275,19 +324,30 @@ export class AnalysisStorageService extends DataStorageService {
   /**
    * Group analysis results by zip code
    */
-  private groupResultsByZipCode(results: DetailedAnalysisResult[]): Record<string, DetailedAnalysisResult[]> {
+  private groupResultsByZipCode(results: DetailedAnalysisResult[], properties?: any[]): Record<string, DetailedAnalysisResult[]> {
     const grouped: Record<string, DetailedAnalysisResult[]> = {};
-    
+
     for (const result of results) {
-      // For now, we'll extract zip code from property ID or use a default
-      // In a real implementation, we'd store zip code in the result
-      const zipCode = 'unknown';
+      let zipCode = 'unknown';
+
+      // Try to find the property and extract zip code from address
+      if (properties) {
+        const property = properties.find((p: any) => p.zpid === result.propertyId);
+        if (property && property.address) {
+          // Extract zip code from address (e.g., "2792 Perdue Ave, Columbus, OH 43211")
+          const zipMatch = property.address.match(/\b\d{5}\b/);
+          if (zipMatch && zipMatch[0]) {
+            zipCode = zipMatch[0];
+          }
+        }
+      }
+
       if (!grouped[zipCode]) {
         grouped[zipCode] = [];
       }
-      grouped[zipCode].push(result);
+      grouped[zipCode]!.push(result);
     }
-    
+
     return grouped;
   }
 }

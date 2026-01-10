@@ -1,0 +1,5672 @@
+{
+  "timestamp": "2026-01-10T19:24:26.601Z",
+  "zipCode": "43211",
+  "totalResults": 71,
+  "results": [
+    {
+      "propertyId": "33861172",
+      "analysisDate": "2026-01-10T19:24:26.591Z",
+      "financialMetrics": {
+        "monthlyRent": 1383,
+        "monthlyMortgagePayment": 530.94,
+        "monthlyOperatingExpenses": 494.5,
+        "monthlyCashFlow": 357.56,
+        "annualCashFlow": 4290.72,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 138.3,
+          "maintenance": 110.64,
+          "vacancy": 69.15,
+          "insurance": 43.75,
+          "propertyTax": 105,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 27.66,
+          "total": 494.5
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 530.94,
+          "monthlyPrincipal": 75.94,
+          "monthlyInterest": 455,
+          "totalLoanAmount": 84000,
+          "downPayment": 21000,
+          "closingCosts": 3150,
+          "totalCashRequired": 24150
+        },
+        "cashOnCashReturn": 17.77,
+        "capRate": 10.15,
+        "totalReturn": 79018.42,
+        "appreciationValue": 36111.22,
+        "totalCashInvested": 24150,
+        "grossRentMultiplier": 6.33,
+        "debtServiceCoverageRatio": 1.67,
+        "netOperatingIncome": 10662,
+        "monthlyPrincipalPayment": 75.94,
+        "monthlyInterestPayment": 455,
+        "projectedValue": 141111.22,
+        "totalCashFlowProjected": 42907.200000000004,
+        "totalReturnProjected": 79018.42,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1383,
+        "source": "ZILLOW",
+        "confidence": "MEDIUM",
+        "details": "Zillow rent estimate: $1383/month"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137448,
+        "percentAboveMarket": -23.61,
+        "soldCompsCount": 15,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 149007,
+        "pricePerSqFt": 92,
+        "avgPricePerSqFt": 129
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33870206",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 1228,
+        "monthlyMortgagePayment": 757.98,
+        "monthlyOperatingExpenses": 519.36,
+        "monthlyCashFlow": -49.34,
+        "annualCashFlow": -592.08,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 122.8,
+          "maintenance": 98.24,
+          "vacancy": 61.4,
+          "insurance": 62.46,
+          "propertyTax": 149.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 24.56,
+          "total": 519.36
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 757.98,
+          "monthlyPrincipal": 108.41,
+          "monthlyInterest": 649.57,
+          "totalLoanAmount": 119920,
+          "downPayment": 29980,
+          "closingCosts": 4497,
+          "totalCashRequired": 34477
+        },
+        "cashOnCashReturn": -1.72,
+        "capRate": 5.67,
+        "totalReturn": 45632.27,
+        "appreciationValue": 51553.07,
+        "totalCashInvested": 34477,
+        "grossRentMultiplier": 10.17,
+        "debtServiceCoverageRatio": 0.93,
+        "netOperatingIncome": 8503.68,
+        "monthlyPrincipalPayment": 108.41,
+        "monthlyInterestPayment": 649.57,
+        "projectedValue": 201453.07,
+        "totalCashFlowProjected": -5920.8,
+        "totalReturnProjected": 45632.27,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1228,
+        "source": "ZILLOW",
+        "confidence": "MEDIUM",
+        "details": "Zillow rent estimate: $1228/month"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 145393,
+        "percentAboveMarket": 3.1,
+        "soldCompsCount": 4,
+        "marketCondition": "BALANCED",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 217,
+        "avgPricePerSqFt": 195
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": true,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33889702",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
+      "financialMetrics": {
+        "monthlyRent": 1786,
+        "monthlyMortgagePayment": 1107.38,
+        "monthlyOperatingExpenses": 756.75,
+        "monthlyCashFlow": -78.13,
+        "annualCashFlow": -937.56,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 178.6,
+          "maintenance": 142.88,
+          "vacancy": 89.3,
+          "insurance": 91.25,
+          "propertyTax": 219,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 35.72,
+          "total": 756.75
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1107.38,
+          "monthlyPrincipal": 158.38,
+          "monthlyInterest": 949,
+          "totalLoanAmount": 175200,
+          "downPayment": 43800,
+          "closingCosts": 6570,
+          "totalCashRequired": 50370
+        },
+        "cashOnCashReturn": -1.86,
+        "capRate": 5.64,
+        "totalReturn": 65942.09,
+        "appreciationValue": 75317.69,
+        "totalCashInvested": 50370,
+        "grossRentMultiplier": 10.22,
+        "debtServiceCoverageRatio": 0.93,
+        "netOperatingIncome": 12351,
+        "monthlyPrincipalPayment": 158.38,
+        "monthlyInterestPayment": 949,
+        "projectedValue": 294317.69,
+        "totalCashFlowProjected": -9375.599999999999,
+        "totalReturnProjected": 65942.09,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1786,
+        "source": "ZILLOW",
+        "confidence": "MEDIUM",
+        "details": "Zillow rent estimate: $1786/month"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 153728,
+        "percentAboveMarket": 42.46,
+        "soldCompsCount": 11,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 156781,
+        "pricePerSqFt": 156,
+        "avgPricePerSqFt": 119
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": true,
+        "hasPriceHistory": true,
+        "missingDataFields": []
+      }
+    },
+    {
+      "propertyId": "33861382",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 1026,
+        "monthlyMortgagePayment": 656.85,
+        "monthlyOperatingExpenses": 440.53,
+        "monthlyCashFlow": -71.38,
+        "annualCashFlow": -856.56,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 102.6,
+          "maintenance": 82.08,
+          "vacancy": 51.3,
+          "insurance": 54.13,
+          "propertyTax": 129.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 20.52,
+          "total": 440.53
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 656.85,
+          "monthlyPrincipal": 93.95,
+          "monthlyInterest": 562.9,
+          "totalLoanAmount": 103920,
+          "downPayment": 25980,
+          "closingCosts": 3897,
+          "totalCashRequired": 29877
+        },
+        "cashOnCashReturn": -2.87,
+        "capRate": 5.41,
+        "totalReturn": 36109.14,
+        "appreciationValue": 44674.74,
+        "totalCashInvested": 29877,
+        "grossRentMultiplier": 10.55,
+        "debtServiceCoverageRatio": 0.89,
+        "netOperatingIncome": 7025.64,
+        "monthlyPrincipalPayment": 93.95,
+        "monthlyInterestPayment": 562.9,
+        "projectedValue": 174574.74,
+        "totalCashFlowProjected": -8565.599999999999,
+        "totalReturnProjected": 36109.14,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1026,
+        "source": "ZILLOW",
+        "confidence": "MEDIUM",
+        "details": "Zillow rent estimate: $1026/month"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 145393,
+        "percentAboveMarket": -10.66,
+        "soldCompsCount": 4,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 193,
+        "avgPricePerSqFt": 195
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": true,
+        "hasPriceHistory": true,
+        "missingDataFields": []
+      }
+    },
+    {
+      "propertyId": "33870424",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 1310,
+        "monthlyMortgagePayment": 910.18,
+        "monthlyOperatingExpenses": 582.5,
+        "monthlyCashFlow": -182.68,
+        "annualCashFlow": -2192.16,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 131,
+          "maintenance": 104.8,
+          "vacancy": 65.5,
+          "insurance": 75,
+          "propertyTax": 180,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 26.2,
+          "total": 582.5
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 910.18,
+          "monthlyPrincipal": 130.18,
+          "monthlyInterest": 780,
+          "totalLoanAmount": 144000,
+          "downPayment": 36000,
+          "closingCosts": 5400,
+          "totalCashRequired": 41400
+        },
+        "cashOnCashReturn": -5.3,
+        "capRate": 4.85,
+        "totalReturn": 39983.35,
+        "appreciationValue": 61904.95,
+        "totalCashInvested": 41400,
+        "grossRentMultiplier": 11.45,
+        "debtServiceCoverageRatio": 0.8,
+        "netOperatingIncome": 8730,
+        "monthlyPrincipalPayment": 130.18,
+        "monthlyInterestPayment": 780,
+        "projectedValue": 241904.95,
+        "totalCashFlowProjected": -21921.6,
+        "totalReturnProjected": 39983.35,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1310,
+        "source": "ZILLOW",
+        "confidence": "MEDIUM",
+        "details": "Zillow rent estimate: $1310/month"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137448,
+        "percentAboveMarket": 30.96,
+        "soldCompsCount": 15,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 149007,
+        "pricePerSqFt": 158,
+        "avgPricePerSqFt": 129
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "34046248",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 1195,
+        "monthlyMortgagePayment": 834.33,
+        "monthlyOperatingExpenses": 532.5,
+        "monthlyCashFlow": -171.83,
+        "annualCashFlow": -2061.96,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 119.5,
+          "maintenance": 95.6,
+          "vacancy": 59.75,
+          "insurance": 68.75,
+          "propertyTax": 165,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 23.9,
+          "total": 532.5
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 834.33,
+          "monthlyPrincipal": 119.33,
+          "monthlyInterest": 715,
+          "totalLoanAmount": 132000,
+          "downPayment": 33000,
+          "closingCosts": 4950,
+          "totalCashRequired": 37950
+        },
+        "cashOnCashReturn": -5.43,
+        "capRate": 4.82,
+        "totalReturn": 36126.6,
+        "appreciationValue": 56746.2,
+        "totalCashInvested": 37950,
+        "grossRentMultiplier": 11.51,
+        "debtServiceCoverageRatio": 0.79,
+        "netOperatingIncome": 7950,
+        "monthlyPrincipalPayment": 119.33,
+        "monthlyInterestPayment": 715,
+        "projectedValue": 221746.2,
+        "totalCashFlowProjected": -20619.6,
+        "totalReturnProjected": 36126.6,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1195,
+        "source": "ZILLOW",
+        "confidence": "MEDIUM",
+        "details": "Zillow rent estimate: $1195/month"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 138233,
+        "percentAboveMarket": 19.36,
+        "soldCompsCount": 13,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 180,
+        "avgPricePerSqFt": 149
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": true,
+        "hasPriceHistory": true,
+        "missingDataFields": []
+      }
+    },
+    {
+      "propertyId": "34046711",
+      "analysisDate": "2026-01-10T19:24:26.591Z",
+      "financialMetrics": {
+        "monthlyRent": 1135,
+        "monthlyMortgagePayment": 960.24,
+        "monthlyOperatingExpenses": 552.78,
+        "monthlyCashFlow": -378.02,
+        "annualCashFlow": -4536.24,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 113.5,
+          "maintenance": 90.8,
+          "vacancy": 56.75,
+          "insurance": 79.13,
+          "propertyTax": 189.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 22.7,
+          "total": 552.78
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 960.24,
+          "monthlyPrincipal": 137.34,
+          "monthlyInterest": 822.9,
+          "totalLoanAmount": 151920,
+          "downPayment": 37980,
+          "closingCosts": 5697,
+          "totalCashRequired": 43677
+        },
+        "cashOnCashReturn": -10.39,
+        "capRate": 3.68,
+        "totalReturn": 19947.32,
+        "appreciationValue": 65309.72,
+        "totalCashInvested": 43677,
+        "grossRentMultiplier": 13.94,
+        "debtServiceCoverageRatio": 0.61,
+        "netOperatingIncome": 6986.64,
+        "monthlyPrincipalPayment": 137.34,
+        "monthlyInterestPayment": 822.9,
+        "projectedValue": 255209.72,
+        "totalCashFlowProjected": -45362.399999999994,
+        "totalReturnProjected": 19947.32,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1135,
+        "source": "ZILLOW",
+        "confidence": "MEDIUM",
+        "details": "Zillow rent estimate: $1135/month"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137448,
+        "percentAboveMarket": 38.16,
+        "soldCompsCount": 15,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 149007,
+        "pricePerSqFt": 166,
+        "avgPricePerSqFt": 129
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": true,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33867219",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 1420,
+        "monthlyMortgagePayment": 1213.06,
+        "monthlyOperatingExpenses": 694.86,
+        "monthlyCashFlow": -487.92,
+        "annualCashFlow": -5855.04,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 142,
+          "maintenance": 113.6,
+          "vacancy": 71,
+          "insurance": 99.96,
+          "propertyTax": 239.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 28.4,
+          "total": 694.86
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1213.06,
+          "monthlyPrincipal": 173.5,
+          "monthlyInterest": 1039.57,
+          "totalLoanAmount": 191920,
+          "downPayment": 47980,
+          "closingCosts": 7197,
+          "totalCashRequired": 55177
+        },
+        "cashOnCashReturn": -10.61,
+        "capRate": 3.63,
+        "totalReturn": 23955.14,
+        "appreciationValue": 82505.54,
+        "totalCashInvested": 55177,
+        "grossRentMultiplier": 14.08,
+        "debtServiceCoverageRatio": 0.6,
+        "netOperatingIncome": 8701.68,
+        "monthlyPrincipalPayment": 173.5,
+        "monthlyInterestPayment": 1039.57,
+        "projectedValue": 322405.54,
+        "totalCashFlowProjected": -58550.4,
+        "totalReturnProjected": 23955.14,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1420,
+        "source": "ZILLOW",
+        "confidence": "MEDIUM",
+        "details": "Zillow rent estimate: $1420/month"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137980,
+        "percentAboveMarket": 73.87,
+        "soldCompsCount": 13,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 245,
+        "avgPricePerSqFt": 134
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": true,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33870625",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 97.27,
+        "monthlyMortgagePayment": 737.75,
+        "monthlyOperatingExpenses": 231.01,
+        "monthlyCashFlow": -871.49,
+        "annualCashFlow": -10457.88,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 9.73,
+          "maintenance": 7.78,
+          "vacancy": 4.86,
+          "insurance": 60.79,
+          "propertyTax": 145.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.95,
+          "total": 231.01
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 737.75,
+          "monthlyPrincipal": 105.52,
+          "monthlyInterest": 632.23,
+          "totalLoanAmount": 116720,
+          "downPayment": 29180,
+          "closingCosts": 4377,
+          "totalCashRequired": 33557
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -54401.4,
+        "appreciationValue": 50177.4,
+        "totalCashInvested": 33557,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1604.88,
+        "monthlyPrincipalPayment": 105.52,
+        "monthlyInterestPayment": 632.23,
+        "projectedValue": 196077.4,
+        "totalCashFlowProjected": -104578.79999999999,
+        "totalReturnProjected": -54401.4,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 97.27,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($97/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137980,
+        "percentAboveMarket": 5.74,
+        "soldCompsCount": 13,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 147,
+        "avgPricePerSqFt": 134
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33861339",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 114,
+        "monthlyMortgagePayment": 864.67,
+        "monthlyOperatingExpenses": 270.75,
+        "monthlyCashFlow": -1021.42,
+        "annualCashFlow": -12257.04,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 11.4,
+          "maintenance": 9.12,
+          "vacancy": 5.7,
+          "insurance": 71.25,
+          "propertyTax": 171,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.28,
+          "total": 270.75
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 864.67,
+          "monthlyPrincipal": 123.67,
+          "monthlyInterest": 741,
+          "totalLoanAmount": 136800,
+          "downPayment": 34200,
+          "closingCosts": 5130,
+          "totalCashRequired": 39330
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -63760.7,
+        "appreciationValue": 58809.7,
+        "totalCashInvested": 39330,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1881,
+        "monthlyPrincipalPayment": 123.67,
+        "monthlyInterestPayment": 741,
+        "projectedValue": 229809.7,
+        "totalCashFlowProjected": -122570.40000000001,
+        "totalReturnProjected": -63760.7,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 114,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($114/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 153506,
+        "percentAboveMarket": 11.4,
+        "soldCompsCount": 13,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 153174,
+        "pricePerSqFt": 118,
+        "avgPricePerSqFt": 123
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33861680",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 73.27,
+        "monthlyMortgagePayment": 555.71,
+        "monthlyOperatingExpenses": 174.01,
+        "monthlyCashFlow": -656.45,
+        "annualCashFlow": -7877.4,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 7.33,
+          "maintenance": 5.86,
+          "vacancy": 3.66,
+          "insurance": 45.79,
+          "propertyTax": 109.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.47,
+          "total": 174.01
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 555.71,
+          "monthlyPrincipal": 79.48,
+          "monthlyInterest": 476.23,
+          "totalLoanAmount": 87920,
+          "downPayment": 21980,
+          "closingCosts": 3297,
+          "totalCashRequired": 25277
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -40977.59,
+        "appreciationValue": 37796.41,
+        "totalCashInvested": 25277,
+        "grossRentMultiplier": 124.99,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1208.88,
+        "monthlyPrincipalPayment": 79.48,
+        "monthlyInterestPayment": 476.23,
+        "projectedValue": 147696.41,
+        "totalCashFlowProjected": -78774,
+        "totalReturnProjected": -40977.59,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 73.27,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($73/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 138233,
+        "percentAboveMarket": -20.5,
+        "soldCompsCount": 13,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 121,
+        "avgPricePerSqFt": 149
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33861120",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 99.8,
+        "monthlyMortgagePayment": 756.96,
+        "monthlyOperatingExpenses": 237.03,
+        "monthlyCashFlow": -894.19,
+        "annualCashFlow": -10730.28,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 9.98,
+          "maintenance": 7.98,
+          "vacancy": 4.99,
+          "insurance": 62.38,
+          "propertyTax": 149.7,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2,
+          "total": 237.03
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 756.96,
+          "monthlyPrincipal": 108.26,
+          "monthlyInterest": 648.7,
+          "totalLoanAmount": 119760,
+          "downPayment": 29940,
+          "closingCosts": 4491,
+          "totalCashRequired": 34431
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -55818.52,
+        "appreciationValue": 51484.28,
+        "totalCashInvested": 34431,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1646.76,
+        "monthlyPrincipalPayment": 108.26,
+        "monthlyInterestPayment": 648.7,
+        "projectedValue": 201184.28,
+        "totalCashFlowProjected": -107302.8,
+        "totalReturnProjected": -55818.52,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 99.8,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($100/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 143979,
+        "percentAboveMarket": 3.97,
+        "soldCompsCount": 16,
+        "marketCondition": "BALANCED",
+        "medianSoldPrice": 153174,
+        "pricePerSqFt": 115,
+        "avgPricePerSqFt": 120
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "448941611",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 166.6,
+        "monthlyMortgagePayment": 1263.63,
+        "monthlyOperatingExpenses": 395.67,
+        "monthlyCashFlow": -1492.7,
+        "annualCashFlow": -17912.4,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 16.66,
+          "maintenance": 13.33,
+          "vacancy": 8.33,
+          "insurance": 104.13,
+          "propertyTax": 249.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 3.33,
+          "total": 395.67
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1263.63,
+          "monthlyPrincipal": 180.73,
+          "monthlyInterest": 1082.9,
+          "totalLoanAmount": 199920,
+          "downPayment": 49980,
+          "closingCosts": 7497,
+          "totalCashRequired": 57477
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -93179.3,
+        "appreciationValue": 85944.7,
+        "totalCashInvested": 57477,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2748.84,
+        "monthlyPrincipalPayment": 180.73,
+        "monthlyInterestPayment": 1082.9,
+        "projectedValue": 335844.7,
+        "totalCashFlowProjected": -179124,
+        "totalReturnProjected": -93179.3,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 166.6,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($167/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 153506,
+        "percentAboveMarket": 62.8,
+        "soldCompsCount": 13,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 153174,
+        "pricePerSqFt": 173,
+        "avgPricePerSqFt": 123
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33861411",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 123.27,
+        "monthlyMortgagePayment": 934.96,
+        "monthlyOperatingExpenses": 292.76,
+        "monthlyCashFlow": -1104.45,
+        "annualCashFlow": -13253.4,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 12.33,
+          "maintenance": 9.86,
+          "vacancy": 6.16,
+          "insurance": 77.04,
+          "propertyTax": 184.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.47,
+          "total": 292.76
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 934.96,
+          "monthlyPrincipal": 133.72,
+          "monthlyInterest": 801.23,
+          "totalLoanAmount": 147920,
+          "downPayment": 36980,
+          "closingCosts": 5547,
+          "totalCashRequired": 42527
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -68943.86,
+        "appreciationValue": 63590.14,
+        "totalCashInvested": 42527,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2033.88,
+        "monthlyPrincipalPayment": 133.72,
+        "monthlyInterestPayment": 801.23,
+        "projectedValue": 248490.14,
+        "totalCashFlowProjected": -132534,
+        "totalReturnProjected": -68943.86,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 123.27,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($123/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 155585,
+        "percentAboveMarket": 18.84,
+        "soldCompsCount": 9,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 156781,
+        "pricePerSqFt": 116,
+        "avgPricePerSqFt": 109
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33898591",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 113.33,
+        "monthlyMortgagePayment": 859.61,
+        "monthlyOperatingExpenses": 269.17,
+        "monthlyCashFlow": -1015.45,
+        "annualCashFlow": -12185.4,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 11.33,
+          "maintenance": 9.07,
+          "vacancy": 5.67,
+          "insurance": 70.83,
+          "propertyTax": 170,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.27,
+          "total": 269.17
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 859.61,
+          "monthlyPrincipal": 122.95,
+          "monthlyInterest": 736.67,
+          "totalLoanAmount": 136000,
+          "downPayment": 34000,
+          "closingCosts": 5100,
+          "totalCashRequired": 39100
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -63388.22,
+        "appreciationValue": 58465.78,
+        "totalCashInvested": 39100,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1870.08,
+        "monthlyPrincipalPayment": 122.95,
+        "monthlyInterestPayment": 736.67,
+        "projectedValue": 228465.78,
+        "totalCashFlowProjected": -121854,
+        "totalReturnProjected": -63388.22,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 113.33,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($113/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 153311,
+        "percentAboveMarket": 10.89,
+        "soldCompsCount": 12,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 156781,
+        "pricePerSqFt": 113,
+        "avgPricePerSqFt": 116
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33869324",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 100,
+        "monthlyMortgagePayment": 758.48,
+        "monthlyOperatingExpenses": 237.5,
+        "monthlyCashFlow": -895.98,
+        "annualCashFlow": -10751.76,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 10,
+          "maintenance": 8,
+          "vacancy": 5,
+          "insurance": 62.5,
+          "propertyTax": 150,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2,
+          "total": 237.5
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 758.48,
+          "monthlyPrincipal": 108.48,
+          "monthlyInterest": 650,
+          "totalLoanAmount": 119999.2,
+          "downPayment": 29999.800000000003,
+          "closingCosts": 4499.97,
+          "totalCashRequired": 34499.770000000004
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -55930.49,
+        "appreciationValue": 51587.11,
+        "totalCashInvested": 34499.77,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1650,
+        "monthlyPrincipalPayment": 108.48,
+        "monthlyInterestPayment": 650,
+        "projectedValue": 201586.11,
+        "totalCashFlowProjected": -107517.6,
+        "totalReturnProjected": -55930.49,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 100,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($100/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 134758,
+        "percentAboveMarket": 11.31,
+        "soldCompsCount": 11,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 148998,
+        "pricePerSqFt": 177,
+        "avgPricePerSqFt": 151
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33866864",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 86.6,
+        "monthlyMortgagePayment": 656.85,
+        "monthlyOperatingExpenses": 205.68,
+        "monthlyCashFlow": -775.93,
+        "annualCashFlow": -9311.16,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 8.66,
+          "maintenance": 6.93,
+          "vacancy": 4.33,
+          "insurance": 54.13,
+          "propertyTax": 129.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.73,
+          "total": 205.68
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 656.85,
+          "monthlyPrincipal": 93.95,
+          "monthlyInterest": 562.9,
+          "totalLoanAmount": 103920,
+          "downPayment": 25980,
+          "closingCosts": 3897,
+          "totalCashRequired": 29877
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -48436.86,
+        "appreciationValue": 44674.74,
+        "totalCashInvested": 29877,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1428.96,
+        "monthlyPrincipalPayment": 93.95,
+        "monthlyInterestPayment": 562.9,
+        "projectedValue": 174574.74,
+        "totalCashFlowProjected": -93111.6,
+        "totalReturnProjected": -48436.86,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 86.6,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($87/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 142972,
+        "percentAboveMarket": -9.14,
+        "soldCompsCount": 15,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 151390,
+        "pricePerSqFt": 96,
+        "avgPricePerSqFt": 117
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33864726",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 113.33,
+        "monthlyMortgagePayment": 859.61,
+        "monthlyOperatingExpenses": 269.17,
+        "monthlyCashFlow": -1015.45,
+        "annualCashFlow": -12185.4,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 11.33,
+          "maintenance": 9.07,
+          "vacancy": 5.67,
+          "insurance": 70.83,
+          "propertyTax": 170,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.27,
+          "total": 269.17
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 859.61,
+          "monthlyPrincipal": 122.95,
+          "monthlyInterest": 736.67,
+          "totalLoanAmount": 136000,
+          "downPayment": 34000,
+          "closingCosts": 5100,
+          "totalCashRequired": 39100
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -63388.22,
+        "appreciationValue": 58465.78,
+        "totalCashInvested": 39100,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1870.08,
+        "monthlyPrincipalPayment": 122.95,
+        "monthlyInterestPayment": 736.67,
+        "projectedValue": 228465.78,
+        "totalCashFlowProjected": -121854,
+        "totalReturnProjected": -63388.22,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 113.33,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($113/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 141574,
+        "percentAboveMarket": 20.08,
+        "soldCompsCount": 12,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151390,
+        "pricePerSqFt": 175,
+        "avgPricePerSqFt": 139
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "2068441396",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 126.6,
+        "monthlyMortgagePayment": 960.24,
+        "monthlyOperatingExpenses": 300.68,
+        "monthlyCashFlow": -1134.32,
+        "annualCashFlow": -13611.84,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 12.66,
+          "maintenance": 10.13,
+          "vacancy": 6.33,
+          "insurance": 79.13,
+          "propertyTax": 189.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.53,
+          "total": 300.68
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 960.24,
+          "monthlyPrincipal": 137.34,
+          "monthlyInterest": 822.9,
+          "totalLoanAmount": 151920,
+          "downPayment": 37980,
+          "closingCosts": 5697,
+          "totalCashRequired": 43677
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -70808.68,
+        "appreciationValue": 65309.72,
+        "totalCashInvested": 43677,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2088.96,
+        "monthlyPrincipalPayment": 137.34,
+        "monthlyInterestPayment": 822.9,
+        "projectedValue": 255209.72,
+        "totalCashFlowProjected": -136118.4,
+        "totalReturnProjected": -70808.68,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 126.6,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($127/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 141574,
+        "percentAboveMarket": 34.14,
+        "soldCompsCount": 12,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151390,
+        "pricePerSqFt": 195,
+        "avgPricePerSqFt": 139
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33860447",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 74.33,
+        "monthlyMortgagePayment": 563.8,
+        "monthlyOperatingExpenses": 176.54,
+        "monthlyCashFlow": -666.01,
+        "annualCashFlow": -7992.12,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 7.43,
+          "maintenance": 5.95,
+          "vacancy": 3.72,
+          "insurance": 46.46,
+          "propertyTax": 111.5,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.49,
+          "total": 176.54
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 563.8,
+          "monthlyPrincipal": 80.64,
+          "monthlyInterest": 483.17,
+          "totalLoanAmount": 89200,
+          "downPayment": 22300,
+          "closingCosts": 3345,
+          "totalCashRequired": 25645
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -41574.52,
+        "appreciationValue": 38346.68,
+        "totalCashInvested": 25645,
+        "grossRentMultiplier": 125.01,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1226.52,
+        "monthlyPrincipalPayment": 80.64,
+        "monthlyInterestPayment": 483.17,
+        "projectedValue": 149846.68,
+        "totalCashFlowProjected": -79921.2,
+        "totalReturnProjected": -41574.52,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 74.33,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($74/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 143979,
+        "percentAboveMarket": -22.56,
+        "soldCompsCount": 16,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 153174,
+        "pricePerSqFt": 88,
+        "avgPricePerSqFt": 120
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33871332",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 83.33,
+        "monthlyMortgagePayment": 632.07,
+        "monthlyOperatingExpenses": 197.92,
+        "monthlyCashFlow": -746.66,
+        "annualCashFlow": -8959.92,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 8.33,
+          "maintenance": 6.67,
+          "vacancy": 4.17,
+          "insurance": 52.08,
+          "propertyTax": 125,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.67,
+          "total": 197.92
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 632.07,
+          "monthlyPrincipal": 90.4,
+          "monthlyInterest": 541.67,
+          "totalLoanAmount": 100000,
+          "downPayment": 25000,
+          "closingCosts": 3750,
+          "totalCashRequired": 28750
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -46609.65,
+        "appreciationValue": 42989.55,
+        "totalCashInvested": 28750,
+        "grossRentMultiplier": 125.01,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1375.08,
+        "monthlyPrincipalPayment": 90.4,
+        "monthlyInterestPayment": 541.67,
+        "projectedValue": 167989.55,
+        "totalCashFlowProjected": -89599.2,
+        "totalReturnProjected": -46609.65,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 83.33,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($83/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136622,
+        "percentAboveMarket": -8.51,
+        "soldCompsCount": 14,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 117,
+        "avgPricePerSqFt": 130
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33859205",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 146.67,
+        "monthlyMortgagePayment": 1112.44,
+        "monthlyOperatingExpenses": 348.33,
+        "monthlyCashFlow": -1314.1,
+        "annualCashFlow": -15769.2,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 14.67,
+          "maintenance": 11.73,
+          "vacancy": 7.33,
+          "insurance": 91.67,
+          "propertyTax": 220,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.93,
+          "total": 348.33
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1112.44,
+          "monthlyPrincipal": 159.11,
+          "monthlyInterest": 953.33,
+          "totalLoanAmount": 176000,
+          "downPayment": 44000,
+          "closingCosts": 6600,
+          "totalCashRequired": 50600
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -82030.4,
+        "appreciationValue": 75661.6,
+        "totalCashInvested": 50600,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2419.92,
+        "monthlyPrincipalPayment": 159.11,
+        "monthlyInterestPayment": 953.33,
+        "projectedValue": 295661.6,
+        "totalCashFlowProjected": -157692,
+        "totalReturnProjected": -82030.4,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 146.67,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($147/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136622,
+        "percentAboveMarket": 61.03,
+        "soldCompsCount": 14,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 211,
+        "avgPricePerSqFt": 130
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33859837",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
+      "financialMetrics": {
+        "monthlyRent": 93.27,
+        "monthlyMortgagePayment": 707.41,
+        "monthlyOperatingExpenses": 221.51,
+        "monthlyCashFlow": -835.65,
+        "annualCashFlow": -10027.8,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 9.33,
+          "maintenance": 7.46,
+          "vacancy": 4.66,
+          "insurance": 58.29,
+          "propertyTax": 139.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.87,
+          "total": 221.51
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 707.41,
+          "monthlyPrincipal": 101.18,
+          "monthlyInterest": 606.23,
+          "totalLoanAmount": 111920,
+          "downPayment": 27980,
+          "closingCosts": 4197,
+          "totalCashRequired": 32177
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -52164.1,
+        "appreciationValue": 48113.9,
+        "totalCashInvested": 32177,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1538.88,
+        "monthlyPrincipalPayment": 101.18,
+        "monthlyInterestPayment": 606.23,
+        "projectedValue": 188013.9,
+        "totalCashFlowProjected": -100278,
+        "totalReturnProjected": -52164.1,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 93.27,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($93/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137448,
+        "percentAboveMarket": 1.78,
+        "soldCompsCount": 15,
+        "marketCondition": "BALANCED",
+        "medianSoldPrice": 149007,
+        "pricePerSqFt": 122,
+        "avgPricePerSqFt": 129
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "444671782",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 133.27,
+        "monthlyMortgagePayment": 1010.8,
+        "monthlyOperatingExpenses": 316.51,
+        "monthlyCashFlow": -1194.04,
+        "annualCashFlow": -14328.48,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 13.33,
+          "maintenance": 10.66,
+          "vacancy": 6.66,
+          "insurance": 83.29,
+          "propertyTax": 199.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.67,
+          "total": 316.51
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1010.8,
+          "monthlyPrincipal": 144.57,
+          "monthlyInterest": 866.23,
+          "totalLoanAmount": 159920,
+          "downPayment": 39980,
+          "closingCosts": 5997,
+          "totalCashRequired": 45977
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -74535.92,
+        "appreciationValue": 68748.88,
+        "totalCashInvested": 45977,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2198.88,
+        "monthlyPrincipalPayment": 144.57,
+        "monthlyInterestPayment": 866.23,
+        "projectedValue": 268648.88,
+        "totalCashFlowProjected": -143284.8,
+        "totalReturnProjected": -74535.92,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 133.27,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($133/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136622,
+        "percentAboveMarket": 46.32,
+        "soldCompsCount": 14,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 185,
+        "avgPricePerSqFt": 130
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": true,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33874683",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 80,
+        "monthlyMortgagePayment": 606.79,
+        "monthlyOperatingExpenses": 190,
+        "monthlyCashFlow": -716.79,
+        "annualCashFlow": -8601.48,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 8,
+          "maintenance": 6.4,
+          "vacancy": 4,
+          "insurance": 50,
+          "propertyTax": 120,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.6,
+          "total": 190
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 606.79,
+          "monthlyPrincipal": 86.79,
+          "monthlyInterest": 520,
+          "totalLoanAmount": 96000,
+          "downPayment": 24000,
+          "closingCosts": 3600,
+          "totalCashRequired": 27600
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -44744.83,
+        "appreciationValue": 41269.97,
+        "totalCashInvested": 27600,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1320,
+        "monthlyPrincipalPayment": 86.79,
+        "monthlyInterestPayment": 520,
+        "projectedValue": 161269.97,
+        "totalCashFlowProjected": -86014.79999999999,
+        "totalReturnProjected": -44744.83,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 80,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($80/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137980,
+        "percentAboveMarket": -13.03,
+        "soldCompsCount": 13,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 116,
+        "avgPricePerSqFt": 134
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33874796",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 77.67,
+        "monthlyMortgagePayment": 589.09,
+        "monthlyOperatingExpenses": 184.46,
+        "monthlyCashFlow": -695.88,
+        "annualCashFlow": -8350.56,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 7.77,
+          "maintenance": 6.21,
+          "vacancy": 3.88,
+          "insurance": 48.54,
+          "propertyTax": 116.5,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.55,
+          "total": 184.46
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 589.09,
+          "monthlyPrincipal": 84.25,
+          "monthlyInterest": 504.83,
+          "totalLoanAmount": 93200,
+          "downPayment": 23300,
+          "closingCosts": 3495,
+          "totalCashRequired": 26795
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -43439.34,
+        "appreciationValue": 40066.26,
+        "totalCashInvested": 26795,
+        "grossRentMultiplier": 124.99,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1281.48,
+        "monthlyPrincipalPayment": 84.25,
+        "monthlyInterestPayment": 504.83,
+        "projectedValue": 156566.26,
+        "totalCashFlowProjected": -83505.59999999999,
+        "totalReturnProjected": -43439.34,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 77.67,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($78/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 145393,
+        "percentAboveMarket": -19.87,
+        "soldCompsCount": 4,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 173,
+        "avgPricePerSqFt": 195
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33866839",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 156.6,
+        "monthlyMortgagePayment": 1187.78,
+        "monthlyOperatingExpenses": 371.93,
+        "monthlyCashFlow": -1403.11,
+        "annualCashFlow": -16837.32,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 15.66,
+          "maintenance": 12.53,
+          "vacancy": 7.83,
+          "insurance": 97.88,
+          "propertyTax": 234.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 3.13,
+          "total": 371.93
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1187.78,
+          "monthlyPrincipal": 169.88,
+          "monthlyInterest": 1017.9,
+          "totalLoanAmount": 187920,
+          "downPayment": 46980,
+          "closingCosts": 7047,
+          "totalCashRequired": 54027
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -87587.24,
+        "appreciationValue": 80785.96,
+        "totalCashInvested": 54027,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2583.96,
+        "monthlyPrincipalPayment": 169.88,
+        "monthlyInterestPayment": 1017.9,
+        "projectedValue": 315685.96,
+        "totalCashFlowProjected": -168373.2,
+        "totalReturnProjected": -87587.24,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 156.6,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($157/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 138200,
+        "percentAboveMarket": 69.97,
+        "soldCompsCount": 15,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 195,
+        "avgPricePerSqFt": 124
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33872251",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 103.27,
+        "monthlyMortgagePayment": 783.26,
+        "monthlyOperatingExpenses": 245.26,
+        "monthlyCashFlow": -925.25,
+        "annualCashFlow": -11103,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 10.33,
+          "maintenance": 8.26,
+          "vacancy": 5.16,
+          "insurance": 64.54,
+          "propertyTax": 154.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.07,
+          "total": 245.26
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 783.26,
+          "monthlyPrincipal": 112.03,
+          "monthlyInterest": 671.23,
+          "totalLoanAmount": 123920,
+          "downPayment": 30980,
+          "closingCosts": 4647,
+          "totalCashRequired": 35627
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -57757.35,
+        "appreciationValue": 53272.65,
+        "totalCashInvested": 35627,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1703.88,
+        "monthlyPrincipalPayment": 112.03,
+        "monthlyInterestPayment": 671.23,
+        "projectedValue": 208172.65,
+        "totalCashFlowProjected": -111030,
+        "totalReturnProjected": -57757.35,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 103.27,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($103/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136622,
+        "percentAboveMarket": 13.38,
+        "soldCompsCount": 14,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 146,
+        "avgPricePerSqFt": 130
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33859965",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 92,
+        "monthlyMortgagePayment": 697.8,
+        "monthlyOperatingExpenses": 218.5,
+        "monthlyCashFlow": -824.3,
+        "annualCashFlow": -9891.6,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 9.2,
+          "maintenance": 7.36,
+          "vacancy": 4.6,
+          "insurance": 57.5,
+          "propertyTax": 138,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.84,
+          "total": 218.5
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 697.8,
+          "monthlyPrincipal": 99.8,
+          "monthlyInterest": 598,
+          "totalLoanAmount": 110400,
+          "downPayment": 27600,
+          "closingCosts": 4140,
+          "totalCashRequired": 31740
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -51455.54,
+        "appreciationValue": 47460.46,
+        "totalCashInvested": 31740,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1518,
+        "monthlyPrincipalPayment": 99.8,
+        "monthlyInterestPayment": 598,
+        "projectedValue": 185460.46,
+        "totalCashFlowProjected": -98916,
+        "totalReturnProjected": -51455.54,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 92,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($92/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137980,
+        "percentAboveMarket": 0.01,
+        "soldCompsCount": 13,
+        "marketCondition": "BALANCED",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 133,
+        "avgPricePerSqFt": 134
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "2072183555",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 69.93,
+        "monthlyMortgagePayment": 530.43,
+        "monthlyOperatingExpenses": 166.09,
+        "monthlyCashFlow": -626.59,
+        "annualCashFlow": -7519.08,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 6.99,
+          "maintenance": 5.59,
+          "vacancy": 3.5,
+          "insurance": 43.71,
+          "propertyTax": 104.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.4,
+          "total": 166.09
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 530.43,
+          "monthlyPrincipal": 75.86,
+          "monthlyInterest": 454.57,
+          "totalLoanAmount": 83920,
+          "downPayment": 20980,
+          "closingCosts": 3147,
+          "totalCashRequired": 24127
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -39113.97,
+        "appreciationValue": 36076.83,
+        "totalCashInvested": 24127,
+        "grossRentMultiplier": 125.01,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1153.92,
+        "monthlyPrincipalPayment": 75.86,
+        "monthlyInterestPayment": 454.57,
+        "projectedValue": 140976.83,
+        "totalCashFlowProjected": -75190.8,
+        "totalReturnProjected": -39113.97,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 69.93,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($70/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 145393,
+        "percentAboveMarket": -27.85,
+        "soldCompsCount": 4,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 156,
+        "avgPricePerSqFt": 195
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33857028",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 113.27,
+        "monthlyMortgagePayment": 859.11,
+        "monthlyOperatingExpenses": 269.01,
+        "monthlyCashFlow": -1014.85,
+        "annualCashFlow": -12178.2,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 11.33,
+          "maintenance": 9.06,
+          "vacancy": 5.66,
+          "insurance": 70.79,
+          "propertyTax": 169.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.27,
+          "total": 269.01
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 859.11,
+          "monthlyPrincipal": 122.87,
+          "monthlyInterest": 736.23,
+          "totalLoanAmount": 135920,
+          "downPayment": 33980,
+          "closingCosts": 5097,
+          "totalCashRequired": 39077
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -63350.61,
+        "appreciationValue": 58431.39,
+        "totalCashInvested": 39077,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1868.88,
+        "monthlyPrincipalPayment": 122.87,
+        "monthlyInterestPayment": 736.23,
+        "projectedValue": 228331.39,
+        "totalCashFlowProjected": -121782,
+        "totalReturnProjected": -63350.61,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 113.27,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($113/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137980,
+        "percentAboveMarket": 23.13,
+        "soldCompsCount": 13,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 173,
+        "avgPricePerSqFt": 134
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33860956",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 113.27,
+        "monthlyMortgagePayment": 859.11,
+        "monthlyOperatingExpenses": 269.01,
+        "monthlyCashFlow": -1014.85,
+        "annualCashFlow": -12178.2,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 11.33,
+          "maintenance": 9.06,
+          "vacancy": 5.66,
+          "insurance": 70.79,
+          "propertyTax": 169.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.27,
+          "total": 269.01
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 859.11,
+          "monthlyPrincipal": 122.87,
+          "monthlyInterest": 736.23,
+          "totalLoanAmount": 135920,
+          "downPayment": 33980,
+          "closingCosts": 5097,
+          "totalCashRequired": 39077
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -63350.61,
+        "appreciationValue": 58431.39,
+        "totalCashInvested": 39077,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1868.88,
+        "monthlyPrincipalPayment": 122.87,
+        "monthlyInterestPayment": 736.23,
+        "projectedValue": 228331.39,
+        "totalCashFlowProjected": -121782,
+        "totalReturnProjected": -63350.61,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 113.27,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($113/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136622,
+        "percentAboveMarket": 24.36,
+        "soldCompsCount": 14,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 161,
+        "avgPricePerSqFt": 130
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33870674",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 96.67,
+        "monthlyMortgagePayment": 733.2,
+        "monthlyOperatingExpenses": 229.58,
+        "monthlyCashFlow": -866.11,
+        "annualCashFlow": -10393.32,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 9.67,
+          "maintenance": 7.73,
+          "vacancy": 4.83,
+          "insurance": 60.42,
+          "propertyTax": 145,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.93,
+          "total": 229.58
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 733.2,
+          "monthlyPrincipal": 104.87,
+          "monthlyInterest": 628.33,
+          "totalLoanAmount": 116000,
+          "downPayment": 29000,
+          "closingCosts": 4350,
+          "totalCashRequired": 33350
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -54065.32,
+        "appreciationValue": 49867.88,
+        "totalCashInvested": 33350,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1594.92,
+        "monthlyPrincipalPayment": 104.87,
+        "monthlyInterestPayment": 628.33,
+        "projectedValue": 194867.88,
+        "totalCashFlowProjected": -103933.2,
+        "totalReturnProjected": -54065.32,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 96.67,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($97/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 145915,
+        "percentAboveMarket": -0.63,
+        "soldCompsCount": 10,
+        "marketCondition": "BALANCED",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 133,
+        "avgPricePerSqFt": 139
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33887422",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 95.27,
+        "monthlyMortgagePayment": 722.58,
+        "monthlyOperatingExpenses": 226.26,
+        "monthlyCashFlow": -853.57,
+        "annualCashFlow": -10242.84,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 9.53,
+          "maintenance": 7.62,
+          "vacancy": 4.76,
+          "insurance": 59.54,
+          "propertyTax": 142.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.91,
+          "total": 226.26
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 722.58,
+          "monthlyPrincipal": 103.35,
+          "monthlyInterest": 619.23,
+          "totalLoanAmount": 114320,
+          "downPayment": 28580,
+          "closingCosts": 4287,
+          "totalCashRequired": 32867
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -53282.75,
+        "appreciationValue": 49145.65,
+        "totalCashInvested": 32867,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1571.88,
+        "monthlyPrincipalPayment": 103.35,
+        "monthlyInterestPayment": 619.23,
+        "projectedValue": 192045.65,
+        "totalCashFlowProjected": -102428.4,
+        "totalReturnProjected": -53282.75,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 95.27,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($95/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 127094,
+        "percentAboveMarket": 12.44,
+        "soldCompsCount": 7,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 184,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "2067437433",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 119.67,
+        "monthlyMortgagePayment": 907.65,
+        "monthlyOperatingExpenses": 284.21,
+        "monthlyCashFlow": -1072.19,
+        "annualCashFlow": -12866.28,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 11.97,
+          "maintenance": 9.57,
+          "vacancy": 5.98,
+          "insurance": 74.79,
+          "propertyTax": 179.5,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.39,
+          "total": 284.21
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 907.65,
+          "monthlyPrincipal": 129.82,
+          "monthlyInterest": 777.83,
+          "totalLoanAmount": 143600,
+          "downPayment": 35900,
+          "closingCosts": 5385,
+          "totalCashRequired": 41285
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -66929.81,
+        "appreciationValue": 61732.99,
+        "totalCashInvested": 41285,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1974.48,
+        "monthlyPrincipalPayment": 129.82,
+        "monthlyInterestPayment": 777.83,
+        "projectedValue": 241232.99,
+        "totalCashFlowProjected": -128662.8,
+        "totalReturnProjected": -66929.81,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 119.67,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($120/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 138200,
+        "percentAboveMarket": 29.88,
+        "soldCompsCount": 15,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 149,
+        "avgPricePerSqFt": 124
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33871711",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 80,
+        "monthlyMortgagePayment": 606.79,
+        "monthlyOperatingExpenses": 190,
+        "monthlyCashFlow": -716.79,
+        "annualCashFlow": -8601.48,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 8,
+          "maintenance": 6.4,
+          "vacancy": 4,
+          "insurance": 50,
+          "propertyTax": 120,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.6,
+          "total": 190
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 606.79,
+          "monthlyPrincipal": 86.79,
+          "monthlyInterest": 520,
+          "totalLoanAmount": 96000,
+          "downPayment": 24000,
+          "closingCosts": 3600,
+          "totalCashRequired": 27600
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -44744.83,
+        "appreciationValue": 41269.97,
+        "totalCashInvested": 27600,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1320,
+        "monthlyPrincipalPayment": 86.79,
+        "monthlyInterestPayment": 520,
+        "projectedValue": 161269.97,
+        "totalCashFlowProjected": -86014.79999999999,
+        "totalReturnProjected": -44744.83,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 80,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($80/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 145393,
+        "percentAboveMarket": -17.47,
+        "soldCompsCount": 4,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 179,
+        "avgPricePerSqFt": 195
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33871342",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 144.13,
+        "monthlyMortgagePayment": 1093.22,
+        "monthlyOperatingExpenses": 342.32,
+        "monthlyCashFlow": -1291.41,
+        "annualCashFlow": -15496.92,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 14.41,
+          "maintenance": 11.53,
+          "vacancy": 7.21,
+          "insurance": 90.08,
+          "propertyTax": 216.2,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.88,
+          "total": 342.32
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1093.22,
+          "monthlyPrincipal": 156.36,
+          "monthlyInterest": 936.87,
+          "totalLoanAmount": 172960,
+          "downPayment": 43240,
+          "closingCosts": 6486,
+          "totalCashRequired": 49726
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -80614.48,
+        "appreciationValue": 74354.72,
+        "totalCashInvested": 49726,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2378.28,
+        "monthlyPrincipalPayment": 156.36,
+        "monthlyInterestPayment": 936.87,
+        "projectedValue": 290554.72,
+        "totalCashFlowProjected": -154969.2,
+        "totalReturnProjected": -80614.48,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 144.13,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($144/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 145915,
+        "percentAboveMarket": 48.17,
+        "soldCompsCount": 10,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 203,
+        "avgPricePerSqFt": 139
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33870917",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 126,
+        "monthlyMortgagePayment": 955.69,
+        "monthlyOperatingExpenses": 299.25,
+        "monthlyCashFlow": -1128.94,
+        "annualCashFlow": -13547.28,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 12.6,
+          "maintenance": 10.08,
+          "vacancy": 6.3,
+          "insurance": 78.75,
+          "propertyTax": 189,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.52,
+          "total": 299.25
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 955.69,
+          "monthlyPrincipal": 136.69,
+          "monthlyInterest": 819,
+          "totalLoanAmount": 151200,
+          "downPayment": 37800,
+          "closingCosts": 5670,
+          "totalCashRequired": 43470
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -70472.6,
+        "appreciationValue": 65000.2,
+        "totalCashInvested": 43470,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2079,
+        "monthlyPrincipalPayment": 136.69,
+        "monthlyInterestPayment": 819,
+        "projectedValue": 254000.2,
+        "totalCashFlowProjected": -135472.80000000002,
+        "totalReturnProjected": -70472.6,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 126,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($126/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136622,
+        "percentAboveMarket": 38.34,
+        "soldCompsCount": 14,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 179,
+        "avgPricePerSqFt": 130
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "444716836",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
+      "financialMetrics": {
+        "monthlyRent": 153.33,
+        "monthlyMortgagePayment": 1163.01,
+        "monthlyOperatingExpenses": 364.17,
+        "monthlyCashFlow": -1373.85,
+        "annualCashFlow": -16486.2,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 15.33,
+          "maintenance": 12.27,
+          "vacancy": 7.67,
+          "insurance": 95.83,
+          "propertyTax": 230,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 3.07,
+          "total": 364.17
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1163.01,
+          "monthlyPrincipal": 166.34,
+          "monthlyInterest": 996.67,
+          "totalLoanAmount": 184000,
+          "downPayment": 46000,
+          "closingCosts": 6900,
+          "totalCashRequired": 52900
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -85761.23,
+        "appreciationValue": 79100.77,
+        "totalCashInvested": 52900,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2530.08,
+        "monthlyPrincipalPayment": 166.34,
+        "monthlyInterestPayment": 996.67,
+        "projectedValue": 309100.77,
+        "totalCashFlowProjected": -164862,
+        "totalReturnProjected": -85761.23,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 153.33,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($153/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 127702,
+        "percentAboveMarket": 80.11,
+        "soldCompsCount": 33,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 148998,
+        "pricePerSqFt": 103,
+        "avgPricePerSqFt": null
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33869582",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 99.93,
+        "monthlyMortgagePayment": 757.98,
+        "monthlyOperatingExpenses": 237.34,
+        "monthlyCashFlow": -895.39,
+        "annualCashFlow": -10744.68,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 9.99,
+          "maintenance": 7.99,
+          "vacancy": 5,
+          "insurance": 62.46,
+          "propertyTax": 149.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2,
+          "total": 237.34
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 757.98,
+          "monthlyPrincipal": 108.41,
+          "monthlyInterest": 649.57,
+          "totalLoanAmount": 119920,
+          "downPayment": 29980,
+          "closingCosts": 4497,
+          "totalCashRequired": 34477
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -55893.73,
+        "appreciationValue": 51553.07,
+        "totalCashInvested": 34477,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1648.92,
+        "monthlyPrincipalPayment": 108.41,
+        "monthlyInterestPayment": 649.57,
+        "projectedValue": 201453.07,
+        "totalCashFlowProjected": -107446.8,
+        "totalReturnProjected": -55893.73,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 99.93,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($100/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 145393,
+        "percentAboveMarket": 3.1,
+        "soldCompsCount": 4,
+        "marketCondition": "BALANCED",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 220,
+        "avgPricePerSqFt": 195
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33898462",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 116.67,
+        "monthlyMortgagePayment": 884.89,
+        "monthlyOperatingExpenses": 277.08,
+        "monthlyCashFlow": -1045.3,
+        "annualCashFlow": -12543.6,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 11.67,
+          "maintenance": 9.33,
+          "vacancy": 5.83,
+          "insurance": 72.92,
+          "propertyTax": 175,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.33,
+          "total": 277.08
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 884.89,
+          "monthlyPrincipal": 126.56,
+          "monthlyInterest": 758.33,
+          "totalLoanAmount": 139999.2,
+          "downPayment": 34999.8,
+          "closingCosts": 5249.97,
+          "totalCashRequired": 40249.770000000004
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -65250.98,
+        "appreciationValue": 60185.02,
+        "totalCashInvested": 40249.77,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1924.92,
+        "monthlyPrincipalPayment": 126.56,
+        "monthlyInterestPayment": 758.33,
+        "projectedValue": 235184.02,
+        "totalCashFlowProjected": -125436,
+        "totalReturnProjected": -65250.98,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 116.67,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($117/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 138233,
+        "percentAboveMarket": 26.6,
+        "soldCompsCount": 13,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 191,
+        "avgPricePerSqFt": 149
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33860325",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 166.6,
+        "monthlyMortgagePayment": 1263.63,
+        "monthlyOperatingExpenses": 395.67,
+        "monthlyCashFlow": -1492.7,
+        "annualCashFlow": -17912.4,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 16.66,
+          "maintenance": 13.33,
+          "vacancy": 8.33,
+          "insurance": 104.13,
+          "propertyTax": 249.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 3.33,
+          "total": 395.67
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1263.63,
+          "monthlyPrincipal": 180.73,
+          "monthlyInterest": 1082.9,
+          "totalLoanAmount": 199920,
+          "downPayment": 49980,
+          "closingCosts": 7497,
+          "totalCashRequired": 57477
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -93179.3,
+        "appreciationValue": 85944.7,
+        "totalCashInvested": 57477,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2748.84,
+        "monthlyPrincipalPayment": 180.73,
+        "monthlyInterestPayment": 1082.9,
+        "projectedValue": 335844.7,
+        "totalCashFlowProjected": -179124,
+        "totalReturnProjected": -93179.3,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 166.6,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($167/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 143979,
+        "percentAboveMarket": 73.57,
+        "soldCompsCount": 16,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 153174,
+        "pricePerSqFt": 196,
+        "avgPricePerSqFt": 120
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33844901",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 110,
+        "monthlyMortgagePayment": 834.33,
+        "monthlyOperatingExpenses": 261.25,
+        "monthlyCashFlow": -985.58,
+        "annualCashFlow": -11826.96,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 11,
+          "maintenance": 8.8,
+          "vacancy": 5.5,
+          "insurance": 68.75,
+          "propertyTax": 165,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.2,
+          "total": 261.25
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 834.33,
+          "monthlyPrincipal": 119.33,
+          "monthlyInterest": 715,
+          "totalLoanAmount": 132000,
+          "downPayment": 33000,
+          "closingCosts": 4950,
+          "totalCashRequired": 37950
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -61523.4,
+        "appreciationValue": 56746.2,
+        "totalCashInvested": 37950,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1815,
+        "monthlyPrincipalPayment": 119.33,
+        "monthlyInterestPayment": 715,
+        "projectedValue": 221746.2,
+        "totalCashFlowProjected": -118269.59999999999,
+        "totalReturnProjected": -61523.4,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 110,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($110/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136622,
+        "percentAboveMarket": 20.77,
+        "soldCompsCount": 14,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 148,
+        "avgPricePerSqFt": 130
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "443959408",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 126,
+        "monthlyMortgagePayment": 955.69,
+        "monthlyOperatingExpenses": 299.25,
+        "monthlyCashFlow": -1128.94,
+        "annualCashFlow": -13547.28,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 12.6,
+          "maintenance": 10.08,
+          "vacancy": 6.3,
+          "insurance": 78.75,
+          "propertyTax": 189,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.52,
+          "total": 299.25
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 955.69,
+          "monthlyPrincipal": 136.69,
+          "monthlyInterest": 819,
+          "totalLoanAmount": 151200,
+          "downPayment": 37800,
+          "closingCosts": 5670,
+          "totalCashRequired": 43470
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -70472.6,
+        "appreciationValue": 65000.2,
+        "totalCashInvested": 43470,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2079,
+        "monthlyPrincipalPayment": 136.69,
+        "monthlyInterestPayment": 819,
+        "projectedValue": 254000.2,
+        "totalCashFlowProjected": -135472.80000000002,
+        "totalReturnProjected": -70472.6,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 126,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($126/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137448,
+        "percentAboveMarket": 37.51,
+        "soldCompsCount": 15,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 149007,
+        "pricePerSqFt": 165,
+        "avgPricePerSqFt": 129
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33861104",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 106.6,
+        "monthlyMortgagePayment": 808.54,
+        "monthlyOperatingExpenses": 253.18,
+        "monthlyCashFlow": -955.12,
+        "annualCashFlow": -11461.44,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 10.66,
+          "maintenance": 8.53,
+          "vacancy": 5.33,
+          "insurance": 66.63,
+          "propertyTax": 159.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.13,
+          "total": 253.18
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 808.54,
+          "monthlyPrincipal": 115.64,
+          "monthlyInterest": 692.9,
+          "totalLoanAmount": 127920,
+          "downPayment": 31980,
+          "closingCosts": 4797,
+          "totalCashRequired": 36777
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -59622.17,
+        "appreciationValue": 54992.23,
+        "totalCashInvested": 36777,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1758.96,
+        "monthlyPrincipalPayment": 115.64,
+        "monthlyInterestPayment": 692.9,
+        "projectedValue": 214892.23,
+        "totalCashFlowProjected": -114614.40000000001,
+        "totalReturnProjected": -59622.17,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 106.6,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($107/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136622,
+        "percentAboveMarket": 17.04,
+        "soldCompsCount": 14,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 144,
+        "avgPricePerSqFt": 130
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33862117",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 103.33,
+        "monthlyMortgagePayment": 783.76,
+        "monthlyOperatingExpenses": 245.42,
+        "monthlyCashFlow": -925.85,
+        "annualCashFlow": -11110.2,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 10.33,
+          "maintenance": 8.27,
+          "vacancy": 5.17,
+          "insurance": 64.58,
+          "propertyTax": 155,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.07,
+          "total": 245.42
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 783.76,
+          "monthlyPrincipal": 112.1,
+          "monthlyInterest": 671.67,
+          "totalLoanAmount": 124000,
+          "downPayment": 31000,
+          "closingCosts": 4650,
+          "totalCashRequired": 35650
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -57794.96,
+        "appreciationValue": 53307.04,
+        "totalCashInvested": 35650,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1705.08,
+        "monthlyPrincipalPayment": 112.1,
+        "monthlyInterestPayment": 671.67,
+        "projectedValue": 208307.04,
+        "totalCashFlowProjected": -111102,
+        "totalReturnProjected": -57794.96,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 103.33,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($103/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 138233,
+        "percentAboveMarket": 12.13,
+        "soldCompsCount": 13,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 169,
+        "avgPricePerSqFt": 149
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33872670",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 126.67,
+        "monthlyMortgagePayment": 960.74,
+        "monthlyOperatingExpenses": 300.83,
+        "monthlyCashFlow": -1134.9,
+        "annualCashFlow": -13618.8,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 12.67,
+          "maintenance": 10.13,
+          "vacancy": 6.33,
+          "insurance": 79.17,
+          "propertyTax": 190,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.53,
+          "total": 300.83
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 960.74,
+          "monthlyPrincipal": 137.41,
+          "monthlyInterest": 823.33,
+          "totalLoanAmount": 152000,
+          "downPayment": 38000,
+          "closingCosts": 5700,
+          "totalCashRequired": 43700
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -70843.89,
+        "appreciationValue": 65344.11,
+        "totalCashInvested": 43700,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2089.92,
+        "monthlyPrincipalPayment": 137.41,
+        "monthlyInterestPayment": 823.33,
+        "projectedValue": 255344.11,
+        "totalCashFlowProjected": -136188,
+        "totalReturnProjected": -70843.89,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 126.67,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($127/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 145393,
+        "percentAboveMarket": 30.68,
+        "soldCompsCount": 4,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 277,
+        "avgPricePerSqFt": 195
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33859791",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 106.67,
+        "monthlyMortgagePayment": 809.05,
+        "monthlyOperatingExpenses": 253.33,
+        "monthlyCashFlow": -955.71,
+        "annualCashFlow": -11468.52,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 10.67,
+          "maintenance": 8.53,
+          "vacancy": 5.33,
+          "insurance": 66.67,
+          "propertyTax": 160,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.13,
+          "total": 253.33
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 809.05,
+          "monthlyPrincipal": 115.71,
+          "monthlyInterest": 693.33,
+          "totalLoanAmount": 128000,
+          "downPayment": 32000,
+          "closingCosts": 4800,
+          "totalCashRequired": 36800
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -59658.58,
+        "appreciationValue": 55026.62,
+        "totalCashInvested": 36800,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1759.92,
+        "monthlyPrincipalPayment": 115.71,
+        "monthlyInterestPayment": 693.33,
+        "projectedValue": 215026.62,
+        "totalCashFlowProjected": -114685.20000000001,
+        "totalReturnProjected": -59658.58,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 106.67,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($107/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 153728,
+        "percentAboveMarket": 4.08,
+        "soldCompsCount": 11,
+        "marketCondition": "BALANCED",
+        "medianSoldPrice": 156781,
+        "pricePerSqFt": 111,
+        "avgPricePerSqFt": 119
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33869994",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 133.27,
+        "monthlyMortgagePayment": 1010.8,
+        "monthlyOperatingExpenses": 316.51,
+        "monthlyCashFlow": -1194.04,
+        "annualCashFlow": -14328.48,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 13.33,
+          "maintenance": 10.66,
+          "vacancy": 6.66,
+          "insurance": 83.29,
+          "propertyTax": 199.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.67,
+          "total": 316.51
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1010.8,
+          "monthlyPrincipal": 144.57,
+          "monthlyInterest": 866.23,
+          "totalLoanAmount": 159920,
+          "downPayment": 39980,
+          "closingCosts": 5997,
+          "totalCashRequired": 45977
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -74535.92,
+        "appreciationValue": 68748.88,
+        "totalCashInvested": 45977,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2198.88,
+        "monthlyPrincipalPayment": 144.57,
+        "monthlyInterestPayment": 866.23,
+        "projectedValue": 268648.88,
+        "totalCashFlowProjected": -143284.8,
+        "totalReturnProjected": -74535.92,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 133.27,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($133/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 145393,
+        "percentAboveMarket": 37.49,
+        "soldCompsCount": 4,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 297,
+        "avgPricePerSqFt": 195
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33859921",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 138,
+        "monthlyMortgagePayment": 1046.7,
+        "monthlyOperatingExpenses": 327.75,
+        "monthlyCashFlow": -1236.45,
+        "annualCashFlow": -14837.4,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 13.8,
+          "maintenance": 11.04,
+          "vacancy": 6.9,
+          "insurance": 86.25,
+          "propertyTax": 207,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.76,
+          "total": 327.75
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1046.7,
+          "monthlyPrincipal": 149.7,
+          "monthlyInterest": 897,
+          "totalLoanAmount": 165600,
+          "downPayment": 41400,
+          "closingCosts": 6210,
+          "totalCashRequired": 47610
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -77183.31,
+        "appreciationValue": 71190.69,
+        "totalCashInvested": 47610,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2277,
+        "monthlyPrincipalPayment": 149.7,
+        "monthlyInterestPayment": 897,
+        "projectedValue": 278190.69,
+        "totalCashFlowProjected": -148374,
+        "totalReturnProjected": -77183.31,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 138,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($138/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137980,
+        "percentAboveMarket": 50.02,
+        "soldCompsCount": 13,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 211,
+        "avgPricePerSqFt": 134
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33860853",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 149.93,
+        "monthlyMortgagePayment": 1137.22,
+        "monthlyOperatingExpenses": 356.09,
+        "monthlyCashFlow": -1343.38,
+        "annualCashFlow": -16120.56,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 14.99,
+          "maintenance": 11.99,
+          "vacancy": 7.5,
+          "insurance": 93.71,
+          "propertyTax": 224.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 3,
+          "total": 356.09
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1137.22,
+          "monthlyPrincipal": 162.65,
+          "monthlyInterest": 974.57,
+          "totalLoanAmount": 179920,
+          "downPayment": 44980,
+          "closingCosts": 6747,
+          "totalCashRequired": 51727
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -83858.81,
+        "appreciationValue": 77346.79,
+        "totalCashInvested": 51727,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2473.92,
+        "monthlyPrincipalPayment": 162.65,
+        "monthlyInterestPayment": 974.57,
+        "projectedValue": 302246.79,
+        "totalCashFlowProjected": -161205.6,
+        "totalReturnProjected": -83858.81,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 149.93,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($150/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 164563,
+        "percentAboveMarket": 36.66,
+        "soldCompsCount": 5,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 156781,
+        "pricePerSqFt": 113,
+        "avgPricePerSqFt": 103
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33869383",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 96.67,
+        "monthlyMortgagePayment": 733.2,
+        "monthlyOperatingExpenses": 229.58,
+        "monthlyCashFlow": -866.11,
+        "annualCashFlow": -10393.32,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 9.67,
+          "maintenance": 7.73,
+          "vacancy": 4.83,
+          "insurance": 60.42,
+          "propertyTax": 145,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.93,
+          "total": 229.58
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 733.2,
+          "monthlyPrincipal": 104.87,
+          "monthlyInterest": 628.33,
+          "totalLoanAmount": 116000,
+          "downPayment": 29000,
+          "closingCosts": 4350,
+          "totalCashRequired": 33350
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -54065.32,
+        "appreciationValue": 49867.88,
+        "totalCashInvested": 33350,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1594.92,
+        "monthlyPrincipalPayment": 104.87,
+        "monthlyInterestPayment": 628.33,
+        "projectedValue": 194867.88,
+        "totalCashFlowProjected": -103933.2,
+        "totalReturnProjected": -54065.32,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 96.67,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($97/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 145393,
+        "percentAboveMarket": -0.27,
+        "soldCompsCount": 4,
+        "marketCondition": "BALANCED",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 216,
+        "avgPricePerSqFt": 195
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33871375",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 149.87,
+        "monthlyMortgagePayment": 1136.71,
+        "monthlyOperatingExpenses": 355.93,
+        "monthlyCashFlow": -1342.77,
+        "annualCashFlow": -16113.24,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 14.99,
+          "maintenance": 11.99,
+          "vacancy": 7.49,
+          "insurance": 93.67,
+          "propertyTax": 224.8,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 3,
+          "total": 355.93
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1136.71,
+          "monthlyPrincipal": 162.58,
+          "monthlyInterest": 974.13,
+          "totalLoanAmount": 179840,
+          "downPayment": 44960,
+          "closingCosts": 6744,
+          "totalCashRequired": 51704
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -83820,
+        "appreciationValue": 77312.4,
+        "totalCashInvested": 51704,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2472.72,
+        "monthlyPrincipalPayment": 162.58,
+        "monthlyInterestPayment": 974.13,
+        "projectedValue": 302112.4,
+        "totalCashFlowProjected": -161132.4,
+        "totalReturnProjected": -83820,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 149.87,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($150/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 155162,
+        "percentAboveMarket": 44.88,
+        "soldCompsCount": 10,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 156781,
+        "pricePerSqFt": 142,
+        "avgPricePerSqFt": 112
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33886208",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 146.6,
+        "monthlyMortgagePayment": 1111.93,
+        "monthlyOperatingExpenses": 348.18,
+        "monthlyCashFlow": -1313.51,
+        "annualCashFlow": -15762.12,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 14.66,
+          "maintenance": 11.73,
+          "vacancy": 7.33,
+          "insurance": 91.63,
+          "propertyTax": 219.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.93,
+          "total": 348.18
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1111.93,
+          "monthlyPrincipal": 159.03,
+          "monthlyInterest": 952.9,
+          "totalLoanAmount": 175920,
+          "downPayment": 43980,
+          "closingCosts": 6597,
+          "totalCashRequired": 50577
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -81993.99,
+        "appreciationValue": 75627.21,
+        "totalCashInvested": 50577,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2418.96,
+        "monthlyPrincipalPayment": 159.03,
+        "monthlyInterestPayment": 952.9,
+        "projectedValue": 295527.21,
+        "totalCashFlowProjected": -157621.2,
+        "totalReturnProjected": -81993.99,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 146.6,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($147/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136622,
+        "percentAboveMarket": 60.95,
+        "soldCompsCount": 14,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 203,
+        "avgPricePerSqFt": 130
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33861364",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
+      "financialMetrics": {
+        "monthlyRent": 103.33,
+        "monthlyMortgagePayment": 783.76,
+        "monthlyOperatingExpenses": 245.42,
+        "monthlyCashFlow": -925.85,
+        "annualCashFlow": -11110.2,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 10.33,
+          "maintenance": 8.27,
+          "vacancy": 5.17,
+          "insurance": 64.58,
+          "propertyTax": 155,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.07,
+          "total": 245.42
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 783.76,
+          "monthlyPrincipal": 112.1,
+          "monthlyInterest": 671.67,
+          "totalLoanAmount": 124000,
+          "downPayment": 31000,
+          "closingCosts": 4650,
+          "totalCashRequired": 35650
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -57794.96,
+        "appreciationValue": 53307.04,
+        "totalCashInvested": 35650,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1705.08,
+        "monthlyPrincipalPayment": 112.1,
+        "monthlyInterestPayment": 671.67,
+        "projectedValue": 208307.04,
+        "totalCashFlowProjected": -111102,
+        "totalReturnProjected": -57794.96,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 103.33,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($103/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136622,
+        "percentAboveMarket": 13.45,
+        "soldCompsCount": 14,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 147,
+        "avgPricePerSqFt": 130
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33889297",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
+      "financialMetrics": {
+        "monthlyRent": 139.93,
+        "monthlyMortgagePayment": 1061.37,
+        "monthlyOperatingExpenses": 332.34,
+        "monthlyCashFlow": -1253.78,
+        "annualCashFlow": -15045.36,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 13.99,
+          "maintenance": 11.19,
+          "vacancy": 7,
+          "insurance": 87.46,
+          "propertyTax": 209.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.8,
+          "total": 332.34
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1061.37,
+          "monthlyPrincipal": 151.8,
+          "monthlyInterest": 909.57,
+          "totalLoanAmount": 167920,
+          "downPayment": 41980,
+          "closingCosts": 6297,
+          "totalCashRequired": 48277
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -78265.55,
+        "appreciationValue": 72188.05,
+        "totalCashInvested": 48277,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2308.92,
+        "monthlyPrincipalPayment": 151.8,
+        "monthlyInterestPayment": 909.57,
+        "projectedValue": 282088.05,
+        "totalCashFlowProjected": -150453.6,
+        "totalReturnProjected": -78265.55,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 139.93,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($140/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 155585,
+        "percentAboveMarket": 34.91,
+        "soldCompsCount": 9,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 156781,
+        "pricePerSqFt": 130,
+        "avgPricePerSqFt": 109
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33869204",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
+      "financialMetrics": {
+        "monthlyRent": 123.33,
+        "monthlyMortgagePayment": 935.46,
+        "monthlyOperatingExpenses": 292.92,
+        "monthlyCashFlow": -1105.05,
+        "annualCashFlow": -13260.6,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 12.33,
+          "maintenance": 9.87,
+          "vacancy": 6.17,
+          "insurance": 77.08,
+          "propertyTax": 185,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.47,
+          "total": 292.92
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 935.46,
+          "monthlyPrincipal": 133.79,
+          "monthlyInterest": 801.67,
+          "totalLoanAmount": 148000,
+          "downPayment": 37000,
+          "closingCosts": 5550,
+          "totalCashRequired": 42550
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -68981.47,
+        "appreciationValue": 63624.53,
+        "totalCashInvested": 42550,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2035.08,
+        "monthlyPrincipalPayment": 133.79,
+        "monthlyInterestPayment": 801.67,
+        "projectedValue": 248624.53,
+        "totalCashFlowProjected": -132606,
+        "totalReturnProjected": -68981.47,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 123.33,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($123/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137980,
+        "percentAboveMarket": 34.08,
+        "soldCompsCount": 13,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 189,
+        "avgPricePerSqFt": 134
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33871186",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
+      "financialMetrics": {
+        "monthlyRent": 146.6,
+        "monthlyMortgagePayment": 1111.93,
+        "monthlyOperatingExpenses": 348.18,
+        "monthlyCashFlow": -1313.51,
+        "annualCashFlow": -15762.12,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 14.66,
+          "maintenance": 11.73,
+          "vacancy": 7.33,
+          "insurance": 91.63,
+          "propertyTax": 219.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.93,
+          "total": 348.18
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1111.93,
+          "monthlyPrincipal": 159.03,
+          "monthlyInterest": 952.9,
+          "totalLoanAmount": 175920,
+          "downPayment": 43980,
+          "closingCosts": 6597,
+          "totalCashRequired": 50577
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -81993.99,
+        "appreciationValue": 75627.21,
+        "totalCashInvested": 50577,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2418.96,
+        "monthlyPrincipalPayment": 159.03,
+        "monthlyInterestPayment": 952.9,
+        "projectedValue": 295527.21,
+        "totalCashFlowProjected": -157621.2,
+        "totalReturnProjected": -81993.99,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 146.6,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($147/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 143979,
+        "percentAboveMarket": 52.73,
+        "soldCompsCount": 16,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 153174,
+        "pricePerSqFt": 173,
+        "avgPricePerSqFt": 120
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33861677",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
+      "financialMetrics": {
+        "monthlyRent": 96.67,
+        "monthlyMortgagePayment": 733.2,
+        "monthlyOperatingExpenses": 229.58,
+        "monthlyCashFlow": -866.11,
+        "annualCashFlow": -10393.32,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 9.67,
+          "maintenance": 7.73,
+          "vacancy": 4.83,
+          "insurance": 60.42,
+          "propertyTax": 145,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.93,
+          "total": 229.58
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 733.2,
+          "monthlyPrincipal": 104.87,
+          "monthlyInterest": 628.33,
+          "totalLoanAmount": 116000,
+          "downPayment": 29000,
+          "closingCosts": 4350,
+          "totalCashRequired": 33350
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -54065.32,
+        "appreciationValue": 49867.88,
+        "totalCashInvested": 33350,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1594.92,
+        "monthlyPrincipalPayment": 104.87,
+        "monthlyInterestPayment": 628.33,
+        "projectedValue": 194867.88,
+        "totalCashFlowProjected": -103933.2,
+        "totalReturnProjected": -54065.32,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 96.67,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($97/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136622,
+        "percentAboveMarket": 6.13,
+        "soldCompsCount": 14,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 136,
+        "avgPricePerSqFt": 130
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33860729",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
+      "financialMetrics": {
+        "monthlyRent": 119.93,
+        "monthlyMortgagePayment": 909.67,
+        "monthlyOperatingExpenses": 284.84,
+        "monthlyCashFlow": -1074.58,
+        "annualCashFlow": -12894.96,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 11.99,
+          "maintenance": 9.59,
+          "vacancy": 6,
+          "insurance": 74.96,
+          "propertyTax": 179.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.4,
+          "total": 284.84
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 909.67,
+          "monthlyPrincipal": 130.11,
+          "monthlyInterest": 779.57,
+          "totalLoanAmount": 143920,
+          "downPayment": 35980,
+          "closingCosts": 5397,
+          "totalCashRequired": 41377
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -67079.04,
+        "appreciationValue": 61870.56,
+        "totalCashInvested": 41377,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1978.92,
+        "monthlyPrincipalPayment": 130.11,
+        "monthlyInterestPayment": 779.57,
+        "projectedValue": 241770.56,
+        "totalCashFlowProjected": -128949.59999999999,
+        "totalReturnProjected": -67079.04,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 119.93,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($120/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136622,
+        "percentAboveMarket": 31.68,
+        "soldCompsCount": 14,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 164,
+        "avgPricePerSqFt": 130
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33861211",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
+      "financialMetrics": {
+        "monthlyRent": 116.2,
+        "monthlyMortgagePayment": 881.36,
+        "monthlyOperatingExpenses": 275.97,
+        "monthlyCashFlow": -1041.13,
+        "annualCashFlow": -12493.56,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 11.62,
+          "maintenance": 9.3,
+          "vacancy": 5.81,
+          "insurance": 72.63,
+          "propertyTax": 174.3,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.32,
+          "total": 275.97
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 881.36,
+          "monthlyPrincipal": 126.06,
+          "monthlyInterest": 755.3,
+          "totalLoanAmount": 139440,
+          "downPayment": 34860,
+          "closingCosts": 5229,
+          "totalCashRequired": 40089
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -64990.98,
+        "appreciationValue": 59944.62,
+        "totalCashInvested": 40089,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1917.24,
+        "monthlyPrincipalPayment": 126.06,
+        "monthlyInterestPayment": 755.3,
+        "projectedValue": 234244.62,
+        "totalCashFlowProjected": -124935.59999999999,
+        "totalReturnProjected": -64990.98,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 116.2,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($116/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137980,
+        "percentAboveMarket": 26.32,
+        "soldCompsCount": 13,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 170,
+        "avgPricePerSqFt": 134
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33859869",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
+      "financialMetrics": {
+        "monthlyRent": 73.33,
+        "monthlyMortgagePayment": 556.22,
+        "monthlyOperatingExpenses": 174.17,
+        "monthlyCashFlow": -657.06,
+        "annualCashFlow": -7884.72,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 7.33,
+          "maintenance": 5.87,
+          "vacancy": 3.67,
+          "insurance": 45.83,
+          "propertyTax": 110,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.47,
+          "total": 174.17
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 556.22,
+          "monthlyPrincipal": 79.55,
+          "monthlyInterest": 476.67,
+          "totalLoanAmount": 88000,
+          "downPayment": 22000,
+          "closingCosts": 3300,
+          "totalCashRequired": 25300
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -41016.4,
+        "appreciationValue": 37830.8,
+        "totalCashInvested": 25300,
+        "grossRentMultiplier": 125.01,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1210.08,
+        "monthlyPrincipalPayment": 79.55,
+        "monthlyInterestPayment": 476.67,
+        "projectedValue": 147830.8,
+        "totalCashFlowProjected": -78847.2,
+        "totalReturnProjected": -41016.4,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 73.33,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($73/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136622,
+        "percentAboveMarket": -19.49,
+        "soldCompsCount": 14,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 103,
+        "avgPricePerSqFt": 130
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33873115",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
+      "financialMetrics": {
+        "monthlyRent": 143.33,
+        "monthlyMortgagePayment": 1087.16,
+        "monthlyOperatingExpenses": 340.42,
+        "monthlyCashFlow": -1284.25,
+        "annualCashFlow": -15411,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 14.33,
+          "maintenance": 11.47,
+          "vacancy": 7.17,
+          "insurance": 89.58,
+          "propertyTax": 215,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.87,
+          "total": 340.42
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1087.16,
+          "monthlyPrincipal": 155.49,
+          "monthlyInterest": 931.67,
+          "totalLoanAmount": 172000,
+          "downPayment": 43000,
+          "closingCosts": 6450,
+          "totalCashRequired": 49450
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -80167.98,
+        "appreciationValue": 73942.02,
+        "totalCashInvested": 49450,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2365.08,
+        "monthlyPrincipalPayment": 155.49,
+        "monthlyInterestPayment": 931.67,
+        "projectedValue": 288942.02,
+        "totalCashFlowProjected": -154110,
+        "totalReturnProjected": -80167.98,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 143.33,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($143/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 136140,
+        "percentAboveMarket": 57.93,
+        "soldCompsCount": 12,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 249,
+        "avgPricePerSqFt": 150
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "454265988",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
+      "financialMetrics": {
+        "monthlyRent": 106,
+        "monthlyMortgagePayment": 803.99,
+        "monthlyOperatingExpenses": 251.75,
+        "monthlyCashFlow": -949.74,
+        "annualCashFlow": -11396.88,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 10.6,
+          "maintenance": 8.48,
+          "vacancy": 5.3,
+          "insurance": 66.25,
+          "propertyTax": 159,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.12,
+          "total": 251.75
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 803.99,
+          "monthlyPrincipal": 114.99,
+          "monthlyInterest": 689,
+          "totalLoanAmount": 127200,
+          "downPayment": 31800,
+          "closingCosts": 4770,
+          "totalCashRequired": 36570
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -59286.1,
+        "appreciationValue": 54682.7,
+        "totalCashInvested": 36570,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1749,
+        "monthlyPrincipalPayment": 114.99,
+        "monthlyInterestPayment": 689,
+        "projectedValue": 213682.7,
+        "totalCashFlowProjected": -113968.79999999999,
+        "totalReturnProjected": -59286.1,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 106,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($106/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 156965,
+        "percentAboveMarket": 1.3,
+        "soldCompsCount": 6,
+        "marketCondition": "BALANCED",
+        "medianSoldPrice": 156781,
+        "pricePerSqFt": 83,
+        "avgPricePerSqFt": 100
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33871124",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
+      "financialMetrics": {
+        "monthlyRent": 86,
+        "monthlyMortgagePayment": 652.29,
+        "monthlyOperatingExpenses": 204.25,
+        "monthlyCashFlow": -770.54,
+        "annualCashFlow": -9246.48,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 8.6,
+          "maintenance": 6.88,
+          "vacancy": 4.3,
+          "insurance": 53.75,
+          "propertyTax": 129,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.72,
+          "total": 204.25
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 652.29,
+          "monthlyPrincipal": 93.29,
+          "monthlyInterest": 559,
+          "totalLoanAmount": 103200,
+          "downPayment": 25800,
+          "closingCosts": 3870,
+          "totalCashRequired": 29670
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -48099.59,
+        "appreciationValue": 44365.21,
+        "totalCashInvested": 29670,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1419,
+        "monthlyPrincipalPayment": 93.29,
+        "monthlyInterestPayment": 559,
+        "projectedValue": 173365.21,
+        "totalCashFlowProjected": -92464.79999999999,
+        "totalReturnProjected": -48099.59,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 86,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($86/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 145393,
+        "percentAboveMarket": -11.28,
+        "soldCompsCount": 4,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 192,
+        "avgPricePerSqFt": 195
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33872824",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
+      "financialMetrics": {
+        "monthlyRent": 96.67,
+        "monthlyMortgagePayment": 733.2,
+        "monthlyOperatingExpenses": 229.58,
+        "monthlyCashFlow": -866.11,
+        "annualCashFlow": -10393.32,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 9.67,
+          "maintenance": 7.73,
+          "vacancy": 4.83,
+          "insurance": 60.42,
+          "propertyTax": 145,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.93,
+          "total": 229.58
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 733.2,
+          "monthlyPrincipal": 104.87,
+          "monthlyInterest": 628.33,
+          "totalLoanAmount": 116000,
+          "downPayment": 29000,
+          "closingCosts": 4350,
+          "totalCashRequired": 33350
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -54065.32,
+        "appreciationValue": 49867.88,
+        "totalCashInvested": 33350,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1594.92,
+        "monthlyPrincipalPayment": 104.87,
+        "monthlyInterestPayment": 628.33,
+        "projectedValue": 194867.88,
+        "totalCashFlowProjected": -103933.2,
+        "totalReturnProjected": -54065.32,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 96.67,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($97/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148133,
+        "percentAboveMarket": -2.11,
+        "soldCompsCount": 5,
+        "marketCondition": "BALANCED",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 201,
+        "avgPricePerSqFt": 191
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33875263",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
+      "financialMetrics": {
+        "monthlyRent": 146.67,
+        "monthlyMortgagePayment": 1112.44,
+        "monthlyOperatingExpenses": 348.33,
+        "monthlyCashFlow": -1314.1,
+        "annualCashFlow": -15769.2,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 14.67,
+          "maintenance": 11.73,
+          "vacancy": 7.33,
+          "insurance": 91.67,
+          "propertyTax": 220,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.93,
+          "total": 348.33
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1112.44,
+          "monthlyPrincipal": 159.11,
+          "monthlyInterest": 953.33,
+          "totalLoanAmount": 176000,
+          "downPayment": 44000,
+          "closingCosts": 6600,
+          "totalCashRequired": 50600
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -82030.4,
+        "appreciationValue": 75661.6,
+        "totalCashInvested": 50600,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2419.92,
+        "monthlyPrincipalPayment": 159.11,
+        "monthlyInterestPayment": 953.33,
+        "projectedValue": 295661.6,
+        "totalCashFlowProjected": -157692,
+        "totalReturnProjected": -82030.4,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 146.67,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($147/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137980,
+        "percentAboveMarket": 59.44,
+        "soldCompsCount": 13,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 220,
+        "avgPricePerSqFt": 134
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33872217",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
+      "financialMetrics": {
+        "monthlyRent": 103.27,
+        "monthlyMortgagePayment": 783.26,
+        "monthlyOperatingExpenses": 245.26,
+        "monthlyCashFlow": -925.25,
+        "annualCashFlow": -11103,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 10.33,
+          "maintenance": 8.26,
+          "vacancy": 5.16,
+          "insurance": 64.54,
+          "propertyTax": 154.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.07,
+          "total": 245.26
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 783.26,
+          "monthlyPrincipal": 112.03,
+          "monthlyInterest": 671.23,
+          "totalLoanAmount": 123920,
+          "downPayment": 30980,
+          "closingCosts": 4647,
+          "totalCashRequired": 35627
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -57757.35,
+        "appreciationValue": 53272.65,
+        "totalCashInvested": 35627,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1703.88,
+        "monthlyPrincipalPayment": 112.03,
+        "monthlyInterestPayment": 671.23,
+        "projectedValue": 208172.65,
+        "totalCashFlowProjected": -111030,
+        "totalReturnProjected": -57757.35,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 103.27,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($103/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148908,
+        "percentAboveMarket": 4.02,
+        "soldCompsCount": 9,
+        "marketCondition": "BALANCED",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 158,
+        "avgPricePerSqFt": 144
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "2062395350",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
+      "financialMetrics": {
+        "monthlyRent": 136.67,
+        "monthlyMortgagePayment": 1036.59,
+        "monthlyOperatingExpenses": 324.58,
+        "monthlyCashFlow": -1224.5,
+        "annualCashFlow": -14694,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 13.67,
+          "maintenance": 10.93,
+          "vacancy": 6.83,
+          "insurance": 85.42,
+          "propertyTax": 205,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.73,
+          "total": 324.58
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1036.59,
+          "monthlyPrincipal": 148.26,
+          "monthlyInterest": 888.33,
+          "totalLoanAmount": 164000,
+          "downPayment": 41000,
+          "closingCosts": 6150,
+          "totalCashRequired": 47150
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -76437.14,
+        "appreciationValue": 70502.86,
+        "totalCashInvested": 47150,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -2254.92,
+        "monthlyPrincipalPayment": 148.26,
+        "monthlyInterestPayment": 888.33,
+        "projectedValue": 275502.86,
+        "totalCashFlowProjected": -146940,
+        "totalReturnProjected": -76437.14,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 136.67,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($137/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 137980,
+        "percentAboveMarket": 48.57,
+        "soldCompsCount": 13,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 151347,
+        "pricePerSqFt": 209,
+        "avgPricePerSqFt": 134
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33859889",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
+      "financialMetrics": {
+        "monthlyRent": 106.67,
+        "monthlyMortgagePayment": 809.05,
+        "monthlyOperatingExpenses": 253.33,
+        "monthlyCashFlow": -955.71,
+        "annualCashFlow": -11468.52,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 10.67,
+          "maintenance": 8.53,
+          "vacancy": 5.33,
+          "insurance": 66.67,
+          "propertyTax": 160,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 2.13,
+          "total": 253.33
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 809.05,
+          "monthlyPrincipal": 115.71,
+          "monthlyInterest": 693.33,
+          "totalLoanAmount": 128000,
+          "downPayment": 32000,
+          "closingCosts": 4800,
+          "totalCashRequired": 36800
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -59658.58,
+        "appreciationValue": 55026.62,
+        "totalCashInvested": 36800,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1759.92,
+        "monthlyPrincipalPayment": 115.71,
+        "monthlyInterestPayment": 693.33,
+        "projectedValue": 215026.62,
+        "totalCashFlowProjected": -114685.20000000001,
+        "totalReturnProjected": -59658.58,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 106.67,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($107/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 128392,
+        "percentAboveMarket": 24.62,
+        "soldCompsCount": 9,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 192,
+        "avgPricePerSqFt": 152
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33871742",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
+      "financialMetrics": {
+        "monthlyRent": 90,
+        "monthlyMortgagePayment": 682.62,
+        "monthlyOperatingExpenses": 213.75,
+        "monthlyCashFlow": -806.37,
+        "annualCashFlow": -9676.44,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 9,
+          "maintenance": 7.2,
+          "vacancy": 4.5,
+          "insurance": 56.25,
+          "propertyTax": 135,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.8,
+          "total": 213.75
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 682.62,
+          "monthlyPrincipal": 97.63,
+          "monthlyInterest": 584.99,
+          "totalLoanAmount": 107997.6,
+          "downPayment": 26999.4,
+          "closingCosts": 4049.91,
+          "totalCashRequired": 31049.31
+        },
+        "cashOnCashReturn": -31.16,
+        "capRate": -1.1,
+        "totalReturn": -50336.72,
+        "appreciationValue": 46427.68,
+        "totalCashInvested": 31049.31,
+        "grossRentMultiplier": 125,
+        "debtServiceCoverageRatio": -0.18,
+        "netOperatingIncome": -1485,
+        "monthlyPrincipalPayment": 97.63,
+        "monthlyInterestPayment": 584.99,
+        "projectedValue": 181424.68,
+        "totalCashFlowProjected": -96764.40000000001,
+        "totalReturnProjected": -50336.72,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 90,
+        "source": "FALLBACK",
+        "confidence": "LOW",
+        "details": "Fallback estimate: 0.8% of purchase price annually ($90/month)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 145393,
+        "percentAboveMarket": -7.15,
+        "soldCompsCount": 4,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 145495,
+        "pricePerSqFt": 201,
+        "avgPricePerSqFt": 195
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": false,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    }
+  ]
+}

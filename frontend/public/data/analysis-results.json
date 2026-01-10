@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-10T19:03:30.598Z",
+  "timestamp": "2026-01-10T19:24:26.604Z",
   "summary": {
     "averageCashFlow": -11209.76,
     "averageROI": -26.75,
@@ -16,7 +16,7 @@
   "properties": [
     {
       "id": "2067256093",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.601Z",
       "address": "3137 Westerville Rd #44, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3137-Westerville-Rd-44-Columbus-OH-43224/2067256093_zpid/",
@@ -44,7 +44,7 @@
     },
     {
       "id": "33861172",
-      "analysisDate": "2026-01-10T19:03:30.586Z",
+      "analysisDate": "2026-01-10T19:24:26.591Z",
       "address": "2230 Cleveland Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2230-Cleveland-Ave-Columbus-OH-43211/33861172_zpid/",
@@ -72,7 +72,7 @@
     },
     {
       "id": "33879632",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "1126 Urana Ave, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1126-Urana-Ave-Columbus-OH-43224/33879632_zpid/",
@@ -100,7 +100,7 @@
     },
     {
       "id": "33870206",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "2705 Osceola Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2705-Osceola-Ave-Columbus-OH-43211/33870206_zpid/",
@@ -128,7 +128,7 @@
     },
     {
       "id": "33889702",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
       "address": "1033 E 22nd Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1033-E-22nd-Ave-Columbus-OH-43211/33889702_zpid/",
@@ -156,7 +156,7 @@
     },
     {
       "id": "33861382",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "1411 E 18th Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1411-E-18th-Ave-Columbus-OH-43211/33861382_zpid/",
@@ -184,7 +184,7 @@
     },
     {
       "id": "33896699",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.599Z",
       "address": "3493 Bremen St, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3493-Bremen-St-Columbus-OH-43224/33896699_zpid/",
@@ -212,7 +212,7 @@
     },
     {
       "id": "33870424",
-      "analysisDate": "2026-01-10T19:03:30.587Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "2481 Osceola Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2481-Osceola-Ave-Columbus-OH-43211/33870424_zpid/",
@@ -240,7 +240,7 @@
     },
     {
       "id": "34046248",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "2585 Perdue Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2585-Perdue-Ave-Columbus-OH-43211/34046248_zpid/",
@@ -268,7 +268,7 @@
     },
     {
       "id": "33890207",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "3434 Norwood St, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3434-Norwood-St-Columbus-OH-43224/33890207_zpid/",
@@ -296,7 +296,7 @@
     },
     {
       "id": "34047057",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "2529 Ferris Park Dr S, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2529-Ferris-Park-Dr-S-Columbus-OH-43224/34047057_zpid/",
@@ -324,7 +324,7 @@
     },
     {
       "id": "34027052",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.599Z",
       "address": "1665 Sale Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1665-Sale-Rd-Columbus-OH-43224/34027052_zpid/",
@@ -352,7 +352,7 @@
     },
     {
       "id": "34046711",
-      "analysisDate": "2026-01-10T19:03:30.586Z",
+      "analysisDate": "2026-01-10T19:24:26.591Z",
       "address": "2792 Perdue Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2792-Perdue-Ave-Columbus-OH-43211/34046711_zpid/",
@@ -380,7 +380,7 @@
     },
     {
       "id": "33867219",
-      "analysisDate": "2026-01-10T19:03:30.591Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "2373 Delbert Rd, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2373-Delbert-Rd-Columbus-OH-43211/33867219_zpid/",
@@ -408,7 +408,7 @@
     },
     {
       "id": "33870625",
-      "analysisDate": "2026-01-10T19:03:30.586Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "2353 Velma Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2353-Velma-Ave-Columbus-OH-43211/33870625_zpid/",
@@ -436,7 +436,7 @@
     },
     {
       "id": "33861339",
-      "analysisDate": "2026-01-10T19:03:30.586Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "1519 E Hudson St, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1519-E-Hudson-St-Columbus-OH-43211/33861339_zpid/",
@@ -464,7 +464,7 @@
     },
     {
       "id": "33861680",
-      "analysisDate": "2026-01-10T19:03:30.587Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "1435 Republic Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1435-Republic-Ave-Columbus-OH-43211/33861680_zpid/",
@@ -492,7 +492,7 @@
     },
     {
       "id": "33861120",
-      "analysisDate": "2026-01-10T19:03:30.587Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "1400 E Maynard Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1400-E-Maynard-Ave-Columbus-OH-43211/33861120_zpid/",
@@ -520,7 +520,7 @@
     },
     {
       "id": "448941611",
-      "analysisDate": "2026-01-10T19:03:30.587Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "1705 Lexington Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1705-Lexington-Ave-Columbus-OH-43211/448941611_zpid/",
@@ -548,7 +548,7 @@
     },
     {
       "id": "33861411",
-      "analysisDate": "2026-01-10T19:03:30.587Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "2316 Cleveland Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2316-Cleveland-Ave-Columbus-OH-43211/33861411_zpid/",
@@ -576,7 +576,7 @@
     },
     {
       "id": "33898591",
-      "analysisDate": "2026-01-10T19:03:30.587Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "2386 Century Dr, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2386-Century-Dr-Columbus-OH-43211/33898591_zpid/",
@@ -604,7 +604,7 @@
     },
     {
       "id": "33869324",
-      "analysisDate": "2026-01-10T19:03:30.588Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "2627 Azelda St, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2627-Azelda-St-Columbus-OH-43211/33869324_zpid/",
@@ -632,7 +632,7 @@
     },
     {
       "id": "33866864",
-      "analysisDate": "2026-01-10T19:03:30.588Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "1995 Minnesota Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1995-Minnesota-Ave-Columbus-OH-43211/33866864_zpid/",
@@ -660,7 +660,7 @@
     },
     {
       "id": "33864726",
-      "analysisDate": "2026-01-10T19:03:30.588Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "1544 Briarwood Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1544-Briarwood-Ave-Columbus-OH-43211/33864726_zpid/",
@@ -688,7 +688,7 @@
     },
     {
       "id": "2068441396",
-      "analysisDate": "2026-01-10T19:03:30.588Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "975 E 14th Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/975-E-14th-Ave-Columbus-OH-43211/2068441396_zpid/",
@@ -716,7 +716,7 @@
     },
     {
       "id": "33860447",
-      "analysisDate": "2026-01-10T19:03:30.588Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "1609 Arlington Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1609-Arlington-Ave-Columbus-OH-43211/33860447_zpid/",
@@ -744,7 +744,7 @@
     },
     {
       "id": "33871332",
-      "analysisDate": "2026-01-10T19:03:30.588Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "2215 Ontario St, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2215-Ontario-St-Columbus-OH-43211/33871332_zpid/",
@@ -772,7 +772,7 @@
     },
     {
       "id": "33859205",
-      "analysisDate": "2026-01-10T19:03:30.588Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "2484 Lexington Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2484-Lexington-Ave-Columbus-OH-43211/33859205_zpid/",
@@ -800,7 +800,7 @@
     },
     {
       "id": "33859837",
-      "analysisDate": "2026-01-10T19:03:30.588Z",
+      "analysisDate": "2026-01-10T19:24:26.592Z",
       "address": "1547 Minnesota Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1547-Minnesota-Ave-Columbus-OH-43211/33859837_zpid/",
@@ -828,7 +828,7 @@
     },
     {
       "id": "444671782",
-      "analysisDate": "2026-01-10T19:03:30.588Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "788 Tibet Rd, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/788-Tibet-Rd-Columbus-OH-43211/444671782_zpid/",
@@ -856,7 +856,7 @@
     },
     {
       "id": "33874683",
-      "analysisDate": "2026-01-10T19:03:30.588Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "1231 23rd Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1231-23rd-Ave-Columbus-OH-43211/33874683_zpid/",
@@ -884,7 +884,7 @@
     },
     {
       "id": "33874796",
-      "analysisDate": "2026-01-10T19:03:30.588Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "1241 E Weber Rd, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1241-E-Weber-Rd-Columbus-OH-43211/33874796_zpid/",
@@ -912,7 +912,7 @@
     },
     {
       "id": "33866839",
-      "analysisDate": "2026-01-10T19:03:30.588Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "1961 Aberdeen Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1961-Aberdeen-Ave-Columbus-OH-43211/33866839_zpid/",
@@ -940,7 +940,7 @@
     },
     {
       "id": "33872251",
-      "analysisDate": "2026-01-10T19:03:30.589Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "1265 Duxberry Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1265-Duxberry-Ave-Columbus-OH-43211/33872251_zpid/",
@@ -968,7 +968,7 @@
     },
     {
       "id": "33859965",
-      "analysisDate": "2026-01-10T19:03:30.589Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "1437 Manchester Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1437-Manchester-Ave-Columbus-OH-43211/33859965_zpid/",
@@ -996,7 +996,7 @@
     },
     {
       "id": "2072183555",
-      "analysisDate": "2026-01-10T19:03:30.589Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "1453 E 20th Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1453-E-20th-Ave-Columbus-OH-43211/2072183555_zpid/",
@@ -1024,7 +1024,7 @@
     },
     {
       "id": "33857028",
-      "analysisDate": "2026-01-10T19:03:30.589Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "1526 Minnesota Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1526-Minnesota-Ave-Columbus-OH-43211/33857028_zpid/",
@@ -1052,7 +1052,7 @@
     },
     {
       "id": "33860956",
-      "analysisDate": "2026-01-10T19:03:30.589Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "1443 E 21st Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1443-E-21st-Ave-Columbus-OH-43211/33860956_zpid/",
@@ -1080,7 +1080,7 @@
     },
     {
       "id": "33870674",
-      "analysisDate": "2026-01-10T19:03:30.589Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "2315 Hiawatha Park Dr, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2315-Hiawatha-Park-Dr-Columbus-OH-43211/33870674_zpid/",
@@ -1108,7 +1108,7 @@
     },
     {
       "id": "33887422",
-      "analysisDate": "2026-01-10T19:03:30.589Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "2654 Howey Rd, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2654-Howey-Rd-Columbus-OH-43211/33887422_zpid/",
@@ -1136,7 +1136,7 @@
     },
     {
       "id": "2067437433",
-      "analysisDate": "2026-01-10T19:03:30.589Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "1371 E 23rd Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1371-E-23rd-Ave-Columbus-OH-43211/2067437433_zpid/",
@@ -1164,7 +1164,7 @@
     },
     {
       "id": "33871711",
-      "analysisDate": "2026-01-10T19:03:30.589Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "2634 Grasmere Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2634-Grasmere-Ave-Columbus-OH-43211/33871711_zpid/",
@@ -1192,7 +1192,7 @@
     },
     {
       "id": "33871342",
-      "analysisDate": "2026-01-10T19:03:30.589Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "2275 Ontario St, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2275-Ontario-St-Columbus-OH-43211/33871342_zpid/",
@@ -1220,7 +1220,7 @@
     },
     {
       "id": "33870917",
-      "analysisDate": "2026-01-10T19:03:30.589Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "2367 Jefferson Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2367-Jefferson-Ave-Columbus-OH-43211/33870917_zpid/",
@@ -1248,7 +1248,7 @@
     },
     {
       "id": "444716836",
-      "analysisDate": "2026-01-10T19:03:30.589Z",
+      "analysisDate": "2026-01-10T19:24:26.593Z",
       "address": "1514-1516 E 26th Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1514-1516-E-26th-Ave-Columbus-OH-43211/444716836_zpid/",
@@ -1276,7 +1276,7 @@
     },
     {
       "id": "33869582",
-      "analysisDate": "2026-01-10T19:03:30.589Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "926 E 19th Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/926-E-19th-Ave-Columbus-OH-43211/33869582_zpid/",
@@ -1304,7 +1304,7 @@
     },
     {
       "id": "33898462",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "2196 Berrell Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2196-Berrell-Ave-Columbus-OH-43211/33898462_zpid/",
@@ -1332,7 +1332,7 @@
     },
     {
       "id": "33860325",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "1275 E Weber Rd, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1275-E-Weber-Rd-Columbus-OH-43211/33860325_zpid/",
@@ -1360,7 +1360,7 @@
     },
     {
       "id": "33844901",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "972 E 12th Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/972-E-12th-Ave-Columbus-OH-43211/33844901_zpid/",
@@ -1388,7 +1388,7 @@
     },
     {
       "id": "443959408",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "2250 Brentnell Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2250-Brentnell-Ave-Columbus-OH-43211/443959408_zpid/",
@@ -1416,7 +1416,7 @@
     },
     {
       "id": "33861104",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "1457 Cordell Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1457-Cordell-Ave-Columbus-OH-43211/33861104_zpid/",
@@ -1444,7 +1444,7 @@
     },
     {
       "id": "33862117",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "2465 Hamilton Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2465-Hamilton-Ave-Columbus-OH-43211/33862117_zpid/",
@@ -1472,7 +1472,7 @@
     },
     {
       "id": "33872670",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "2444 Bancroft St, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2444-Bancroft-St-Columbus-OH-43211/33872670_zpid/",
@@ -1500,7 +1500,7 @@
     },
     {
       "id": "33859791",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "1525 Aberdeen Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1525-Aberdeen-Ave-Columbus-OH-43211/33859791_zpid/",
@@ -1528,7 +1528,7 @@
     },
     {
       "id": "33869994",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "2712 Homecroft Dr, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2712-Homecroft-Dr-Columbus-OH-43211/33869994_zpid/",
@@ -1556,7 +1556,7 @@
     },
     {
       "id": "33859921",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "1430 Aberdeen Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1430-Aberdeen-Ave-Columbus-OH-43211/33859921_zpid/",
@@ -1584,7 +1584,7 @@
     },
     {
       "id": "33860853",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "1384 23rd Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1384-23rd-Ave-Columbus-OH-43211/33860853_zpid/",
@@ -1612,7 +1612,7 @@
     },
     {
       "id": "33869383",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "2623 Audubon Rd, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2623-Audubon-Rd-Columbus-OH-43211/33869383_zpid/",
@@ -1640,7 +1640,7 @@
     },
     {
       "id": "33871375",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "2210 Gerbert Rd, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2210-Gerbert-Rd-Columbus-OH-43211/33871375_zpid/",
@@ -1668,7 +1668,7 @@
     },
     {
       "id": "33886208",
-      "analysisDate": "2026-01-10T19:03:30.590Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "2828 Linview Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2828-Linview-Ave-Columbus-OH-43211/33886208_zpid/",
@@ -1696,7 +1696,7 @@
     },
     {
       "id": "33861364",
-      "analysisDate": "2026-01-10T19:03:30.591Z",
+      "analysisDate": "2026-01-10T19:24:26.594Z",
       "address": "1435 Kohr Pl, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1435-Kohr-Pl-Columbus-OH-43211/33861364_zpid/",
@@ -1724,7 +1724,7 @@
     },
     {
       "id": "33889297",
-      "analysisDate": "2026-01-10T19:03:30.591Z",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
       "address": "986 Loretta Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/986-Loretta-Ave-Columbus-OH-43211/33889297_zpid/",
@@ -1752,7 +1752,7 @@
     },
     {
       "id": "33869204",
-      "analysisDate": "2026-01-10T19:03:30.591Z",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
       "address": "2751 Pontiac St, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2751-Pontiac-St-Columbus-OH-43211/33869204_zpid/",
@@ -1780,7 +1780,7 @@
     },
     {
       "id": "33871186",
-      "analysisDate": "2026-01-10T19:03:30.591Z",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
       "address": "2214 Medina Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2214-Medina-Ave-Columbus-OH-43211/33871186_zpid/",
@@ -1808,7 +1808,7 @@
     },
     {
       "id": "33861677",
-      "analysisDate": "2026-01-10T19:03:30.591Z",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
       "address": "1447 Republic Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1447-Republic-Ave-Columbus-OH-43211/33861677_zpid/",
@@ -1836,7 +1836,7 @@
     },
     {
       "id": "33860729",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
       "address": "2107 Cleveland Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2107-Cleveland-Ave-Columbus-OH-43211/33860729_zpid/",
@@ -1864,7 +1864,7 @@
     },
     {
       "id": "33861211",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
       "address": "1546 26th Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1546-26th-Ave-Columbus-OH-43211/33861211_zpid/",
@@ -1892,7 +1892,7 @@
     },
     {
       "id": "33859869",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
       "address": "1479 Genessee Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1479-Genessee-Ave-Columbus-OH-43211/33859869_zpid/",
@@ -1920,7 +1920,7 @@
     },
     {
       "id": "33873115",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.595Z",
       "address": "2804 Grasmere Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2804-Grasmere-Ave-Columbus-OH-43211/33873115_zpid/",
@@ -1948,7 +1948,7 @@
     },
     {
       "id": "454265988",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
       "address": "1161 22nd Ave #1159, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1161-22nd-Ave-1159-Columbus-OH-43211/454265988_zpid/",
@@ -1976,7 +1976,7 @@
     },
     {
       "id": "33871124",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
       "address": "2352 Hiawatha Park Dr, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2352-Hiawatha-Park-Dr-Columbus-OH-43211/33871124_zpid/",
@@ -2004,7 +2004,7 @@
     },
     {
       "id": "33872824",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
       "address": "1270 E 18th Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1270-E-18th-Ave-Columbus-OH-43211/33872824_zpid/",
@@ -2032,7 +2032,7 @@
     },
     {
       "id": "33875263",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
       "address": "2292 Traymore Pl, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2292-Traymore-Pl-Columbus-OH-43211/33875263_zpid/",
@@ -2060,7 +2060,7 @@
     },
     {
       "id": "33872217",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
       "address": "1092 Duxberry Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1092-Duxberry-Ave-Columbus-OH-43211/33872217_zpid/",
@@ -2088,7 +2088,7 @@
     },
     {
       "id": "2062395350",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
       "address": "1150 E 20th Ave, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1150-E-20th-Ave-Columbus-OH-43211/2062395350_zpid/",
@@ -2116,7 +2116,7 @@
     },
     {
       "id": "33859889",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
       "address": "1357 E Weber Rd, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1357-E-Weber-Rd-Columbus-OH-43211/33859889_zpid/",
@@ -2144,7 +2144,7 @@
     },
     {
       "id": "33871742",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.596Z",
       "address": "2769 McGuffey Rd, Columbus, OH 43211",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2769-McGuffey-Rd-Columbus-OH-43211/33871742_zpid/",
@@ -2172,7 +2172,7 @@
     },
     {
       "id": "33892251",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.597Z",
       "address": "3469 Dresden St, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3469-Dresden-St-Columbus-OH-43224/33892251_zpid/",
@@ -2200,7 +2200,7 @@
     },
     {
       "id": "33894478",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "3835 Fayette Dr, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3835-Fayette-Dr-Columbus-OH-43224/33894478_zpid/",
@@ -2228,7 +2228,7 @@
     },
     {
       "id": "33888195",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "796 Wainwright Dr, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/796-Wainwright-Dr-Columbus-OH-43224/33888195_zpid/",
@@ -2256,7 +2256,7 @@
     },
     {
       "id": "33905287",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "2283 Ward Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2283-Ward-Rd-Columbus-OH-43224/33905287_zpid/",
@@ -2284,7 +2284,7 @@
     },
     {
       "id": "33888175",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "813 Wainwright Dr, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/813-Wainwright-Dr-Columbus-OH-43224/33888175_zpid/",
@@ -2312,7 +2312,7 @@
     },
     {
       "id": "33887312",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "746 Oakland Park Ave, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/746-Oakland-Park-Ave-Columbus-OH-43224/33887312_zpid/",
@@ -2340,7 +2340,7 @@
     },
     {
       "id": "33878273",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "3129 McGuffey Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3129-McGuffey-Rd-Columbus-OH-43224/33878273_zpid/",
@@ -2368,7 +2368,7 @@
     },
     {
       "id": "33933568",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "3484 Sweetday St, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3484-Sweetday-St-Columbus-OH-43224/33933568_zpid/",
@@ -2396,7 +2396,7 @@
     },
     {
       "id": "33877049",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "1181 Lenore Ave, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1181-Lenore-Ave-Columbus-OH-43224/33877049_zpid/",
@@ -2424,7 +2424,7 @@
     },
     {
       "id": "33897199",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "3486 Oaklawn St, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3486-Oaklawn-St-Columbus-OH-43224/33897199_zpid/",
@@ -2452,7 +2452,7 @@
     },
     {
       "id": "33944166",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "3967 Karl Rd APT 123, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3967-Karl-Rd-APT-123-Columbus-OH-43224/33944166_zpid/",
@@ -2480,7 +2480,7 @@
     },
     {
       "id": "34026511",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "4111 Walford St, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/4111-Walford-St-Columbus-OH-43224/34026511_zpid/",
@@ -2508,7 +2508,7 @@
     },
     {
       "id": "33876074",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "3084 Oaklawn St, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3084-Oaklawn-St-Columbus-OH-43224/33876074_zpid/",
@@ -2536,7 +2536,7 @@
     },
     {
       "id": "33887657",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "3476 Karl Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3476-Karl-Rd-Columbus-OH-43224/33887657_zpid/",
@@ -2564,7 +2564,7 @@
     },
     {
       "id": "34026593",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "1812 Audrey Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1812-Audrey-Rd-Columbus-OH-43224/34026593_zpid/",
@@ -2592,7 +2592,7 @@
     },
     {
       "id": "33878154",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.599Z",
       "address": "3147 Grasmere Ave, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3147-Grasmere-Ave-Columbus-OH-43224/33878154_zpid/",
@@ -2620,7 +2620,7 @@
     },
     {
       "id": "33889004",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.599Z",
       "address": "876 Lenore Ave, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/876-Lenore-Ave-Columbus-OH-43224/33889004_zpid/",
@@ -2648,7 +2648,7 @@
     },
     {
       "id": "33875012",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.599Z",
       "address": "2865 Dresden St, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2865-Dresden-St-Columbus-OH-43224/33875012_zpid/",
@@ -2676,7 +2676,7 @@
     },
     {
       "id": "33888794",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.599Z",
       "address": "3545 Ontario St, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3545-Ontario-St-Columbus-OH-43224/33888794_zpid/",
@@ -2704,7 +2704,7 @@
     },
     {
       "id": "33847035",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.599Z",
       "address": "3219 Oaklawn St, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3219-Oaklawn-St-Columbus-OH-43224/33847035_zpid/",
@@ -2732,7 +2732,7 @@
     },
     {
       "id": "33875030",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.599Z",
       "address": "2915 Norwood St, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2915-Norwood-St-Columbus-OH-43224/33875030_zpid/",
@@ -2760,7 +2760,7 @@
     },
     {
       "id": "33878257",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.599Z",
       "address": "3029 McGuffey Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3029-McGuffey-Rd-Columbus-OH-43224/33878257_zpid/",
@@ -2788,7 +2788,7 @@
     },
     {
       "id": "33878260",
-      "analysisDate": "2026-01-10T19:03:30.593Z",
+      "analysisDate": "2026-01-10T19:24:26.599Z",
       "address": "3043 McGuffey Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3043-McGuffey-Rd-Columbus-OH-43224/33878260_zpid/",
@@ -2816,7 +2816,7 @@
     },
     {
       "id": "33876046",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.599Z",
       "address": "3005 Kenlawn St, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3005-Kenlawn-St-Columbus-OH-43224/33876046_zpid/",
@@ -2844,7 +2844,7 @@
     },
     {
       "id": "454241578",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "3609 Westerville Rd LOT P49, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3609-Westerville-Rd-LOT-P49-Columbus-OH-43224/454241578_zpid/",
@@ -2872,7 +2872,7 @@
     },
     {
       "id": "33939801",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "4279 Morsetown Ct, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/4279-Morsetown-Ct-Columbus-OH-43224/33939801_zpid/",
@@ -2900,7 +2900,7 @@
     },
     {
       "id": "33877481",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "1382 Elmore Ave, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1382-Elmore-Ave-Columbus-OH-43224/33877481_zpid/",
@@ -2928,7 +2928,7 @@
     },
     {
       "id": "456221872",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "3939 Karl Rd APT 222, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3939-Karl-Rd-APT-222-Columbus-OH-43224/456221872_zpid/",
@@ -2956,7 +2956,7 @@
     },
     {
       "id": "34027025",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "1713 Sale Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1713-Sale-Rd-Columbus-OH-43224/34027025_zpid/",
@@ -2984,7 +2984,7 @@
     },
     {
       "id": "33906464",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "1530 Evaline Dr, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1530-Evaline-Dr-Columbus-OH-43224/33906464_zpid/",
@@ -3012,7 +3012,7 @@
     },
     {
       "id": "34027584",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "2076 Agler Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2076-Agler-Rd-Columbus-OH-43224/34027584_zpid/",
@@ -3040,7 +3040,7 @@
     },
     {
       "id": "34027158",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "1828 Ferris Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1828-Ferris-Rd-Columbus-OH-43224/34027158_zpid/",
@@ -3068,7 +3068,7 @@
     },
     {
       "id": "33944178",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "3965 Karl Rd APT 208, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3965-Karl-Rd-APT-208-Columbus-OH-43224/33944178_zpid/",
@@ -3096,7 +3096,7 @@
     },
     {
       "id": "33888227",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "759 E Longview Ave, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/759-E-Longview-Ave-Columbus-OH-43224/33888227_zpid/",
@@ -3124,7 +3124,7 @@
     },
     {
       "id": "33878212",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "2950 Grasmere Ave, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2950-Grasmere-Ave-Columbus-OH-43224/33878212_zpid/",
@@ -3152,7 +3152,7 @@
     },
     {
       "id": "455360049",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "4145 Karl Rd #4222, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/4145-Karl-Rd-4222-Columbus-OH-43224/455360049_zpid/",
@@ -3180,7 +3180,7 @@
     },
     {
       "id": "33943265",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.600Z",
       "address": "4143 Karl Rd #314, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/4143-Karl-Rd-314-Columbus-OH-43224/33943265_zpid/",
@@ -3208,7 +3208,7 @@
     },
     {
       "id": "33889547",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.601Z",
       "address": "3268 McGuffey Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3268-McGuffey-Rd-Columbus-OH-43224/33889547_zpid/",
@@ -3236,7 +3236,7 @@
     },
     {
       "id": "34027151",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.601Z",
       "address": "1863 Ward Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1863-Ward-Rd-Columbus-OH-43224/34027151_zpid/",
@@ -3264,7 +3264,7 @@
     },
     {
       "id": "34026687",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.601Z",
       "address": "1997 Ferris Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/1997-Ferris-Rd-Columbus-OH-43224/34026687_zpid/",
@@ -3292,7 +3292,7 @@
     },
     {
       "id": "33877978",
-      "analysisDate": "2026-01-10T19:03:30.594Z",
+      "analysisDate": "2026-01-10T19:24:26.601Z",
       "address": "2899 Howey Rd, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/2899-Howey-Rd-Columbus-OH-43224/33877978_zpid/",
@@ -3320,7 +3320,7 @@
     },
     {
       "id": "449392018",
-      "analysisDate": "2026-01-10T19:03:30.592Z",
+      "analysisDate": "2026-01-10T19:24:26.598Z",
       "address": "3137 Westerville Rd LOT 91, Columbus, OH 43224",
       "zipCode": "unknown",
       "zillowUrl": "/homedetails/3137-Westerville-Rd-LOT-91-Columbus-OH-43224/449392018_zpid/",

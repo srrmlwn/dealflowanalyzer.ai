@@ -30,6 +30,15 @@ interface AnalysisProperty {
   isPositiveCashFlow: boolean;
   isGoodROI: boolean;
   isGoodCapRate: boolean;
+  priceComparison?: {
+    avgRecentlySoldPrice: number;
+    percentAboveMarket: number;
+    soldCompsCount: number;
+    marketCondition: 'HOT' | 'BALANCED' | 'COLD';
+    medianSoldPrice: number;
+    pricePerSqFt: number;
+    avgPricePerSqFt: number;
+  };
 }
 
 interface AnalysisData {
@@ -142,7 +151,8 @@ const Analysis: NextPage = () => {
               missingFields: result.dataQuality.missingDataFields.length,
               isPositiveCashFlow: result.financialMetrics.monthlyCashFlow > 0,
               isGoodROI: result.financialMetrics.cashOnCashReturn > 8,
-              isGoodCapRate: result.financialMetrics.capRate > 6
+              isGoodCapRate: result.financialMetrics.capRate > 6,
+              priceComparison: result.priceComparison
             };
           })
         };
@@ -238,7 +248,8 @@ const Analysis: NextPage = () => {
                 missingFields: result.dataQuality.missingDataFields.length,
                 isPositiveCashFlow: result.financialMetrics.monthlyCashFlow > 0,
                 isGoodROI: result.financialMetrics.cashOnCashReturn > 8,
-                isGoodCapRate: result.financialMetrics.capRate > 6
+                isGoodCapRate: result.financialMetrics.capRate > 6,
+                priceComparison: result.priceComparison
               };
             })
           };
@@ -592,7 +603,7 @@ const Analysis: NextPage = () => {
                         sortDirection === 'asc' ? <ArrowUpIcon className="inline h-4 w-4 ml-1" /> : <ArrowDownIcon className="inline h-4 w-4 ml-1" />
                       )}
                     </th>
-                    <th 
+                    <th
                       className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100"
                       onClick={() => handleSort('totalCashInvested')}
                     >
@@ -600,6 +611,9 @@ const Analysis: NextPage = () => {
                       {sortField === 'totalCashInvested' && (
                         sortDirection === 'asc' ? <ArrowUpIcon className="inline h-4 w-4 ml-1" /> : <ArrowDownIcon className="inline h-4 w-4 ml-1" />
                       )}
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Price vs Market
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Data Quality
@@ -659,6 +673,25 @@ const Analysis: NextPage = () => {
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         ${property.totalCashInvested.toLocaleString()}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm">
+                        {property.priceComparison ? (
+                          <div>
+                            <span className={`font-medium ${
+                              property.priceComparison.percentAboveMarket < -5 ? 'text-green-600' :
+                              property.priceComparison.percentAboveMarket > 5 ? 'text-red-600' :
+                              'text-yellow-600'
+                            }`}>
+                              {property.priceComparison.percentAboveMarket > 0 ? '+' : ''}
+                              {property.priceComparison.percentAboveMarket.toFixed(1)}%
+                            </span>
+                            <div className="text-xs text-gray-500">
+                              {property.priceComparison.marketCondition} ({property.priceComparison.soldCompsCount} comps)
+                            </div>
+                          </div>
+                        ) : (
+                          <span className="text-xs text-gray-400">No data</span>
+                        )}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm">
                         <div className="flex items-center">

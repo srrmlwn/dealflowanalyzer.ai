@@ -10,7 +10,7 @@ export interface StorageConfig {
 }
 
 export class DataStorageService {
-  private config: StorageConfig;
+  protected config: StorageConfig;
 
   constructor(dataPath: string = './data') {
     this.config = {
