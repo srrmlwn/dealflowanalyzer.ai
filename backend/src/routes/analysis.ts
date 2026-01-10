@@ -361,31 +361,65 @@ router.get('/columns', (req: Request, res: Response) => {
  */
 router.post('/refresh', async (req: Request, res: Response): Promise<void> => {
   try {
-    const { zipCode = '43211' } = req.body;
-    
-    // For now, simulate fresh analysis by returning updated timestamp
-    // In a real implementation, this would re-run the analysis
-    const mockAnalysisResult = {
-      timestamp: new Date().toISOString(),
-      zipCodes: [zipCode],
-      totalProperties: 71,
-      successfulAnalyses: 71,
-      failedAnalyses: 0,
-      results: [], // Would contain actual analysis results
-      errors: [],
-      summary: {
-        averageCashFlow: -11734.81,
-        averageROI: -28.55,
-        averageCapRate: 0.15,
-        topPerformers: ['2072183555', '33861680', '33859869'],
-        dataQualityScore: 8.45
+    // Load property service to get stored properties
+    const propertyService = new PropertyService({
+      apiKey: process.env['RAPIDAPI_KEY'] || '',
+      apiHost: process.env['RAPIDAPI_HOST'] || '',
+      rateLimit: parseInt(process.env['API_RATE_LIMIT'] || '100'),
+      rateWindow: parseInt(process.env['API_RATE_WINDOW'] || '86400'),
+      dataPath: join(dataPath)
+    });
+
+    // Get all available zip codes
+    const zipCodes = propertyService.getAvailableZipCodes();
+
+    if (zipCodes.length === 0) {
+      res.status(404).json({
+        error: 'No property data found',
+        message: 'Please fetch properties first before running analysis'
+      });
+      return;
+    }
+
+    // Load all properties from all zip codes
+    const allProperties: any[] = [];
+    for (const zipCode of zipCodes) {
+      const dates = propertyService.getAvailableDates(zipCode);
+      if (dates.length > 0) {
+        const latestDate = dates[0]; // Dates are sorted, most recent first
+        const properties = propertyService.loadProperties(zipCode, latestDate);
+        if (properties && properties.length > 0) {
+          allProperties.push(...properties);
+        }
       }
-    };
-    
+    }
+
+    if (allProperties.length === 0) {
+      res.status(404).json({
+        error: 'No properties found',
+        message: 'No property data available to analyze'
+      });
+      return;
+    }
+
+    // Run batch analysis
+    const financialConfig = getFinancialConfig();
+    const batchResult = await analysisService.analyzeBatch(allProperties, financialConfig);
+
+    // Save results
+    if (batchResult.results.length > 0) {
+      try {
+        analysisStorage.saveBatchAnalysisResult(batchResult, config.getBuyboxConfig().name, allProperties);
+      } catch (saveError) {
+        console.error('Failed to save analysis results:', saveError);
+        // Continue without failing the request
+      }
+    }
+
     res.json({
       success: true,
-      result: mockAnalysisResult,
-      message: 'Analysis refreshed successfully',
+      result: batchResult,
+      message: `Successfully analyzed ${batchResult.results.length} properties`,
       timestamp: new Date().toISOString()
     });
 

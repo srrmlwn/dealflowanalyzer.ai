@@ -1,6 +1,7 @@
-import { readFileSync, existsSync, readdirSync } from 'fs';
+import { readFileSync, existsSync, readdirSync, mkdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import { Property } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types';
+import { ZillowApiService, SearchParams } from './zillowService';
 
 export interface PriceComparisonMetrics {
   avgRecentlySoldPrice: number;
@@ -12,13 +13,23 @@ export interface PriceComparisonMetrics {
   avgPricePerSqFt: number;
 }
 
+export interface FetchRecentlySoldOptions {
+  zipCode: string;
+  minPrice?: number;
+  maxPrice?: number;
+  daysBack?: number; // How many days back to look for sold properties
+  saveToFile?: boolean;
+}
+
 export class RecentlySoldService {
   private dataPath: string;
   private cache: Map<string, Property[]>;
+  private zillowService: ZillowApiService | undefined;
 
-  constructor(dataPath: string = './data') {
+  constructor(dataPath: string = './data', zillowService?: ZillowApiService) {
     this.dataPath = dataPath;
     this.cache = new Map();
+    this.zillowService = zillowService;
   }
 
   loadRecentlySold(zipCode: string, date?: string): Property[] {
@@ -41,7 +52,6 @@ export class RecentlySoldService {
   private loadRecentlySoldFromDisk(zipCode: string, date?: string): Property[] {
     try {
       const recentlySoldPath = join(this.dataPath, 'recently-sold', zipCode);
-
       if (!existsSync(recentlySoldPath)) {
         console.log(`No recently sold data for zip code ${zipCode}`);
         return [];
@@ -58,10 +68,6 @@ export class RecentlySoldService {
       }
 
       const jsonFiles = readdirSync(dateDir).filter(f => f.endsWith('.json'));
-      if (jsonFiles.length === 0) {
-        return [];
-      }
-
       const firstFile = jsonFiles[0];
       if (!firstFile) {
         return [];
@@ -69,7 +75,6 @@ export class RecentlySoldService {
 
       const filePath = join(dateDir, firstFile);
       const data = JSON.parse(readFileSync(filePath, 'utf-8'));
-
       return data.properties || [];
     } catch (error) {
       console.error(`Error loading recently sold data for zip ${zipCode}:`, error);
@@ -181,5 +186,77 @@ export class RecentlySoldService {
     return readdirSync(directoryPath, { withFileTypes: true })
       .filter(dirent => dirent.isDirectory())
       .map(dirent => dirent.name);
+  }
+
+  async fetchRecentlySoldFromAPI(options: FetchRecentlySoldOptions): Promise<Property[]> {
+    if (!this.zillowService) {
+      throw new Error('ZillowApiService not configured. Cannot fetch from API.');
+    }
+
+    const { zipCode, minPrice, maxPrice, daysBack = 180, saveToFile = true } = options;
+    console.log(`Fetching recently sold properties for zip code ${zipCode}...`);
+
+    const searchParams: SearchParams = {
+      location: zipCode,
+      statusType: 'RecentlySold',
+      minPrice,
+      maxPrice,
+      daysOn: String(daysBack)
+    };
+
+    const response = await this.zillowService.searchProperties(searchParams);
+    const properties = response.props || [];
+    console.log(`Found ${properties.length} recently sold properties in ${zipCode}`);
+
+    if (saveToFile && properties.length > 0) {
+      this.saveRecentlySoldToFile(zipCode, properties);
+    }
+
+    const cacheKey = `${zipCode}-latest`;
+    this.cache.set(cacheKey, properties);
+
+    return properties;
+  }
+
+  async fetchRecentlySoldBatch(
+    zipCodes: string[],
+    options: Omit<FetchRecentlySoldOptions, 'zipCode'> = {}
+  ): Promise<Map<string, Property[]>> {
+    const results = new Map<string, Property[]>();
+    const lastIndex = zipCodes.length - 1;
+
+    for (let i = 0; i < zipCodes.length; i++) {
+      const zipCode = zipCodes[i]!;
+      try {
+        const properties = await this.fetchRecentlySoldFromAPI({ zipCode, ...options });
+        results.set(zipCode, properties);
+
+        if (i < lastIndex) {
+          await new Promise(resolve => setTimeout(resolve, 2000));
+        }
+      } catch (error) {
+        console.error(`Failed to fetch recently sold for ${zipCode}:`, error);
+        results.set(zipCode, []);
+      }
+    }
+
+    return results;
+  }
+
+  private saveRecentlySoldToFile(zipCode: string, properties: Property[]): void {
+    const today = new Date().toISOString().split('T')[0]!;
+    const dirPath = join(this.dataPath, 'recently-sold', zipCode, today);
+    mkdirSync(dirPath, { recursive: true });
+
+    const filePath = join(dirPath, `recently-sold-${zipCode}.json`);
+    const data = {
+      zipCode,
+      fetchDate: today,
+      count: properties.length,
+      properties
+    };
+
+    writeFileSync(filePath, JSON.stringify(data, null, 2));
+    console.log(`Saved ${properties.length} recently sold properties to ${filePath}`);
   }
 }

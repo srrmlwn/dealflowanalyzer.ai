@@ -19,6 +19,7 @@
     "lint:frontend": "cd frontend && npm run lint",
     "test:analysis": "cd backend && npm run build && cd .. && npx ts-node scripts/testFinancialAnalysis.ts",
     "generate:analysis": "cd backend && npm run build && cd .. && npx ts-node scripts/generateAnalysisData.ts",
+    "fetch:recently-sold": "cd backend && npm run build && cd .. && npx ts-node scripts/fetchRecentlySold.ts",
     "convert:hud": "npx ts-node scripts/convertHudData.ts"
   },
   "keywords": [

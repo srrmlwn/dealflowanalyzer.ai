@@ -449,34 +449,35 @@ Based on comprehensive codebase analysis, the application has:
 
 ---
 
-## PHASE 1: CRITICAL FIXES (Week 1)
+## PHASE 1: CRITICAL FIXES ✅ COMPLETE
 **Goal**: Make the application fully functional end-to-end
 
-### 1.1 Fix Frontend-Backend Integration
+### 1.1 Fix Frontend-Backend Integration ✅
 **Priority**: CRITICAL
-- [ ] Update `frontend/pages/analysis.tsx` to call `/api/analysis/results` instead of reading static JSON
-- [ ] Fix the "Refresh Analysis" button to properly trigger backend recalculation
-- [ ] Implement proper API error handling and loading states
-- [ ] Add backend health check and connectivity indicator
-- [ ] Test data flow: Zillow → Analysis → Frontend Display
+- [x] Update `frontend/pages/analysis.tsx` to call `/api/analysis/results` instead of reading static JSON
+- [x] Fix the "Refresh Analysis" button to properly trigger backend recalculation
+- [x] Implement proper API error handling and loading states
+- [x] Add backend health check and connectivity indicator
+- [x] Test data flow: Zillow → Analysis → Frontend Display
 
-### 1.2 Complete Analysis Data Pipeline
+### 1.2 Complete Analysis Data Pipeline ✅
 **Priority**: HIGH
-- [ ] Run `npm run generate:analysis` to populate analysis results for existing properties
-- [ ] Verify analysis results are stored in `/data/analysis/{zipCode}/{date}/`
-- [ ] Ensure backend `/api/analysis/results` endpoint returns real data
-- [ ] Add proper date/zipcode filtering in API endpoints
+- [x] Run `npm run generate:analysis` to populate analysis results for existing properties
+- [x] Verify analysis results are stored in `/data/analysis/{zipCode}/{date}/`
+- [x] Ensure backend `/api/analysis/results` endpoint returns real data
+- [x] Add proper date/zipcode filtering in API endpoints
 
-### 1.3 Add Recently Sold Data Fetching
+### 1.3 Add Recently Sold Data Fetching ✅
 **Priority**: MEDIUM (user requested)
-- [ ] Implement recently sold property fetching via Zillow API (already supports `statusType: 'RecentlySold'`)
-- [ ] Store recently sold data separately: `/data/recently-sold/{zipCode}/{date}/`
-- [ ] Create comparison logic: list price vs. recent sold prices in same zip
-- [ ] Add "Price vs. Market" metric showing % above/below recent sold avg
-- [ ] Display comparison on frontend analysis page
+- [x] Implement recently sold property fetching via Zillow API (already supports `statusType: 'RecentlySold'`)
+- [x] Store recently sold data separately: `/data/recently-sold/{zipCode}/{date}/`
+- [x] Create comparison logic: list price vs. recent sold prices in same zip
+- [x] Add "Price vs. Market" metric showing % above/below recent sold avg
+- [x] Display comparison on frontend analysis page
+- [x] Add API integration for real-time fetching with `npm run fetch:recently-sold`
 
-**Estimated Effort**: 3-4 days
-**Outcome**: Fully functional data pipeline from Zillow → Analysis → UI
+**Completed**: 2026-01-10
+**Outcome**: Fully functional data pipeline from Zillow → Analysis → UI with both mock and real API support
 
 ---
 
@@ -907,3 +908,112 @@ If we start immediately, I recommend this order:
 **Files Modified:**
 - `frontend/pages/analysis.tsx` - Added Link import and property detail links
 - `CODEBASE_CONTEXT.md` - Updated session log
+
+---
+
+### Session 2 - 2026-01-10 (Phase 1 API Enhancement)
+
+**Phase 1.3 Enhancement: Real API Integration for Recently Sold Data** ✅
+
+#### What Was Completed
+
+**API Fetching Capability Added**
+- Enhanced `RecentlySoldService` with Zillow API integration
+- Added `fetchRecentlySoldFromAPI()` method to fetch real recently sold data
+- Added `fetchRecentlySoldBatch()` for multi-zip code fetching with rate limiting
+- Implemented automatic data saving to disk after API fetch
+- Added configurable options: daysBack (default 180 days), price range filtering
+- Service now supports both modes: reading from disk (cached) or fetching from API
+
+**New Script Created**
+- `scripts/fetchRecentlySold.ts` - Command-line tool to fetch recently sold properties
+- Uses Zillow API with `statusType: 'RecentlySold'`
+- Respects API rate limits (2-second delay between requests)
+- Saves data to: `backend/data/recently-sold/{zipCode}/{date}/`
+- npm script added: `npm run fetch:recently-sold`
+
+**Data Pipeline Options**
+Users can now choose between:
+1. **Mock Data (Free)**: Use `scripts/createMockRecentlySold.js` for testing/development
+2. **Real API Data**: Use `npm run fetch:recently-sold` for production analysis
+
+**Key Features**
+- Automatic caching to avoid redundant API calls
+- Intelligent comparable selection (bedroom match ± 1, size ratio 0.7-1.3x)
+- Price comparison metrics: avg/median sold price, price per sqft, market condition
+- Error handling with graceful fallbacks
+- TypeScript strict mode compliance
+
+#### Files Created
+- `scripts/fetchRecentlySold.ts` - API fetching script
+
+#### Files Modified
+- `backend/src/services/recentlySoldService.ts` - Added API integration
+  - New methods: `fetchRecentlySoldFromAPI()`, `fetchRecentlySoldBatch()`, `saveRecentlySoldToFile()`
+  - New interface: `FetchRecentlySoldOptions`
+  - Constructor now accepts optional `ZillowApiService` dependency
+- `package.json` - Added `fetch:recently-sold` script
+
+#### Usage Instructions
+
+**To fetch real recently sold data:**
+```bash
+npm run fetch:recently-sold
+```
+
+**To generate mock data (no API costs):**
+```bash
+node scripts/createMockRecentlySold.js
+```
+
+**Configuration:**
+- Edit `config/buybox.json` to set zip codes and price range
+- Script automatically uses these settings
+- Looks back 180 days by default (6 months of sold data)
+
+#### Technical Implementation
+
+**API Integration Pattern:**
+```typescript
+// Service can work with or without API access
+const recentlySoldService = new RecentlySoldService(
+  dataPath,
+  zillowService  // Optional - enables API fetching
+);
+
+// Fetch from API
+const properties = await recentlySoldService.fetchRecentlySoldFromAPI({
+  zipCode: '43211',
+  minPrice: 0,
+  maxPrice: 250000,
+  daysBack: 180,
+  saveToFile: true
+});
+
+// Or load from disk (cached data)
+const cachedProperties = recentlySoldService.loadRecentlySold('43211');
+```
+
+**Data Structure:**
+```json
+{
+  "zipCode": "43211",
+  "fetchDate": "2026-01-10",
+  "count": 48,
+  "properties": [...]
+}
+```
+
+#### Next Steps
+Phase 1 is now **FULLY COMPLETE** with both mock and real API support:
+- ✅ Frontend-backend integration
+- ✅ Analysis data pipeline
+- ✅ Recently sold data (mock + real API)
+
+Ready to proceed to **Phase 2.2**: Enhanced Financial Metrics (equity over time, amortization)
+
+---
+
+**Last Updated**: 2026-01-10 23:45 UTC
+**Status**: Phase 1 COMPLETE ✅ | Phase 2.1 Complete ✅
+**Next Action**: Continue Phase 2.2 - Enhanced financial metrics (equity tracking, amortization schedule)
