@@ -76,7 +76,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       <Head>
         <title>Deal Flow Analyzer</title>
         <meta name="description" content="Real estate investment analysis tool" />
@@ -128,9 +128,24 @@ const Home: NextPage = () => {
           )}
 
           <div className="mt-8 text-center">
-            <p className="text-gray-600">
+            <p className="text-gray-600 mb-4">
               Phase 1 setup complete! Backend and frontend are connected.
             </p>
+            <div className="space-x-4">
+              <a 
+                href="/analysis" 
+                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                View Analysis Results
+              </a>
+              <a 
+                href="http://localhost:8000/health" 
+                target="_blank"
+                className="inline-flex items-center px-6 py-3 bg-gray-600 text-white font-medium rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                Check Backend Status
+              </a>
+            </div>
           </div>
         </div>
       </main>
