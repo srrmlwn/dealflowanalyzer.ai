@@ -1,6 +1,6 @@
 {
   "mortgage": {
-    "interestRate": 7.5,
+    "interestRate": 6.50,
     "downPaymentPercent": 20,
     "loanTermYears": 30,
     "points": 0,
