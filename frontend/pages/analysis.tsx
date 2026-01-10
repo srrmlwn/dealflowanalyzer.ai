@@ -53,87 +53,212 @@ const Analysis: NextPage = () => {
   const [filterROI, setFilterROI] = useState<number>(-100);
   const [filterCashFlow, setFilterCashFlow] = useState<number>(-10000);
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const [backendHealthy, setBackendHealthy] = useState<boolean | null>(null);
 
   useEffect(() => {
+    checkBackendHealth();
     loadAnalysisData();
   }, []);
+
+  const checkBackendHealth = async () => {
+    try {
+      const response = await fetch('http://localhost:8000/health');
+      setBackendHealthy(response.ok);
+    } catch {
+      setBackendHealthy(false);
+    }
+  };
 
   const loadAnalysisData = async (forceRefresh = false) => {
     try {
       setLoading(true);
-      
+      setError(null);
+
       if (forceRefresh) {
-        // Run fresh analysis via backend API
+        // Re-run analysis via backend API
         console.log('Running fresh analysis...');
-        const analysisResponse = await fetch('http://localhost:8000/api/analysis/refresh', {
+
+        // Load properties from both zip codes
+        const zip1Response = await fetch('/data/properties/43211/2025-09-15/Columbus OH - Simplified Buybox.json');
+        const zip2Response = await fetch('/data/properties/43224/2025-09-15/Columbus OH - Simplified Buybox.json');
+
+        if (!zip1Response.ok || !zip2Response.ok) {
+          throw new Error('Failed to load property data');
+        }
+
+        const zip1Data = await zip1Response.json();
+        const zip2Data = await zip2Response.json();
+
+        const allProperties = [...zip1Data.properties, ...zip2Data.properties];
+        const validProperties = allProperties.filter((p: any) =>
+          p.price > 1000 && p.bedrooms > 0 && p.livingArea > 0
+        );
+
+        // Call backend batch analysis
+        const analysisResponse = await fetch('http://localhost:8000/api/analysis/batch', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ 
-            zipCode: '43211'
+          body: JSON.stringify({
+            properties: validProperties,
+            saveResults: true
           })
         });
-        
+
         if (!analysisResponse.ok) {
-          throw new Error('Failed to run analysis');
+          throw new Error(`Analysis failed: ${analysisResponse.status}`);
         }
-        
+
         const analysisResult = await analysisResponse.json();
-        
+
         // Transform backend result to frontend format
         const transformedData = {
-          timestamp: analysisResult.result.timestamp,
+          timestamp: analysisResult.timestamp,
           summary: analysisResult.result.summary,
-          properties: analysisResult.result.results.map((result: any) => ({
-            id: result.propertyId,
-            analysisDate: result.analysisDate,
-            address: `Property ${result.propertyId}`, // We'd need to enhance this
-            zipCode: '43211',
-            zillowUrl: '',
-            price: 0,
-            bedrooms: 0,
-            bathrooms: 0,
-            livingArea: 0,
-            monthlyRent: result.financialMetrics.monthlyRent,
-            monthlyMortgage: result.financialMetrics.monthlyMortgagePayment,
-            monthlyExpenses: result.financialMetrics.monthlyOperatingExpenses,
-            monthlyCashFlow: result.financialMetrics.monthlyCashFlow,
-            annualCashFlow: result.financialMetrics.annualCashFlow,
-            cashOnCashReturn: result.financialMetrics.cashOnCashReturn,
-            capRate: result.financialMetrics.capRate,
-            totalCashInvested: result.financialMetrics.totalCashInvested,
-            projectedValue: result.financialMetrics.projectedValue,
-            rentSource: result.rentalEstimate.source,
-            rentConfidence: result.rentalEstimate.confidence,
-            hasRentalData: result.dataQuality.hasRentalData,
-            hasZestimate: result.dataQuality.hasZestimate,
-            missingFields: result.dataQuality.missingDataFields.length,
-            isPositiveCashFlow: result.financialMetrics.monthlyCashFlow > 0,
-            isGoodROI: result.financialMetrics.cashOnCashReturn > 8,
-            isGoodCapRate: result.financialMetrics.capRate > 6
-          }))
+          properties: analysisResult.result.results.map((result: any) => {
+            const originalProp = validProperties.find((p: any) => p.zpid === result.propertyId);
+            return {
+              id: result.propertyId,
+              analysisDate: result.analysisDate,
+              address: originalProp?.address || `Property ${result.propertyId}`,
+              zipCode: originalProp?.zipcode || 'unknown',
+              zillowUrl: originalProp?.detailUrl || '',
+              price: originalProp?.price || 0,
+              bedrooms: originalProp?.bedrooms || 0,
+              bathrooms: originalProp?.bathrooms || 0,
+              livingArea: originalProp?.livingArea || 0,
+              monthlyRent: result.financialMetrics.monthlyRent,
+              monthlyMortgage: result.financialMetrics.monthlyMortgagePayment,
+              monthlyExpenses: result.financialMetrics.monthlyOperatingExpenses,
+              monthlyCashFlow: result.financialMetrics.monthlyCashFlow,
+              annualCashFlow: result.financialMetrics.annualCashFlow,
+              cashOnCashReturn: result.financialMetrics.cashOnCashReturn,
+              capRate: result.financialMetrics.capRate,
+              totalCashInvested: result.financialMetrics.totalCashInvested,
+              projectedValue: result.financialMetrics.projectedValue,
+              rentSource: result.rentalEstimate.source,
+              rentConfidence: result.rentalEstimate.confidence,
+              hasRentalData: result.dataQuality.hasRentalData,
+              hasZestimate: result.dataQuality.hasZestimate,
+              missingFields: result.dataQuality.missingDataFields.length,
+              isPositiveCashFlow: result.financialMetrics.monthlyCashFlow > 0,
+              isGoodROI: result.financialMetrics.cashOnCashReturn > 8,
+              isGoodCapRate: result.financialMetrics.capRate > 6
+            };
+          })
         };
-        
+
         setData(transformedData);
       } else {
-        // Try to load cached results first
+        // Load from backend API results endpoint
         try {
-          const response = await fetch('/data/analysis-results.json');
-          if (response.ok) {
-            const analysisData = await response.json();
-            setData(analysisData);
-          } else {
-            // If no cached data, run fresh analysis
-            await loadAnalysisData(true);
+          const response = await fetch('http://localhost:8000/api/analysis/results');
+
+          if (!response.ok) {
+            // If backend fails, try static file as fallback
+            const staticResponse = await fetch('/data/analysis-results.json');
+            if (staticResponse.ok) {
+              const analysisData = await staticResponse.json();
+              setData(analysisData);
+              return;
+            }
+            throw new Error('Failed to load analysis results from backend');
+          }
+
+          const backendData = await response.json();
+
+          // Check if we have results
+          if (!backendData.results || backendData.results.length === 0) {
+            // No backend results, try static file
+            const staticResponse = await fetch('/data/analysis-results.json');
+            if (staticResponse.ok) {
+              const analysisData = await staticResponse.json();
+              setData(analysisData);
+            } else {
+              throw new Error('No analysis data available. Please run a refresh.');
+            }
             return;
           }
-        } catch {
-          // If cached data fails, run fresh analysis
-          await loadAnalysisData(true);
-          return;
+
+          // Transform backend results to frontend format
+          // Load property data to get addresses
+          const zip1Response = await fetch('/data/properties/43211/2025-09-15/Columbus OH - Simplified Buybox.json');
+          const zip2Response = await fetch('/data/properties/43224/2025-09-15/Columbus OH - Simplified Buybox.json');
+
+          let allProperties: any[] = [];
+          if (zip1Response.ok && zip2Response.ok) {
+            const zip1Data = await zip1Response.json();
+            const zip2Data = await zip2Response.json();
+            allProperties = [...zip1Data.properties, ...zip2Data.properties];
+          }
+
+          // Calculate summary statistics
+          const avgCashFlow = backendData.results.reduce((sum: number, r: any) => sum + r.financialMetrics.monthlyCashFlow, 0) / backendData.results.length;
+          const avgROI = backendData.results.reduce((sum: number, r: any) => sum + r.financialMetrics.cashOnCashReturn, 0) / backendData.results.length;
+          const avgCapRate = backendData.results.reduce((sum: number, r: any) => sum + r.financialMetrics.capRate, 0) / backendData.results.length;
+          const topPerformers = backendData.results
+            .sort((a: any, b: any) => b.financialMetrics.cashOnCashReturn - a.financialMetrics.cashOnCashReturn)
+            .slice(0, 3)
+            .map((r: any) => r.propertyId);
+          const dataQualityScore = backendData.results.filter((r: any) => r.dataQuality.hasRentalData).length / backendData.results.length * 100;
+
+          const transformedData = {
+            timestamp: backendData.timestamp,
+            summary: {
+              averageCashFlow: avgCashFlow,
+              averageROI: avgROI,
+              averageCapRate: avgCapRate,
+              topPerformers,
+              dataQualityScore
+            },
+            properties: backendData.results.map((result: any) => {
+              const originalProp = allProperties.find((p: any) => p.zpid === result.propertyId);
+              return {
+                id: result.propertyId,
+                analysisDate: result.analysisDate,
+                address: originalProp?.address || `Property ${result.propertyId}`,
+                zipCode: originalProp?.zipcode || 'unknown',
+                zillowUrl: originalProp?.detailUrl || '',
+                price: originalProp?.price || 0,
+                bedrooms: originalProp?.bedrooms || 0,
+                bathrooms: originalProp?.bathrooms || 0,
+                livingArea: originalProp?.livingArea || 0,
+                monthlyRent: result.financialMetrics.monthlyRent,
+                monthlyMortgage: result.financialMetrics.monthlyMortgagePayment,
+                monthlyExpenses: result.financialMetrics.monthlyOperatingExpenses,
+                monthlyCashFlow: result.financialMetrics.monthlyCashFlow,
+                annualCashFlow: result.financialMetrics.annualCashFlow,
+                cashOnCashReturn: result.financialMetrics.cashOnCashReturn,
+                capRate: result.financialMetrics.capRate,
+                totalCashInvested: result.financialMetrics.totalCashInvested,
+                projectedValue: result.financialMetrics.projectedValue,
+                rentSource: result.rentalEstimate.source,
+                rentConfidence: result.rentalEstimate.confidence,
+                hasRentalData: result.dataQuality.hasRentalData,
+                hasZestimate: result.dataQuality.hasZestimate,
+                missingFields: result.dataQuality.missingDataFields.length,
+                isPositiveCashFlow: result.financialMetrics.monthlyCashFlow > 0,
+                isGoodROI: result.financialMetrics.cashOnCashReturn > 8,
+                isGoodCapRate: result.financialMetrics.capRate > 6
+              };
+            })
+          };
+
+          setData(transformedData);
+        } catch (err) {
+          console.error('Error loading from backend:', err);
+          // Final fallback to static file
+          const staticResponse = await fetch('/data/analysis-results.json');
+          if (staticResponse.ok) {
+            const analysisData = await staticResponse.json();
+            setData(analysisData);
+          } else {
+            throw err;
+          }
         }
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load analysis data');
+      console.error('Analysis loading error:', err);
     } finally {
       setLoading(false);
     }
@@ -256,9 +381,29 @@ const Analysis: NextPage = () => {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">
-              Financial Analysis Results
-            </h1>
+            <div className="flex items-center justify-between mb-2">
+              <h1 className="text-3xl font-bold text-gray-900">
+                Financial Analysis Results
+              </h1>
+              <div className="flex items-center space-x-2">
+                {backendHealthy === null ? (
+                  <span className="flex items-center text-gray-500 text-sm">
+                    <div className="h-2 w-2 rounded-full bg-gray-400 mr-2 animate-pulse"></div>
+                    Checking backend...
+                  </span>
+                ) : backendHealthy ? (
+                  <span className="flex items-center text-green-600 text-sm">
+                    <div className="h-2 w-2 rounded-full bg-green-500 mr-2"></div>
+                    Backend connected
+                  </span>
+                ) : (
+                  <span className="flex items-center text-red-600 text-sm">
+                    <div className="h-2 w-2 rounded-full bg-red-500 mr-2"></div>
+                    Backend offline
+                  </span>
+                )}
+              </div>
+            </div>
             <div className="flex items-center justify-between">
               <p className="text-gray-600">
                 Analysis completed on {new Date(data.timestamp).toLocaleDateString()} at {new Date(data.timestamp).toLocaleTimeString()} • {data.properties.length} properties analyzed

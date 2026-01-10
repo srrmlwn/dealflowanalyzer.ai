@@ -417,3 +417,374 @@ npm run test:analysis
 - `scripts/testFinancialAnalysis.ts` - Test analysis calculations
 
 This codebase represents a production-ready real estate investment analysis platform with comprehensive financial modeling, data integration, and user-friendly presentation of complex investment metrics.
+
+---
+
+## MY NOTES
+There are 3 fundamental functions that I would like to implement.
+The current code base has all of them implemented to some level.
+
+The functions are - 
+1. Data Fetcher - given a buybox config (e.g., zip codes, city names, geomap etc for location, property criteria such as price, bedrooms, single family/multifamily etc. and other possible options), fetch the listings from either an API, or scrape Zillow/Redfin/MLS etc. 
+
+I don't want to invest in infrastructure yet, so download data as json and store on disk is fine. 
+
+Eventually, I also want to download recently sold listings, etc., to compare prices of listed property vs recently sold ones that match the same criteria.
+
+2. Metric Calculations - calculate cashflow, spread, ROI, NRR, equity over time. Calculations can take inu user configurations, such as interest rate, etc., but where possible leverage existing data sets, such as as HUD rental estimates, rentometer estimates, county property taxes., etc
+
+3. Webapp (eventually mobile app) - to query the data, view listings and our analysis, maybe even an chatbot (like claude chat or chatgpt) to interact with our application using natural language.
+
+---
+
+## CLAUDE'S ITERATIVE IMPROVEMENT PLAN
+
+### Executive Summary
+Based on comprehensive codebase analysis, the application has:
+- **Data Fetcher**: 70% complete (excellent Zillow integration; missing recently sold & alternative sources)
+- **Metric Calculations**: 85% complete (all primary metrics solid; missing equity tracking & tax analysis)
+- **Webapp**: 55% complete (beautiful UI but disconnected from backend APIs)
+
+**Critical Issue**: Frontend-backend integration is broken. The frontend displays static JSON instead of calling backend APIs.
+
+---
+
+## PHASE 1: CRITICAL FIXES (Week 1)
+**Goal**: Make the application fully functional end-to-end
+
+### 1.1 Fix Frontend-Backend Integration
+**Priority**: CRITICAL
+- [ ] Update `frontend/pages/analysis.tsx` to call `/api/analysis/results` instead of reading static JSON
+- [ ] Fix the "Refresh Analysis" button to properly trigger backend recalculation
+- [ ] Implement proper API error handling and loading states
+- [ ] Add backend health check and connectivity indicator
+- [ ] Test data flow: Zillow → Analysis → Frontend Display
+
+### 1.2 Complete Analysis Data Pipeline
+**Priority**: HIGH
+- [ ] Run `npm run generate:analysis` to populate analysis results for existing properties
+- [ ] Verify analysis results are stored in `/data/analysis/{zipCode}/{date}/`
+- [ ] Ensure backend `/api/analysis/results` endpoint returns real data
+- [ ] Add proper date/zipcode filtering in API endpoints
+
+### 1.3 Add Recently Sold Data Fetching
+**Priority**: MEDIUM (user requested)
+- [ ] Implement recently sold property fetching via Zillow API (already supports `statusType: 'RecentlySold'`)
+- [ ] Store recently sold data separately: `/data/recently-sold/{zipCode}/{date}/`
+- [ ] Create comparison logic: list price vs. recent sold prices in same zip
+- [ ] Add "Price vs. Market" metric showing % above/below recent sold avg
+- [ ] Display comparison on frontend analysis page
+
+**Estimated Effort**: 3-4 days
+**Outcome**: Fully functional data pipeline from Zillow → Analysis → UI
+
+---
+
+## PHASE 2: QUICK WINS & ENHANCEMENTS (Week 2-3)
+
+### 2.1 Property Detail Page
+**Priority**: HIGH (major UX improvement)
+- [ ] Create `/pages/property/[zpid].tsx` for individual property deep-dive
+- [ ] Show complete financial breakdown with charts
+- [ ] Display all 8 operating expense categories
+- [ ] Show amortization schedule preview
+- [ ] Add property images from Zillow data
+- [ ] Include "Save to Watchlist" functionality
+- [ ] Link from analysis table to detail page
+
+### 2.2 Enhanced Financial Metrics
+**Priority**: MEDIUM (user requested "equity over time")
+- [ ] Implement amortization schedule calculation
+- [ ] Add equity buildup tracking over holding period
+- [ ] Calculate year-by-year cash flow projection
+- [ ] Add basic depreciation calculation (straight-line, 27.5 years)
+- [ ] Display equity accumulation chart on detail page
+
+### 2.3 Data Quality & User Experience
+**Priority**: MEDIUM
+- [ ] Add pagination to analysis table (currently shows all 71 properties)
+- [ ] Persist sort order and filters to localStorage
+- [ ] Add property image thumbnails to table
+- [ ] Implement "Export Selected" for filtered results
+- [ ] Add data freshness indicator ("Last updated 11 days ago")
+- [ ] Create data refresh scheduling interface
+
+### 2.4 Comparison Features
+**Priority**: MEDIUM
+- [ ] Add "Compare Properties" checkbox selection
+- [ ] Create `/pages/compare.tsx` for side-by-side comparison
+- [ ] Show metric differences and which property wins on each metric
+- [ ] Add "vs. Recent Sold" comparison view
+
+**Estimated Effort**: 7-10 days
+**Outcome**: Professional, feature-complete analysis tool ready for real use
+
+---
+
+## PHASE 3: EXPANDED DATA SOURCES (Week 4-5)
+
+### 3.1 Rentometer Integration
+**Priority**: MEDIUM (user mentioned)
+- [ ] Research Rentometer API access (https://www.rentometer.com/api)
+- [ ] Implement `RentometerService` similar to `ZillowService`
+- [ ] Add Rentometer as Priority 2.5 (between HUD and Zillow fallback)
+- [ ] Display rental estimate comparison: HUD vs. Rentometer vs. Zillow
+- [ ] Add confidence scoring based on source agreement
+
+### 3.2 Redfin Scraper
+**Priority**: LOW (alternative to Zillow)
+- [ ] Implement Redfin web scraper (Redfin has no public API)
+- [ ] Use Puppeteer/Playwright for headless browsing
+- [ ] Extract property data matching Zillow schema
+- [ ] Add Redfin as fallback if Zillow API rate limits hit
+- [ ] Store Redfin data with source attribution
+
+### 3.3 County Tax Data Integration
+**Priority**: MEDIUM (user mentioned "county property taxes")
+- [ ] Research county assessor APIs for Ohio (Franklin County for Columbus)
+- [ ] Implement property tax lookup by parcel ID or address
+- [ ] Replace estimated 1.2% with actual county tax rates
+- [ ] Add tax history and assessment history
+- [ ] Display "Actual Tax" vs. "Estimated Tax" comparison
+
+**Estimated Effort**: 7-10 days
+**Outcome**: Multi-source data validation and improved accuracy
+
+---
+
+## PHASE 4: ADVANCED ANALYTICS (Week 6-8)
+
+### 4.1 Scenario Modeling ("What-If" Analysis)
+**Priority**: HIGH (mentioned in Phase 2 opportunities)
+- [ ] Create `/pages/scenario.tsx` for interactive modeling
+- [ ] Add adjustable sliders for interest rate, down payment, rent, expenses
+- [ ] Real-time recalculation as user adjusts parameters
+- [ ] "Best case / Base case / Worst case" preset scenarios
+- [ ] Save and compare multiple scenarios per property
+
+### 4.2 Market Trends & Historical Analysis
+**Priority**: MEDIUM
+- [ ] Track property data over time (create historical snapshots)
+- [ ] Calculate price trends: 30-day, 90-day, 1-year changes
+- [ ] Rental rate trends by zip code
+- [ ] Days on market analysis (identify motivated sellers)
+- [ ] "Hot vs. Cold" market indicators
+- [ ] Time-series charts for market visualization
+
+### 4.3 Portfolio Management
+**Priority**: MEDIUM
+- [ ] Add "Watchlist" for favorited properties
+- [ ] Create portfolio aggregation (if user owns multiple properties)
+- [ ] Portfolio-level metrics: total cash flow, total equity, diversification
+- [ ] Target allocation vs. actual allocation
+- [ ] Portfolio rebalancing recommendations
+
+### 4.4 Alerts & Notifications
+**Priority**: MEDIUM
+- [ ] Email/SMS alerts for properties matching criteria
+- [ ] Price drop notifications on watchlisted properties
+- [ ] New listing alerts for buybox criteria
+- [ ] Market change alerts (sudden inventory increase/decrease)
+- [ ] Configurable alert thresholds (e.g., "notify if ROI > 10%")
+
+**Estimated Effort**: 10-14 days
+**Outcome**: Professional-grade investment analysis platform
+
+---
+
+## PHASE 5: AI/CHATBOT INTEGRATION (Week 9-10)
+
+### 5.1 Natural Language Query Interface
+**Priority**: MEDIUM (user specifically requested)
+- [ ] Integrate Claude API or OpenAI API
+- [ ] Create `/api/chat` endpoint for conversational queries
+- [ ] Build context from current analysis results and property data
+- [ ] Support queries like:
+  - "Show me properties with positive cash flow"
+  - "Compare 123 Main St to 456 Oak Ave"
+  - "What's the best deal in 43211?"
+  - "Explain why this property has negative cash flow"
+- [ ] Add chat widget to analysis page (bottom-right corner)
+- [ ] Display chat responses with data tables and charts
+
+### 5.2 AI-Powered Insights
+**Priority**: LOW (experimental)
+- [ ] GPT-4 analysis of property descriptions for red flags
+- [ ] Sentiment analysis on neighborhood descriptions
+- [ ] Automated investment thesis generation per property
+- [ ] Risk assessment based on property characteristics
+- [ ] Comparable property recommendations
+
+**Estimated Effort**: 5-7 days
+**Outcome**: Differentiated product with AI-powered natural language interface
+
+---
+
+## PHASE 6: SCALE & POLISH (Week 11-12)
+
+### 6.1 Performance Optimization
+**Priority**: MEDIUM
+- [ ] Implement caching for frequently accessed data
+- [ ] Add database (SQLite or PostgreSQL) for faster queries
+- [ ] Index analysis results by multiple dimensions
+- [ ] Lazy loading for property images
+- [ ] Debounce filter inputs to reduce re-renders
+
+### 6.2 Multi-Market Expansion
+**Priority**: LOW (mentioned in Phase 4 opportunities)
+- [ ] Expand buybox to support multiple cities/states
+- [ ] City-level and state-level market aggregation
+- [ ] Market comparison: Columbus vs. Cleveland vs. Cincinnati
+- [ ] Market scoring: which markets have best opportunities
+
+### 6.3 Code Quality & Testing
+**Priority**: MEDIUM
+- [ ] Add comprehensive unit tests for all services
+- [ ] Integration tests for API endpoints
+- [ ] E2E tests for critical user flows (Playwright/Cypress)
+- [ ] Set up CI/CD pipeline (GitHub Actions)
+- [ ] Add code coverage reporting (aim for 80%+)
+
+### 6.4 Documentation & Deployment
+**Priority**: MEDIUM
+- [ ] User documentation and tutorial videos
+- [ ] API documentation with Swagger/OpenAPI
+- [ ] Deployment guide (Docker, Railway, Vercel)
+- [ ] Environment setup automation
+- [ ] Sample data and demo mode
+
+**Estimated Effort**: 7-10 days
+**Outcome**: Production-ready, scalable, well-tested application
+
+---
+
+## PHASE 7: MOBILE & FUTURE (Month 4+)
+
+### 7.1 Mobile Application
+**Priority**: LOW (user mentioned)
+- [ ] Research React Native vs. Flutter
+- [ ] Design mobile-first UX
+- [ ] Core features: property search, analysis view, watchlist
+- [ ] Camera integration for property photos during drive-bys
+- [ ] GPS integration for nearby property discovery
+
+### 7.2 Advanced ML/AI Features
+**Priority**: LOW (mentioned in Phase 3 opportunities)
+- [ ] ML model for appreciation prediction (train on historical data)
+- [ ] Rental price prediction model
+- [ ] Optimal buy/sell timing recommendations
+- [ ] Market crash risk indicators
+
+---
+
+## SUBAGENT STRATEGY
+
+I will spin up **5 specialized subagents** throughout this development process:
+
+### 1. **Code Simplification Agent** (1x per phase)
+- **When**: After completing each major phase
+- **Purpose**: Refactor and simplify newly written code
+- **Focus**: Remove duplication, improve readability, optimize performance
+- **Estimated**: 5 invocations across all phases
+
+### 2. **Git Commit Agent** (Continuous)
+- **When**: After completing each major feature or fix
+- **Purpose**: Create well-structured, semantic commits
+- **Focus**: Organize changes into logical commits with descriptive messages
+- **Estimated**: 20-30 commits across all phases
+
+### 3. **Code Review Agent** (1x per phase)
+- **When**: Before merging phase completion
+- **Purpose**: Review code for bugs, security issues, and best practices
+- **Focus**: Type safety, error handling, security vulnerabilities, performance
+- **Estimated**: 6 invocations (one per major phase)
+
+### 4. **Browser Testing Agent** (Continuous during frontend work)
+- **When**: After implementing any frontend features
+- **Purpose**: Automated E2E testing of user flows
+- **Focus**: Critical paths (data loading, filtering, export, navigation)
+- **Estimated**: 10-15 test runs across phases
+
+### 5. **Feature Development Agent** (As needed for complex features)
+- **When**: For large features like chatbot, scenario modeling, mobile app
+- **Purpose**: End-to-end feature implementation with full context
+- **Focus**: Architecture planning, implementation, testing
+- **Estimated**: 3-5 invocations for major features
+
+**Total Subagents**: 40-60 invocations across 12-week timeline
+
+---
+
+## PRIORITY RANKING FOR NEXT SESSION
+
+If we start immediately, I recommend this order:
+
+**IMMEDIATE (Session 1-2)**:
+1. Fix frontend-backend API integration (CRITICAL)
+2. Generate analysis data for existing properties
+3. Test full data pipeline end-to-end
+
+**NEXT (Session 3-5)**:
+4. Implement recently sold data fetching and comparison
+5. Create property detail page
+6. Add equity over time calculations
+
+**THEN (Session 6-8)**:
+7. Rentometer integration
+8. Scenario modeling interface
+9. Natural language chatbot
+
+**Success Criteria**: After Phase 1-2, you should have a fully functional tool ready to analyze real deals for your Columbus market.
+
+---
+
+## TECHNICAL DEBT & CLEANUP NEEDED
+
+### High Priority
+- [ ] Frontend static JSON dependency removal
+- [ ] Mock API endpoint replacement (`/api/analysis/refresh`)
+- [ ] Error handling standardization across services
+- [ ] Environment variable validation on startup
+
+### Medium Priority
+- [ ] Type coverage improvements (some `any` types in older code)
+- [ ] Consistent error response format across all API endpoints
+- [ ] Logging strategy standardization (use proper logging library)
+- [ ] Configuration validation on load (catch invalid configs early)
+
+### Low Priority
+- [ ] Remove unused dependencies
+- [ ] Update outdated npm packages
+- [ ] ESLint rule enforcement consistency
+- [ ] File naming convention consistency
+
+---
+
+## METRICS FOR SUCCESS
+
+**Phase 1 Success**:
+- [ ] All properties displayed from backend API (not static file)
+- [ ] Refresh button triggers real analysis recalculation
+- [ ] No console errors on any page
+
+**Phase 2 Success**:
+- [ ] Property detail page works for all 71 properties
+- [ ] Recently sold comparison shows meaningful data
+- [ ] Users can filter and export results effectively
+
+**Phase 6 Success**:
+- [ ] 80%+ code coverage with tests
+- [ ] Sub-100ms API response times for analysis results
+- [ ] Zero critical security vulnerabilities
+- [ ] Production deployment successful
+
+**Final Success**:
+- [ ] User can analyze deals in <30 seconds from listing URL to detailed analysis
+- [ ] Chatbot answers 90%+ of common questions correctly
+- [ ] Mobile app available for on-the-go property evaluation
+
+---
+
+**Last Updated**: 2026-01-10
+**Status**: Ready to begin Phase 1
+**Next Action**: Fix frontend-backend integration (estimated 4-6 hours)
