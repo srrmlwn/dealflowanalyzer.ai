@@ -111,15 +111,27 @@ const PropertyDetail: NextPage = () => {
         throw new Error('Property not found');
       }
 
+      if (!propertyResult.financialMetrics) {
+        throw new Error('Property analysis data is incomplete');
+      }
+
+      // Get available dates and use the latest one
+      const datesResponse = await fetch('http://localhost:8000/api/properties/dates/43211');
+      let latestDate = '';
+      if (datesResponse.ok) {
+        const datesData = await datesResponse.json();
+        latestDate = datesData.dates[0]; // dates are sorted with most recent first
+      }
+
       // Load property data for address
-      const zip1Response = await fetch('/data/properties/43211/2025-09-15/Columbus OH - Simplified Buybox.json');
-      const zip2Response = await fetch('/data/properties/43224/2025-09-15/Columbus OH - Simplified Buybox.json');
+      const zip1Response = await fetch(`http://localhost:8000/api/properties?zipCode=43211&date=${latestDate}&buyboxName=Columbus%20OH%20-%20Simplified%20Buybox`);
+      const zip2Response = await fetch(`http://localhost:8000/api/properties?zipCode=43224&date=${latestDate}&buyboxName=Columbus%20OH%20-%20Simplified%20Buybox`);
 
       let originalProp: any = null;
       if (zip1Response.ok && zip2Response.ok) {
         const zip1Data = await zip1Response.json();
         const zip2Data = await zip2Response.json();
-        const allProperties = [...zip1Data.properties, ...zip2Data.properties];
+        const allProperties = [...(zip1Data.properties || []), ...(zip2Data.properties || [])];
         originalProp = allProperties.find((p: any) => p.zpid === propertyId);
       }
 
@@ -132,23 +144,23 @@ const PropertyDetail: NextPage = () => {
         bathrooms: originalProp?.bathrooms || 0,
         livingArea: originalProp?.livingArea || 0,
         zillowUrl: originalProp?.detailUrl || '',
-        monthlyRent: propertyResult.financialMetrics.monthlyRent,
-        monthlyMortgage: propertyResult.financialMetrics.monthlyMortgagePayment,
-        monthlyExpenses: propertyResult.financialMetrics.monthlyOperatingExpenses,
-        monthlyCashFlow: propertyResult.financialMetrics.monthlyCashFlow,
-        annualCashFlow: propertyResult.financialMetrics.annualCashFlow,
-        cashOnCashReturn: propertyResult.financialMetrics.cashOnCashReturn,
-        capRate: propertyResult.financialMetrics.capRate,
-        totalCashInvested: propertyResult.financialMetrics.totalCashInvested,
-        projectedValue: propertyResult.financialMetrics.projectedValue,
-        operatingExpensesBreakdown: propertyResult.financialMetrics.operatingExpensesBreakdown,
-        mortgageDetails: propertyResult.financialMetrics.mortgageDetails,
+        monthlyRent: propertyResult.financialMetrics?.monthlyRent || 0,
+        monthlyMortgage: propertyResult.financialMetrics?.monthlyMortgagePayment || 0,
+        monthlyExpenses: propertyResult.financialMetrics?.monthlyOperatingExpenses || 0,
+        monthlyCashFlow: propertyResult.financialMetrics?.monthlyCashFlow || 0,
+        annualCashFlow: propertyResult.financialMetrics?.annualCashFlow || 0,
+        cashOnCashReturn: propertyResult.financialMetrics?.cashOnCashReturn || 0,
+        capRate: propertyResult.financialMetrics?.capRate || 0,
+        totalCashInvested: propertyResult.financialMetrics?.totalCashInvested || 0,
+        projectedValue: propertyResult.financialMetrics?.projectedValue || 0,
+        operatingExpensesBreakdown: propertyResult.financialMetrics?.operatingExpensesBreakdown,
+        mortgageDetails: propertyResult.financialMetrics?.mortgageDetails,
         priceComparison: propertyResult.priceComparison,
-        rentSource: propertyResult.rentalEstimate.source,
-        rentConfidence: propertyResult.rentalEstimate.confidence,
-        hasRentalData: propertyResult.dataQuality.hasRentalData,
-        hasZestimate: propertyResult.dataQuality.hasZestimate,
-        missingFields: propertyResult.dataQuality.missingDataFields.length
+        rentSource: propertyResult.rentalEstimate?.source || 'Unknown',
+        rentConfidence: propertyResult.rentalEstimate?.confidence || 'Unknown',
+        hasRentalData: propertyResult.dataQuality?.hasRentalData || false,
+        hasZestimate: propertyResult.dataQuality?.hasZestimate || false,
+        missingFields: propertyResult.dataQuality?.missingDataFields?.length || 0
       });
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load property details');
@@ -170,8 +182,8 @@ const PropertyDetail: NextPage = () => {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="text-lg text-red-600 mb-4">{error || 'Property not found'}</div>
-          <Link href="/analysis">
-            <a className="text-blue-600 hover:text-blue-800">Back to Analysis</a>
+          <Link href="/analysis" className="text-blue-600 hover:text-blue-800">
+            Back to Analysis
           </Link>
         </div>
       </div>
@@ -189,11 +201,9 @@ const PropertyDetail: NextPage = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-6">
-            <Link href="/analysis">
-              <a className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4">
-                <ArrowLeftIcon className="h-4 w-4 mr-2" />
-                Back to Analysis
-              </a>
+            <Link href="/analysis" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4">
+              <ArrowLeftIcon className="h-4 w-4 mr-2" />
+              Back to Analysis
             </Link>
 
             <div className="bg-white rounded-lg shadow-md p-6">
@@ -209,13 +219,13 @@ const PropertyDetail: NextPage = () => {
                     </span>
                     <span className="flex items-center">
                       <HomeIcon className="h-4 w-4 mr-1" />
-                      {property.bedrooms} bd | {property.bathrooms} ba | {property.livingArea.toLocaleString()} sq ft
+                      {property.bedrooms} bd | {property.bathrooms} ba | {property.livingArea?.toLocaleString() || 'N/A'} sq ft
                     </span>
                   </div>
                 </div>
                 <div className="text-right">
                   <div className="text-3xl font-bold text-gray-900">
-                    ${property.price.toLocaleString()}
+                    ${property.price?.toLocaleString() || 'N/A'}
                   </div>
                   {property.zillowUrl && (
                     <a
@@ -237,7 +247,7 @@ const PropertyDetail: NextPage = () => {
             <div className="bg-white rounded-lg shadow-md p-4">
               <div className="text-sm text-gray-600 mb-1">Monthly Cash Flow</div>
               <div className={`text-2xl font-bold ${property.monthlyCashFlow >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                ${Math.abs(property.monthlyCashFlow).toLocaleString()}
+                ${Math.abs(property.monthlyCashFlow || 0).toLocaleString()}
                 {property.monthlyCashFlow >= 0 ? '' : ' loss'}
               </div>
             </div>
@@ -259,7 +269,7 @@ const PropertyDetail: NextPage = () => {
             <div className="bg-white rounded-lg shadow-md p-4">
               <div className="text-sm text-gray-600 mb-1">Total Investment</div>
               <div className="text-2xl font-bold text-gray-900">
-                ${property.totalCashInvested.toLocaleString()}
+                ${property.totalCashInvested?.toLocaleString() || 'N/A'}
               </div>
             </div>
           </div>
@@ -277,28 +287,28 @@ const PropertyDetail: NextPage = () => {
                     'text-yellow-600'
                   }`}>
                     {property.priceComparison.percentAboveMarket > 0 ? '+' : ''}
-                    {property.priceComparison.percentAboveMarket.toFixed(1)}%
+                    {property.priceComparison.percentAboveMarket?.toFixed(1) || 'N/A'}%
                   </div>
                   <div className="text-sm text-gray-500 mt-1">
-                    {property.priceComparison.marketCondition} market
+                    {property.priceComparison.marketCondition || 'Unknown'} market
                   </div>
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 mb-1">Avg Sold Price</div>
                   <div className="text-xl font-semibold text-gray-900">
-                    ${property.priceComparison.avgRecentlySoldPrice.toLocaleString()}
+                    ${property.priceComparison.avgRecentlySoldPrice?.toLocaleString() || 'N/A'}
                   </div>
                   <div className="text-sm text-gray-500 mt-1">
-                    Based on {property.priceComparison.soldCompsCount} comparables
+                    Based on {property.priceComparison.soldCompsCount || 0} comparables
                   </div>
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 mb-1">Price per Sq Ft</div>
                   <div className="text-xl font-semibold text-gray-900">
-                    ${property.priceComparison.pricePerSqFt}
+                    ${property.priceComparison.pricePerSqFt || 'N/A'}
                   </div>
                   <div className="text-sm text-gray-500 mt-1">
-                    Market avg: ${property.priceComparison.avgPricePerSqFt}
+                    Market avg: ${property.priceComparison.avgPricePerSqFt || 'N/A'}
                   </div>
                 </div>
               </div>
@@ -311,20 +321,20 @@ const PropertyDetail: NextPage = () => {
             <div className="space-y-3">
               <div className="flex justify-between items-center pb-3 border-b">
                 <span className="text-gray-700">Monthly Rent</span>
-                <span className="font-semibold text-green-600">+${property.monthlyRent.toLocaleString()}</span>
+                <span className="font-semibold text-green-600">+${property.monthlyRent?.toLocaleString() || 'N/A'}</span>
               </div>
               <div className="flex justify-between items-center pb-3 border-b">
                 <span className="text-gray-700">Mortgage Payment</span>
-                <span className="font-semibold text-red-600">-${property.monthlyMortgage.toLocaleString()}</span>
+                <span className="font-semibold text-red-600">-${property.monthlyMortgage?.toLocaleString() || 'N/A'}</span>
               </div>
               <div className="flex justify-between items-center pb-3 border-b">
                 <span className="text-gray-700">Operating Expenses</span>
-                <span className="font-semibold text-red-600">-${property.monthlyExpenses.toLocaleString()}</span>
+                <span className="font-semibold text-red-600">-${property.monthlyExpenses?.toLocaleString() || 'N/A'}</span>
               </div>
               <div className="flex justify-between items-center pt-2">
                 <span className="text-lg font-bold text-gray-900">Net Cash Flow</span>
                 <span className={`text-lg font-bold ${property.monthlyCashFlow >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                  {property.monthlyCashFlow >= 0 ? '+' : '-'}${Math.abs(property.monthlyCashFlow).toLocaleString()}
+                  {property.monthlyCashFlow >= 0 ? '+' : '-'}${Math.abs(property.monthlyCashFlow || 0).toLocaleString()}
                 </span>
               </div>
             </div>
@@ -335,58 +345,58 @@ const PropertyDetail: NextPage = () => {
             <div className="bg-white rounded-lg shadow-md p-6 mb-6">
               <h2 className="text-xl font-bold text-gray-900 mb-4">Operating Expenses Breakdown</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {property.operatingExpensesBreakdown.propertyManagement > 0 && (
+                {property.operatingExpensesBreakdown?.propertyManagement > 0 && (
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Property Management</span>
-                    <span className="font-semibold">${property.operatingExpensesBreakdown.propertyManagement.toLocaleString()}/mo</span>
+                    <span className="font-semibold">${property.operatingExpensesBreakdown.propertyManagement?.toLocaleString() || 'N/A'}/mo</span>
                   </div>
                 )}
-                {property.operatingExpensesBreakdown.maintenance > 0 && (
+                {property.operatingExpensesBreakdown?.maintenance > 0 && (
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Maintenance</span>
-                    <span className="font-semibold">${property.operatingExpensesBreakdown.maintenance.toLocaleString()}/mo</span>
+                    <span className="font-semibold">${property.operatingExpensesBreakdown.maintenance?.toLocaleString() || 'N/A'}/mo</span>
                   </div>
                 )}
-                {property.operatingExpensesBreakdown.vacancy > 0 && (
+                {property.operatingExpensesBreakdown?.vacancy > 0 && (
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Vacancy Reserve</span>
-                    <span className="font-semibold">${property.operatingExpensesBreakdown.vacancy.toLocaleString()}/mo</span>
+                    <span className="font-semibold">${property.operatingExpensesBreakdown.vacancy?.toLocaleString() || 'N/A'}/mo</span>
                   </div>
                 )}
-                {property.operatingExpensesBreakdown.insurance > 0 && (
+                {property.operatingExpensesBreakdown?.insurance > 0 && (
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Insurance</span>
-                    <span className="font-semibold">${property.operatingExpensesBreakdown.insurance.toLocaleString()}/mo</span>
+                    <span className="font-semibold">${property.operatingExpensesBreakdown.insurance?.toLocaleString() || 'N/A'}/mo</span>
                   </div>
                 )}
-                {property.operatingExpensesBreakdown.propertyTax > 0 && (
+                {property.operatingExpensesBreakdown?.propertyTax > 0 && (
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Property Tax</span>
-                    <span className="font-semibold">${property.operatingExpensesBreakdown.propertyTax.toLocaleString()}/mo</span>
+                    <span className="font-semibold">${property.operatingExpensesBreakdown.propertyTax?.toLocaleString() || 'N/A'}/mo</span>
                   </div>
                 )}
-                {property.operatingExpensesBreakdown.hoa > 0 && (
+                {property.operatingExpensesBreakdown?.hoa > 0 && (
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">HOA Fees</span>
-                    <span className="font-semibold">${property.operatingExpensesBreakdown.hoa.toLocaleString()}/mo</span>
+                    <span className="font-semibold">${property.operatingExpensesBreakdown.hoa?.toLocaleString() || 'N/A'}/mo</span>
                   </div>
                 )}
-                {property.operatingExpensesBreakdown.utilities > 0 && (
+                {property.operatingExpensesBreakdown?.utilities > 0 && (
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Utilities</span>
-                    <span className="font-semibold">${property.operatingExpensesBreakdown.utilities.toLocaleString()}/mo</span>
+                    <span className="font-semibold">${property.operatingExpensesBreakdown.utilities?.toLocaleString() || 'N/A'}/mo</span>
                   </div>
                 )}
-                {property.operatingExpensesBreakdown.other > 0 && (
+                {property.operatingExpensesBreakdown?.other > 0 && (
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Other</span>
-                    <span className="font-semibold">${property.operatingExpensesBreakdown.other.toLocaleString()}/mo</span>
+                    <span className="font-semibold">${property.operatingExpensesBreakdown.other?.toLocaleString() || 'N/A'}/mo</span>
                   </div>
                 )}
               </div>
               <div className="flex justify-between items-center pt-4 mt-4 border-t">
                 <span className="font-bold text-gray-900">Total Monthly Expenses</span>
-                <span className="font-bold text-red-600">${property.operatingExpensesBreakdown.total.toLocaleString()}</span>
+                <span className="font-bold text-red-600">${property.operatingExpensesBreakdown?.total?.toLocaleString() || 'N/A'}</span>
               </div>
             </div>
           )}
@@ -399,25 +409,25 @@ const PropertyDetail: NextPage = () => {
                 <div>
                   <div className="text-sm text-gray-600 mb-1">Loan Amount</div>
                   <div className="text-xl font-semibold text-gray-900">
-                    ${property.mortgageDetails.loanAmount.toLocaleString()}
+                    ${property.mortgageDetails.loanAmount?.toLocaleString() || 'N/A'}
                   </div>
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 mb-1">Down Payment</div>
                   <div className="text-xl font-semibold text-gray-900">
-                    ${property.mortgageDetails.downPayment.toLocaleString()}
+                    ${property.mortgageDetails.downPayment?.toLocaleString() || 'N/A'}
                   </div>
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 mb-1">Monthly Principal</div>
                   <div className="text-xl font-semibold text-gray-900">
-                    ${property.mortgageDetails.monthlyPrincipal.toLocaleString()}
+                    ${property.mortgageDetails.monthlyPrincipal?.toLocaleString() || 'N/A'}
                   </div>
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 mb-1">Monthly Interest</div>
                   <div className="text-xl font-semibold text-gray-900">
-                    ${property.mortgageDetails.monthlyInterest.toLocaleString()}
+                    ${property.mortgageDetails.monthlyInterest?.toLocaleString() || 'N/A'}
                   </div>
                 </div>
               </div>

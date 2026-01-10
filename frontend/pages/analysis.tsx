@@ -136,23 +136,23 @@ const Analysis: NextPage = () => {
               bedrooms: originalProp?.bedrooms || 0,
               bathrooms: originalProp?.bathrooms || 0,
               livingArea: originalProp?.livingArea || 0,
-              monthlyRent: result.financialMetrics.monthlyRent,
-              monthlyMortgage: result.financialMetrics.monthlyMortgagePayment,
-              monthlyExpenses: result.financialMetrics.monthlyOperatingExpenses,
-              monthlyCashFlow: result.financialMetrics.monthlyCashFlow,
-              annualCashFlow: result.financialMetrics.annualCashFlow,
-              cashOnCashReturn: result.financialMetrics.cashOnCashReturn,
-              capRate: result.financialMetrics.capRate,
-              totalCashInvested: result.financialMetrics.totalCashInvested,
-              projectedValue: result.financialMetrics.projectedValue,
-              rentSource: result.rentalEstimate.source,
-              rentConfidence: result.rentalEstimate.confidence,
-              hasRentalData: result.dataQuality.hasRentalData,
-              hasZestimate: result.dataQuality.hasZestimate,
-              missingFields: result.dataQuality.missingDataFields.length,
-              isPositiveCashFlow: result.financialMetrics.monthlyCashFlow > 0,
-              isGoodROI: result.financialMetrics.cashOnCashReturn > 8,
-              isGoodCapRate: result.financialMetrics.capRate > 6,
+              monthlyRent: result.financialMetrics?.monthlyRent || 0,
+              monthlyMortgage: result.financialMetrics?.monthlyMortgagePayment || 0,
+              monthlyExpenses: result.financialMetrics?.monthlyOperatingExpenses || 0,
+              monthlyCashFlow: result.financialMetrics?.monthlyCashFlow || 0,
+              annualCashFlow: result.financialMetrics?.annualCashFlow || 0,
+              cashOnCashReturn: result.financialMetrics?.cashOnCashReturn || 0,
+              capRate: result.financialMetrics?.capRate || 0,
+              totalCashInvested: result.financialMetrics?.totalCashInvested || 0,
+              projectedValue: result.financialMetrics?.projectedValue || 0,
+              rentSource: result.rentalEstimate?.source || 'Unknown',
+              rentConfidence: result.rentalEstimate?.confidence || 'Unknown',
+              hasRentalData: result.dataQuality?.hasRentalData || false,
+              hasZestimate: result.dataQuality?.hasZestimate || false,
+              missingFields: result.dataQuality?.missingDataFields?.length || 0,
+              isPositiveCashFlow: (result.financialMetrics?.monthlyCashFlow || 0) > 0,
+              isGoodROI: (result.financialMetrics?.cashOnCashReturn || 0) > 8,
+              isGoodCapRate: (result.financialMetrics?.capRate || 0) > 6,
               priceComparison: result.priceComparison
             };
           })
@@ -191,26 +191,34 @@ const Analysis: NextPage = () => {
           }
 
           // Transform backend results to frontend format
-          // Load property data to get addresses
-          const zip1Response = await fetch('/data/properties/43211/2025-09-15/Columbus OH - Simplified Buybox.json');
-          const zip2Response = await fetch('/data/properties/43224/2025-09-15/Columbus OH - Simplified Buybox.json');
+          // Get available dates and use the latest one
+          const datesResponse = await fetch('http://localhost:8000/api/properties/dates/43211');
+          let latestDate = '';
+          if (datesResponse.ok) {
+            const datesData = await datesResponse.json();
+            latestDate = datesData.dates[0]; // dates are sorted with most recent first
+          }
+
+          // Load property data from backend API
+          const zip1Response = await fetch(`http://localhost:8000/api/properties?zipCode=43211&date=${latestDate}&buyboxName=Columbus%20OH%20-%20Simplified%20Buybox`);
+          const zip2Response = await fetch(`http://localhost:8000/api/properties?zipCode=43224&date=${latestDate}&buyboxName=Columbus%20OH%20-%20Simplified%20Buybox`);
 
           let allProperties: any[] = [];
           if (zip1Response.ok && zip2Response.ok) {
             const zip1Data = await zip1Response.json();
             const zip2Data = await zip2Response.json();
-            allProperties = [...zip1Data.properties, ...zip2Data.properties];
+            allProperties = [...(zip1Data.properties || []), ...(zip2Data.properties || [])];
           }
 
           // Calculate summary statistics
-          const avgCashFlow = backendData.results.reduce((sum: number, r: any) => sum + r.financialMetrics.monthlyCashFlow, 0) / backendData.results.length;
-          const avgROI = backendData.results.reduce((sum: number, r: any) => sum + r.financialMetrics.cashOnCashReturn, 0) / backendData.results.length;
-          const avgCapRate = backendData.results.reduce((sum: number, r: any) => sum + r.financialMetrics.capRate, 0) / backendData.results.length;
+          const avgCashFlow = backendData.results.reduce((sum: number, r: any) => sum + (r.financialMetrics?.monthlyCashFlow || 0), 0) / backendData.results.length;
+          const avgROI = backendData.results.reduce((sum: number, r: any) => sum + (r.financialMetrics?.cashOnCashReturn || 0), 0) / backendData.results.length;
+          const avgCapRate = backendData.results.reduce((sum: number, r: any) => sum + (r.financialMetrics?.capRate || 0), 0) / backendData.results.length;
           const topPerformers = backendData.results
-            .sort((a: any, b: any) => b.financialMetrics.cashOnCashReturn - a.financialMetrics.cashOnCashReturn)
+            .sort((a: any, b: any) => (b.financialMetrics?.cashOnCashReturn || 0) - (a.financialMetrics?.cashOnCashReturn || 0))
             .slice(0, 3)
             .map((r: any) => r.propertyId);
-          const dataQualityScore = backendData.results.filter((r: any) => r.dataQuality.hasRentalData).length / backendData.results.length * 100;
+          const dataQualityScore = backendData.results.filter((r: any) => r.dataQuality?.hasRentalData).length / backendData.results.length * 100;
 
           const transformedData = {
             timestamp: backendData.timestamp,
@@ -233,23 +241,23 @@ const Analysis: NextPage = () => {
                 bedrooms: originalProp?.bedrooms || 0,
                 bathrooms: originalProp?.bathrooms || 0,
                 livingArea: originalProp?.livingArea || 0,
-                monthlyRent: result.financialMetrics.monthlyRent,
-                monthlyMortgage: result.financialMetrics.monthlyMortgagePayment,
-                monthlyExpenses: result.financialMetrics.monthlyOperatingExpenses,
-                monthlyCashFlow: result.financialMetrics.monthlyCashFlow,
-                annualCashFlow: result.financialMetrics.annualCashFlow,
-                cashOnCashReturn: result.financialMetrics.cashOnCashReturn,
-                capRate: result.financialMetrics.capRate,
-                totalCashInvested: result.financialMetrics.totalCashInvested,
-                projectedValue: result.financialMetrics.projectedValue,
-                rentSource: result.rentalEstimate.source,
-                rentConfidence: result.rentalEstimate.confidence,
-                hasRentalData: result.dataQuality.hasRentalData,
-                hasZestimate: result.dataQuality.hasZestimate,
-                missingFields: result.dataQuality.missingDataFields.length,
-                isPositiveCashFlow: result.financialMetrics.monthlyCashFlow > 0,
-                isGoodROI: result.financialMetrics.cashOnCashReturn > 8,
-                isGoodCapRate: result.financialMetrics.capRate > 6,
+                monthlyRent: result.financialMetrics?.monthlyRent || 0,
+                monthlyMortgage: result.financialMetrics?.monthlyMortgagePayment || 0,
+                monthlyExpenses: result.financialMetrics?.monthlyOperatingExpenses || 0,
+                monthlyCashFlow: result.financialMetrics?.monthlyCashFlow || 0,
+                annualCashFlow: result.financialMetrics?.annualCashFlow || 0,
+                cashOnCashReturn: result.financialMetrics?.cashOnCashReturn || 0,
+                capRate: result.financialMetrics?.capRate || 0,
+                totalCashInvested: result.financialMetrics?.totalCashInvested || 0,
+                projectedValue: result.financialMetrics?.projectedValue || 0,
+                rentSource: result.rentalEstimate?.source || 'Unknown',
+                rentConfidence: result.rentalEstimate?.confidence || 'Unknown',
+                hasRentalData: result.dataQuality?.hasRentalData || false,
+                hasZestimate: result.dataQuality?.hasZestimate || false,
+                missingFields: result.dataQuality?.missingDataFields?.length || 0,
+                isPositiveCashFlow: (result.financialMetrics?.monthlyCashFlow || 0) > 0,
+                isGoodROI: (result.financialMetrics?.cashOnCashReturn || 0) > 8,
+                isGoodCapRate: (result.financialMetrics?.capRate || 0) > 6,
                 priceComparison: result.priceComparison
               };
             })
@@ -451,7 +459,7 @@ const Analysis: NextPage = () => {
                 <div className="ml-4">
                   <p className="text-sm font-medium text-gray-600">Avg Cash Flow</p>
                   <p className={`text-2xl font-bold ${data.summary.averageCashFlow >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                    ${data.summary.averageCashFlow.toLocaleString()}
+                    ${data.summary.averageCashFlow?.toLocaleString() || 'N/A'}
                   </p>
                 </div>
               </div>
@@ -491,7 +499,7 @@ const Analysis: NextPage = () => {
                 <p className="text-2xl font-bold text-red-600">{((positiveFlowCount / data.properties.length) * 100).toFixed(1)}%</p>
               </div>
               <div className="text-center p-4 bg-yellow-50 rounded-lg">
-                <p className="text-sm text-gray-600">Good ROI (>8%)</p>
+                <p className="text-sm text-gray-600">Good ROI (&gt;8%)</p>
                 <p className="text-2xl font-bold text-yellow-600">{((goodROICount / data.properties.length) * 100).toFixed(1)}%</p>
               </div>
               <div className="text-center p-4 bg-blue-50 rounded-lg">
@@ -626,10 +634,8 @@ const Analysis: NextPage = () => {
                     <tr key={property.id} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm">
                         <div className="font-medium text-gray-900">
-                          <Link href={`/property/${property.id}`}>
-                            <a className="text-blue-600 hover:text-blue-800 hover:underline">
-                              {property.address}
-                            </a>
+                          <Link href={`/property/${property.id}`} className="text-blue-600 hover:text-blue-800 hover:underline">
+                            {property.address}
                           </Link>
                         </div>
                         <div className="text-xs text-gray-500">
@@ -651,17 +657,17 @@ const Analysis: NextPage = () => {
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        ${property.monthlyRent.toLocaleString()}
+                        ${property.monthlyRent?.toLocaleString() || 'N/A'}
                         <div className="text-xs text-gray-500">
                           {property.rentSource} ({property.rentConfidence})
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm">
                         <span className={`font-medium ${property.monthlyCashFlow >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                          ${property.monthlyCashFlow.toLocaleString()}
+                          ${property.monthlyCashFlow?.toLocaleString() || 'N/A'}
                         </span>
                         <div className="text-xs text-gray-500">
-                          ${property.annualCashFlow.toLocaleString()}/year
+                          ${property.annualCashFlow?.toLocaleString() || 'N/A'}/year
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm">
@@ -675,7 +681,7 @@ const Analysis: NextPage = () => {
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        ${property.totalCashInvested.toLocaleString()}
+                        ${property.totalCashInvested?.toLocaleString() || 'N/A'}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm">
                         {property.priceComparison ? (
