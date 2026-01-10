@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { ArrowUpIcon, ArrowDownIcon, TrendingUpIcon, TrendingDownIcon, DollarSignIcon, HomeIcon, BarChart3Icon, DownloadIcon, ExternalLinkIcon, RefreshCwIcon } from 'lucide-react';
 
@@ -625,26 +626,28 @@ const Analysis: NextPage = () => {
                     <tr key={property.id} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm">
                         <div className="font-medium text-gray-900">
-                          {property.zillowUrl ? (
-                            <a 
-                              href={property.zillowUrl.startsWith('http') ? property.zillowUrl : `https://www.zillow.com${property.zillowUrl}`} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="text-blue-600 hover:text-blue-800 hover:underline flex items-center"
-                              title="View on Zillow"
-                            >
+                          <Link href={`/property/${property.id}`}>
+                            <a className="text-blue-600 hover:text-blue-800 hover:underline">
                               {property.address}
-                              <ExternalLinkIcon className="h-3 w-3 ml-1" />
                             </a>
-                          ) : (
-                            property.address
-                          )}
+                          </Link>
                         </div>
                         <div className="text-xs text-gray-500">
                           ${property.price?.toLocaleString()} • {property.bedrooms}bd/{property.bathrooms}ba • {property.livingArea?.toLocaleString()} sqft
                         </div>
-                        <div className="text-xs text-gray-400">
-                          ID: {property.id}
+                        <div className="text-xs text-gray-400 flex items-center space-x-2">
+                          <span>ID: {property.id}</span>
+                          {property.zillowUrl && (
+                            <a
+                              href={property.zillowUrl.startsWith('http') ? property.zillowUrl : `https://www.zillow.com${property.zillowUrl}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-gray-400 hover:text-blue-600"
+                              title="View on Zillow"
+                            >
+                              <ExternalLinkIcon className="h-3 w-3" />
+                            </a>
+                          )}
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
