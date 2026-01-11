@@ -18,10 +18,28 @@ const analysisStorage = new AnalysisStorageService(dataPath);
 
 // Helper function to get financial config
 function getFinancialConfig(): FinancialConfig {
+  return config.getConfig().financial;
+}
+
+// Helper function to create PropertyService with environment config
+function createPropertyService(): PropertyService {
+  return new PropertyService({
+    apiKey: process.env['RAPIDAPI_KEY'] || '',
+    apiHost: process.env['RAPIDAPI_HOST'] || '',
+    rateLimit: parseInt(process.env['API_RATE_LIMIT'] || '100'),
+    rateWindow: parseInt(process.env['API_RATE_WINDOW'] || '86400'),
+    dataPath: dataPath
+  });
+}
+
+// Helper function to save batch analysis results (logs errors but doesn't throw)
+function saveBatchResults(batchResult: any, buyboxName: string | undefined, properties: Property[]): void {
+  if (batchResult.results.length === 0) return;
+
   try {
-    return config.getConfig().financial;
-  } catch (error) {
-    throw new Error('Failed to load financial configuration');
+    analysisStorage.saveBatchAnalysisResult(batchResult, buyboxName, properties);
+  } catch (saveError) {
+    console.error('Failed to save analysis results:', saveError);
   }
 }
 
@@ -86,16 +104,10 @@ router.post('/batch', async (req: Request, res: Response): Promise<void> => {
     const financialConfig = getFinancialConfig();
     const batchResult = await analysisService.analyzeBatch(properties, financialConfig);
 
-    // Save results if requested
-    if (saveResults && batchResult.results.length > 0) {
-      try {
-        analysisStorage.saveBatchAnalysisResult(batchResult, undefined, properties);
-      } catch (saveError) {
-        console.error('Failed to save batch analysis results:', saveError);
-        // Continue without failing the request
-      }
+    if (saveResults) {
+      saveBatchResults(batchResult, undefined, properties);
     }
-    
+
     res.json({
       success: true,
       result: batchResult,
@@ -118,26 +130,18 @@ router.post('/batch', async (req: Request, res: Response): Promise<void> => {
 router.post('/zipcode', async (req: Request, res: Response): Promise<void> => {
   try {
     const { zipCode, date, buyboxName, saveResults = true } = req.body;
-    
+
     if (!zipCode) {
-      res.status(400).json({ 
+      res.status(400).json({
         error: 'Zip code is required',
         message: 'Please provide a zip code to analyze'
       });
       return;
     }
 
-    // Load properties from storage
-    const propertyService = new PropertyService({
-      apiKey: process.env['RAPIDAPI_KEY'] || '',
-      apiHost: process.env['RAPIDAPI_HOST'] || '',
-      rateLimit: parseInt(process.env['API_RATE_LIMIT'] || '100'),
-      rateWindow: parseInt(process.env['API_RATE_WINDOW'] || '86400'),
-      dataPath: process.env['DATA_PATH'] || './data'
-    });
-
+    const propertyService = createPropertyService();
     const properties = propertyService.loadProperties(zipCode, date, buyboxName);
-    
+
     if (!properties || properties.length === 0) {
       res.status(404).json({
         error: 'No properties found',
@@ -149,16 +153,10 @@ router.post('/zipcode', async (req: Request, res: Response): Promise<void> => {
     const financialConfig = getFinancialConfig();
     const batchResult = await analysisService.analyzeBatch(properties, financialConfig);
 
-    // Save results if requested
-    if (saveResults && batchResult.results.length > 0) {
-      try {
-        analysisStorage.saveBatchAnalysisResult(batchResult, buyboxName, properties);
-      } catch (saveError) {
-        console.error('Failed to save analysis results:', saveError);
-        // Continue without failing the request
-      }
+    if (saveResults) {
+      saveBatchResults(batchResult, buyboxName, properties);
     }
-    
+
     res.json({
       success: true,
       result: batchResult,
@@ -285,38 +283,28 @@ router.get('/statistics', async (req: Request, res: Response) => {
  */
 router.get('/export/csv', async (req: Request, res: Response) => {
   try {
-    const { 
-      zipCodes, 
-      startDate, 
-      endDate, 
+    const {
+      zipCodes,
+      startDate,
+      endDate,
       columns,
       filename = 'analysis-results.csv'
     } = req.query;
 
-    let zipCodeArray: string[] = [];
-    if (zipCodes) {
-      zipCodeArray = Array.isArray(zipCodes) ? zipCodes as string[] : [zipCodes as string];
-    } else {
-      // Get all available zip codes if none specified
-      zipCodeArray = analysisStorage.getAvailableZipCodes();
-    }
-    
-    let dateRange: { startDate: string; endDate: string } | undefined;
-    if (startDate && endDate) {
-      dateRange = { 
-        startDate: startDate as string, 
-        endDate: endDate as string 
-      };
-    }
+    const zipCodeArray = zipCodes
+      ? (Array.isArray(zipCodes) ? zipCodes as string[] : [zipCodes as string])
+      : analysisStorage.getAvailableZipCodes();
 
-    let includeColumns: string[] | undefined;
-    if (columns) {
-      includeColumns = Array.isArray(columns) ? columns as string[] : [columns as string];
-    }
+    const dateRange = (startDate && endDate)
+      ? { startDate: startDate as string, endDate: endDate as string }
+      : undefined;
+
+    const includeColumns = columns
+      ? (Array.isArray(columns) ? columns as string[] : [columns as string])
+      : undefined;
 
     const csvContent = analysisStorage.exportAnalysisToCSV(zipCodeArray, dateRange, includeColumns);
-    
-    // Set headers for file download
+
     res.setHeader('Content-Type', 'text/csv');
     res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
     res.send(csvContent);
@@ -329,8 +317,6 @@ router.get('/export/csv', async (req: Request, res: Response) => {
     });
   }
 });
-
-
 
 /**
  * GET /api/analysis/columns
@@ -361,16 +347,7 @@ router.get('/columns', (req: Request, res: Response) => {
  */
 router.post('/refresh', async (req: Request, res: Response): Promise<void> => {
   try {
-    // Load property service to get stored properties
-    const propertyService = new PropertyService({
-      apiKey: process.env['RAPIDAPI_KEY'] || '',
-      apiHost: process.env['RAPIDAPI_HOST'] || '',
-      rateLimit: parseInt(process.env['API_RATE_LIMIT'] || '100'),
-      rateWindow: parseInt(process.env['API_RATE_WINDOW'] || '86400'),
-      dataPath: join(dataPath)
-    });
-
-    // Get all available zip codes
+    const propertyService = createPropertyService();
     const zipCodes = propertyService.getAvailableZipCodes();
 
     if (zipCodes.length === 0) {
@@ -381,16 +358,18 @@ router.post('/refresh', async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    // Load all properties from all zip codes
-    const allProperties: any[] = [];
+    // Load latest properties from all zip codes
+    const buyboxName = config.getBuyboxConfig().name;
+    const allProperties: Property[] = [];
+
     for (const zipCode of zipCodes) {
       const dates = propertyService.getAvailableDates(zipCode);
-      if (dates.length > 0) {
-        const latestDate = dates[0]; // Dates are sorted, most recent first
-        const properties = propertyService.loadProperties(zipCode, latestDate);
-        if (properties && properties.length > 0) {
-          allProperties.push(...properties);
-        }
+      if (dates.length === 0) continue;
+
+      const latestDate = dates[0];
+      const properties = propertyService.loadProperties(zipCode, latestDate, buyboxName);
+      if (properties && properties.length > 0) {
+        allProperties.push(...properties);
       }
     }
 
@@ -402,19 +381,10 @@ router.post('/refresh', async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    // Run batch analysis
     const financialConfig = getFinancialConfig();
     const batchResult = await analysisService.analyzeBatch(allProperties, financialConfig);
 
-    // Save results
-    if (batchResult.results.length > 0) {
-      try {
-        analysisStorage.saveBatchAnalysisResult(batchResult, config.getBuyboxConfig().name, allProperties);
-      } catch (saveError) {
-        console.error('Failed to save analysis results:', saveError);
-        // Continue without failing the request
-      }
-    }
+    saveBatchResults(batchResult, buyboxName, allProperties);
 
     res.json({
       success: true,

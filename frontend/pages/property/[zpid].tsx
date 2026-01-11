@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowLeftIcon, DollarSignIcon, TrendingUpIcon, HomeIcon, CalendarIcon, MapPinIcon } from 'lucide-react';
+import { ArrowLeftIcon, HomeIcon, MapPinIcon } from 'lucide-react';
 
 interface PropertyDetails {
   // Property info
@@ -87,9 +87,8 @@ const PropertyDetail: NextPage = () => {
       setLoading(true);
       setError(null);
 
-      // Try to load from backend API
+      // Load analysis results
       const response = await fetch(`http://localhost:8000/api/analysis/results`);
-
       if (!response.ok) {
         throw new Error('Failed to load property details');
       }
@@ -98,16 +97,6 @@ const PropertyDetail: NextPage = () => {
       const propertyResult = data.results.find((r: any) => r.propertyId === propertyId);
 
       if (!propertyResult) {
-        // Try static JSON as fallback
-        const staticResponse = await fetch('/data/analysis-results.json');
-        if (staticResponse.ok) {
-          const staticData = await staticResponse.json();
-          const staticProperty = staticData.properties.find((p: any) => p.id === propertyId);
-          if (staticProperty) {
-            setProperty(staticProperty);
-            return;
-          }
-        }
         throw new Error('Property not found');
       }
 
@@ -115,59 +104,70 @@ const PropertyDetail: NextPage = () => {
         throw new Error('Property analysis data is incomplete');
       }
 
-      // Get available dates and use the latest one
-      const datesResponse = await fetch('http://localhost:8000/api/properties/dates/43211');
-      let latestDate = '';
-      if (datesResponse.ok) {
-        const datesData = await datesResponse.json();
-        latestDate = datesData.dates[0]; // dates are sorted with most recent first
-      }
+      // Load property data for address and details
+      const originalProp = await loadPropertyData(propertyId);
 
-      // Load property data for address
-      const zip1Response = await fetch(`http://localhost:8000/api/properties?zipCode=43211&date=${latestDate}&buyboxName=Columbus%20OH%20-%20Simplified%20Buybox`);
-      const zip2Response = await fetch(`http://localhost:8000/api/properties?zipCode=43224&date=${latestDate}&buyboxName=Columbus%20OH%20-%20Simplified%20Buybox`);
-
-      let originalProp: any = null;
-      if (zip1Response.ok && zip2Response.ok) {
-        const zip1Data = await zip1Response.json();
-        const zip2Data = await zip2Response.json();
-        const allProperties = [...(zip1Data.properties || []), ...(zip2Data.properties || [])];
-        originalProp = allProperties.find((p: any) => p.zpid === propertyId);
-      }
-
-      setProperty({
-        id: propertyResult.propertyId,
-        address: originalProp?.address || `Property ${propertyId}`,
-        zipCode: originalProp?.zipcode || 'unknown',
-        price: originalProp?.price || 0,
-        bedrooms: originalProp?.bedrooms || 0,
-        bathrooms: originalProp?.bathrooms || 0,
-        livingArea: originalProp?.livingArea || 0,
-        zillowUrl: originalProp?.detailUrl || '',
-        monthlyRent: propertyResult.financialMetrics?.monthlyRent || 0,
-        monthlyMortgage: propertyResult.financialMetrics?.monthlyMortgagePayment || 0,
-        monthlyExpenses: propertyResult.financialMetrics?.monthlyOperatingExpenses || 0,
-        monthlyCashFlow: propertyResult.financialMetrics?.monthlyCashFlow || 0,
-        annualCashFlow: propertyResult.financialMetrics?.annualCashFlow || 0,
-        cashOnCashReturn: propertyResult.financialMetrics?.cashOnCashReturn || 0,
-        capRate: propertyResult.financialMetrics?.capRate || 0,
-        totalCashInvested: propertyResult.financialMetrics?.totalCashInvested || 0,
-        projectedValue: propertyResult.financialMetrics?.projectedValue || 0,
-        operatingExpensesBreakdown: propertyResult.financialMetrics?.operatingExpensesBreakdown,
-        mortgageDetails: propertyResult.financialMetrics?.mortgageDetails,
-        priceComparison: propertyResult.priceComparison,
-        rentSource: propertyResult.rentalEstimate?.source || 'Unknown',
-        rentConfidence: propertyResult.rentalEstimate?.confidence || 'Unknown',
-        hasRentalData: propertyResult.dataQuality?.hasRentalData || false,
-        hasZestimate: propertyResult.dataQuality?.hasZestimate || false,
-        missingFields: propertyResult.dataQuality?.missingDataFields?.length || 0
-      });
+      setProperty(transformPropertyData(propertyResult, originalProp));
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load property details');
     } finally {
       setLoading(false);
     }
   };
+
+  const loadPropertyData = async (propertyId: string): Promise<any | null> => {
+    try {
+      const zipCodesResponse = await fetch('http://localhost:8000/api/properties/zipcodes');
+      const { zipCodes = [] } = await zipCodesResponse.json();
+
+      for (const zipCode of zipCodes) {
+        const datesResponse = await fetch(`http://localhost:8000/api/properties/dates/${zipCode}`);
+        if (!datesResponse.ok) continue;
+
+        const { dates } = await datesResponse.json();
+        const latestDate = dates[0];
+        if (!latestDate) continue;
+
+        const propsResponse = await fetch(`http://localhost:8000/api/properties?zipCode=${zipCode}&date=${latestDate}&buyboxName=Columbus%20OH%20-%20Simplified%20Buybox`);
+        if (!propsResponse.ok) continue;
+
+        const { properties = [] } = await propsResponse.json();
+        const prop = properties.find((p: any) => p.zpid === propertyId);
+        if (prop) return prop;
+      }
+    } catch (err) {
+      console.error('Error loading property data:', err);
+    }
+    return null;
+  };
+
+  const transformPropertyData = (result: any, originalProp: any): PropertyDetails => ({
+    id: result.propertyId,
+    address: originalProp?.address || `Property ${result.propertyId}`,
+    zipCode: originalProp?.zipcode || 'unknown',
+    price: originalProp?.price || 0,
+    bedrooms: originalProp?.bedrooms || 0,
+    bathrooms: originalProp?.bathrooms || 0,
+    livingArea: originalProp?.livingArea || 0,
+    zillowUrl: originalProp?.detailUrl || '',
+    monthlyRent: result.financialMetrics?.monthlyRent || 0,
+    monthlyMortgage: result.financialMetrics?.monthlyMortgagePayment || 0,
+    monthlyExpenses: result.financialMetrics?.monthlyOperatingExpenses || 0,
+    monthlyCashFlow: result.financialMetrics?.monthlyCashFlow || 0,
+    annualCashFlow: result.financialMetrics?.annualCashFlow || 0,
+    cashOnCashReturn: result.financialMetrics?.cashOnCashReturn || 0,
+    capRate: result.financialMetrics?.capRate || 0,
+    totalCashInvested: result.financialMetrics?.totalCashInvested || 0,
+    projectedValue: result.financialMetrics?.projectedValue || 0,
+    operatingExpensesBreakdown: result.financialMetrics?.operatingExpensesBreakdown,
+    mortgageDetails: result.financialMetrics?.mortgageDetails,
+    priceComparison: result.priceComparison,
+    rentSource: result.rentalEstimate?.source || 'Unknown',
+    rentConfidence: result.rentalEstimate?.confidence || 'Unknown',
+    hasRentalData: result.dataQuality?.hasRentalData || false,
+    hasZestimate: result.dataQuality?.hasZestimate || false,
+    missingFields: result.dataQuality?.missingDataFields?.length || 0
+  });
 
   if (loading) {
     return (
