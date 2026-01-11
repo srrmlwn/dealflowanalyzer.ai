@@ -63,6 +63,8 @@ const Analysis: NextPage = () => {
   const [filterROI, setFilterROI] = useState<number>(-100);
   const [filterCashFlow, setFilterCashFlow] = useState<number>(-10000);
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const [exportMessage, setExportMessage] = useState<string | null>(null);
+  const [searchTerm, setSearchTerm] = useState<string>('');
   const [backendHealthy, setBackendHealthy] = useState<boolean | null>(null);
 
   useEffect(() => {
@@ -237,10 +239,15 @@ const Analysis: NextPage = () => {
   };
 
   const filteredAndSortedProperties = data?.properties
-    .filter(property => 
-      property.cashOnCashReturn >= filterROI && 
-      property.monthlyCashFlow >= filterCashFlow
-    )
+    .filter(property => {
+      const matchesROI = property.cashOnCashReturn >= filterROI;
+      const matchesCashFlow = property.monthlyCashFlow >= filterCashFlow;
+      const matchesSearch = searchTerm === '' || 
+        property.address.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        property.id.toLowerCase().includes(searchTerm.toLowerCase());
+      
+      return matchesROI && matchesCashFlow && matchesSearch;
+    })
     .sort((a, b) => {
       const aValue = a[sortField];
       const bValue = b[sortField];
@@ -256,6 +263,11 @@ const Analysis: NextPage = () => {
     setIsRefreshing(true);
     try {
       await loadAnalysisData(true);
+      setExportMessage('Analysis refreshed successfully!');
+      setTimeout(() => setExportMessage(null), 3000);
+    } catch (error) {
+      setExportMessage('Failed to refresh analysis. Please try again.');
+      setTimeout(() => setExportMessage(null), 3000);
     } finally {
       setIsRefreshing(false);
     }
@@ -264,43 +276,53 @@ const Analysis: NextPage = () => {
   const exportToCSV = () => {
     if (!data) return;
     
-    const headers = [
-      'Property ID', 'Address', 'Price', 'Bedrooms', 'Bathrooms', 'Living Area',
-      'Monthly Rent', 'Monthly Mortgage', 'Monthly Expenses', 
-      'Monthly Cash Flow', 'Annual Cash Flow', 'Cash-on-Cash Return %', 
-      'Cap Rate %', 'Total Investment', 'Rent Source', 'Rent Confidence', 'Zillow URL'
-    ];
-    
-    const csvContent = [
-      headers.join(','),
-      ...filteredAndSortedProperties.map(property => [
-        property.id,
-        `"${property.address}"`,
-        property.price,
-        property.bedrooms,
-        property.bathrooms,
-        property.livingArea,
-        property.monthlyRent,
-        property.monthlyMortgage,
-        property.monthlyExpenses,
-        property.monthlyCashFlow,
-        property.annualCashFlow,
-        property.cashOnCashReturn.toFixed(2),
-        property.capRate.toFixed(2),
-        property.totalCashInvested,
-        property.rentSource,
-        property.rentConfidence,
-        property.zillowUrl.startsWith('http') ? property.zillowUrl : `https://www.zillow.com${property.zillowUrl}`
-      ].join(','))
-    ].join('\n');
-    
-    const blob = new Blob([csvContent], { type: 'text/csv' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `analysis-results-${new Date().toISOString().split('T')[0]}.csv`;
-    a.click();
-    window.URL.revokeObjectURL(url);
+    try {
+      const headers = [
+        'Property ID', 'Address', 'Price', 'Bedrooms', 'Bathrooms', 'Living Area',
+        'Monthly Rent', 'Monthly Mortgage', 'Monthly Expenses', 
+        'Monthly Cash Flow', 'Annual Cash Flow', 'Cash-on-Cash Return %', 
+        'Cap Rate %', 'Total Investment', 'Rent Source', 'Rent Confidence', 'Zillow URL'
+      ];
+      
+      const csvContent = [
+        headers.join(','),
+        ...filteredAndSortedProperties.map(property => [
+          property.id,
+          `"${property.address}"`,
+          property.price || 0,
+          property.bedrooms || 0,
+          property.bathrooms || 0,
+          property.livingArea || 0,
+          property.monthlyRent || 0,
+          property.monthlyMortgage || 0,
+          property.monthlyExpenses || 0,
+          property.monthlyCashFlow || 0,
+          property.annualCashFlow || 0,
+          property.cashOnCashReturn?.toFixed(2) || '0.00',
+          property.capRate?.toFixed(2) || '0.00',
+          property.totalCashInvested || 0,
+          property.rentSource || 'Unknown',
+          property.rentConfidence || 'Unknown',
+          property.zillowUrl ? (property.zillowUrl.startsWith('http') ? property.zillowUrl : `https://www.zillow.com${property.zillowUrl}`) : ''
+        ].join(','))
+      ].join('\n');
+      
+      const blob = new Blob([csvContent], { type: 'text/csv' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `analysis-results-${new Date().toISOString().split('T')[0]}.csv`;
+      a.click();
+      window.URL.revokeObjectURL(url);
+
+      // Show success message
+      setExportMessage(`Successfully exported ${filteredAndSortedProperties.length} properties to CSV`);
+      setTimeout(() => setExportMessage(null), 3000);
+    } catch (error) {
+      console.error('Export failed:', error);
+      setExportMessage('Export failed. Please try again.');
+      setTimeout(() => setExportMessage(null), 3000);
+    }
   };
 
   if (loading) {
@@ -369,7 +391,15 @@ const Analysis: NextPage = () => {
             </div>
             <div className="flex items-center justify-between">
               <p className="text-gray-600">
-                Analysis completed on {new Date(data.timestamp).toLocaleDateString()} at {new Date(data.timestamp).toLocaleTimeString()} • {data.properties.length} properties analyzed
+                Analysis completed on {new Date(data.timestamp).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric'
+                })} at {new Date(data.timestamp).toLocaleTimeString('en-US', {
+                  hour: '2-digit',
+                  minute: '2-digit',
+                  timeZoneName: 'short'
+                })} • {data.properties.length} properties analyzed
               </p>
               <div className="text-sm text-gray-500">
                 {isRefreshing ? (
@@ -446,7 +476,12 @@ const Analysis: NextPage = () => {
                 <p className="text-2xl font-bold text-yellow-600">{((goodROICount / data.properties.length) * 100).toFixed(1)}%</p>
               </div>
               <div className="text-center p-4 bg-blue-50 rounded-lg">
-                <p className="text-sm text-gray-600">Data Quality</p>
+                <p className="text-sm text-gray-600">
+                  Data Quality
+                  <span className="ml-1 text-xs text-gray-400 cursor-help" title="Percentage of properties with complete rental data from reliable sources (HUD, Zillow estimates)">
+                    ℹ️
+                  </span>
+                </p>
                 <p className="text-2xl font-bold text-blue-600">{data.summary.dataQualityScore.toFixed(1)}%</p>
               </div>
             </div>
@@ -463,12 +498,29 @@ const Analysis: NextPage = () => {
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="flex flex-wrap items-center gap-4">
                 <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Search</label>
+                  <input
+                    type="text"
+                    placeholder="Search by address or ID..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-48 px-3 py-2 border border-gray-300 rounded-md text-sm"
+                  />
+                </div>
+                <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Min ROI (%)</label>
                   <input
                     type="number"
                     value={filterROI}
-                    onChange={(e) => setFilterROI(Number(e.target.value))}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      if (value === '' || (!isNaN(Number(value)) && Number(value) >= -100 && Number(value) <= 100)) {
+                        setFilterROI(Number(value) || -100);
+                      }
+                    }}
                     className="w-24 px-3 py-2 border border-gray-300 rounded-md text-sm"
+                    min="-100"
+                    max="100"
                   />
                 </div>
                 <div>
@@ -476,37 +528,140 @@ const Analysis: NextPage = () => {
                   <input
                     type="number"
                     value={filterCashFlow}
-                    onChange={(e) => setFilterCashFlow(Number(e.target.value))}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      if (value === '' || (!isNaN(Number(value)) && Number(value) >= -50000 && Number(value) <= 50000)) {
+                        setFilterCashFlow(Number(value) || -10000);
+                      }
+                    }}
                     className="w-32 px-3 py-2 border border-gray-300 rounded-md text-sm"
+                    min="-50000"
+                    max="50000"
                   />
                 </div>
                 <div className="text-sm text-gray-600">
                   Showing {filteredAndSortedProperties.length} of {data.properties.length} properties
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <button
-                  onClick={handleRefreshAnalysis}
-                  disabled={isRefreshing}
-                  className="flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:bg-gray-400 text-sm"
-                >
-                  <RefreshCwIcon className={`h-4 w-4 mr-2 ${isRefreshing ? 'animate-spin' : ''}`} />
-                  {isRefreshing ? 'Analyzing...' : 'Refresh Analysis'}
-                </button>
-                <button
-                  onClick={exportToCSV}
-                  className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
-                >
-                  <DownloadIcon className="h-4 w-4 mr-2" />
-                  Export CSV
-                </button>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-3">
+                {exportMessage && (
+                  <div className="text-sm text-green-600 bg-green-50 px-3 py-1 rounded-md">
+                    {exportMessage}
+                  </div>
+                )}
+                <div className="flex items-center space-x-3">
+                  <button
+                    onClick={handleRefreshAnalysis}
+                    disabled={isRefreshing}
+                    className="flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:bg-gray-400 text-sm"
+                  >
+                    <RefreshCwIcon className={`h-4 w-4 mr-2 ${isRefreshing ? 'animate-spin' : ''}`} />
+                    {isRefreshing ? 'Analyzing...' : 'Refresh Analysis'}
+                  </button>
+                  <button
+                    onClick={exportToCSV}
+                    className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
+                  >
+                    <DownloadIcon className="h-4 w-4 mr-2" />
+                    Export CSV
+                  </button>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Properties Table */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="overflow-x-auto">
+            {/* Table Header with Actions */}
+            <div className="px-4 py-5 sm:px-6 border-b border-gray-200">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <h3 className="text-lg leading-6 font-medium text-gray-900">
+                    Property Analysis Results
+                  </h3>
+                  <p className="mt-1 max-w-2xl text-sm text-gray-500">
+                    Showing {filteredAndSortedProperties.length} of {data.properties.length} properties
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Card View */}
+            <div className="block md:hidden">
+              {filteredAndSortedProperties.length === 0 ? (
+                <div className="text-center py-12">
+                  <div className="text-gray-500 text-lg mb-2">No properties match your criteria</div>
+                  <div className="text-gray-400 text-sm">Try adjusting your filters above</div>
+                </div>
+              ) : (
+                <div className="divide-y divide-gray-200">
+                  {filteredAndSortedProperties.map((property) => (
+                    <div key={property.id} className="p-4">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1 min-w-0">
+                          <Link href={`/property/${property.id}`} className="text-blue-600 hover:text-blue-800 font-medium text-sm">
+                            {property.address}
+                          </Link>
+                          <div className="text-xs text-gray-500 mt-1">
+                            ${property.price?.toLocaleString()} • {property.bedrooms}bd/{property.bathrooms}ba
+                          </div>
+                          <div className="text-xs text-gray-400 mt-1">
+                            ID: {property.id}
+                          </div>
+                        </div>
+                        {property.zillowUrl && (
+                          <a
+                            href={property.zillowUrl.startsWith('http') ? property.zillowUrl : `https://www.zillow.com${property.zillowUrl}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="ml-2 text-gray-400 hover:text-gray-600"
+                            title="View on Zillow"
+                          >
+                            <ExternalLinkIcon className="h-4 w-4" />
+                          </a>
+                        )}
+                      </div>
+                      
+                      <div className="mt-3 grid grid-cols-2 gap-3 text-sm">
+                        <div>
+                          <div className="text-gray-500 text-xs">Monthly Rent</div>
+                          <div className="font-medium">${property.monthlyRent?.toLocaleString() || 'N/A'}</div>
+                          <div className="text-xs text-gray-400">{property.rentSource}</div>
+                        </div>
+                        <div>
+                          <div className="text-gray-500 text-xs">Cash Flow</div>
+                          <div className={`font-medium ${property.monthlyCashFlow >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                            ${property.monthlyCashFlow?.toLocaleString() || 'N/A'}
+                          </div>
+                          <div className="text-xs text-gray-400">${property.annualCashFlow?.toLocaleString() || 'N/A'}/year</div>
+                        </div>
+                        <div>
+                          <div className="text-gray-500 text-xs">ROI %</div>
+                          <div className={`font-medium ${
+                            property.cashOnCashReturn >= 8 ? 'text-green-600' : 
+                            property.cashOnCashReturn >= 0 ? 'text-yellow-600' : 'text-red-600'
+                          }`}>
+                            {property.cashOnCashReturn?.toFixed(2) || 'N/A'}%
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-gray-500 text-xs">Cap Rate %</div>
+                          <div className={`font-medium ${
+                            property.capRate >= 6 ? 'text-green-600' : 
+                            property.capRate >= 4 ? 'text-yellow-600' : 'text-red-600'
+                          }`}>
+                            {property.capRate?.toFixed(2) || 'N/A'}%
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Desktop Table View */}
+            <div className="hidden md:block overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
@@ -573,7 +728,15 @@ const Analysis: NextPage = () => {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {filteredAndSortedProperties.map((property) => (
+                  {filteredAndSortedProperties.length === 0 ? (
+                    <tr>
+                      <td colSpan={8} className="px-6 py-12 text-center">
+                        <div className="text-gray-500 text-lg mb-2">No properties match your criteria</div>
+                        <div className="text-gray-400 text-sm">Try adjusting your filters above</div>
+                      </td>
+                    </tr>
+                  ) : (
+                    filteredAndSortedProperties.map((property) => (
                     <tr key={property.id} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm">
                         <div className="font-medium text-gray-900">
@@ -654,17 +817,13 @@ const Analysis: NextPage = () => {
                         </div>
                       </td>
                     </tr>
-                  ))}
+                  ))
+                  )}
                 </tbody>
               </table>
             </div>
           </div>
 
-          {filteredAndSortedProperties.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-gray-500">No properties match the current filters.</p>
-            </div>
-          )}
         </div>
       </main>
     </div>

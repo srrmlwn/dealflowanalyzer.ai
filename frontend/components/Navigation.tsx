@@ -16,12 +16,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-gray-900">
+            <Link href="/" className="text-lg sm:text-xl font-bold text-gray-900">
               Deal Flow Analyzer
             </Link>
           </div>
           
-          <div className="flex space-x-8">
+          <div className="hidden md:flex space-x-8">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = router.pathname === item.href;
@@ -41,6 +41,31 @@ const Navigation = () => {
                 </Link>
               );
             })}
+          </div>
+
+          {/* Mobile menu */}
+          <div className="md:hidden">
+            <div className="flex space-x-2">
+              {navItems.map((item) => {
+                const Icon = item.icon;
+                const isActive = router.pathname === item.href;
+                
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`p-2 rounded-md transition-colors ${
+                      isActive
+                        ? 'text-blue-600 bg-blue-50'
+                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                    }`}
+                    title={item.label}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

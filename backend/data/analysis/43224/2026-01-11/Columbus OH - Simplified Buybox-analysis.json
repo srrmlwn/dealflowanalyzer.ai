@@ -1,0 +1,4884 @@
+{
+  "timestamp": "2026-01-11T00:11:00.182Z",
+  "zipCode": "43224",
+  "buyboxName": "Columbus OH - Simplified Buybox",
+  "totalResults": 52,
+  "results": [
+    {
+      "propertyId": "449392018",
+      "analysisDate": "2026-01-11T00:10:59.583Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 136.53,
+        "monthlyOperatingExpenses": 261,
+        "monthlyCashFlow": 493.47,
+        "annualCashFlow": 5921.64,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 11.25,
+          "propertyTax": 27,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 261
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 136.53,
+          "monthlyPrincipal": 19.53,
+          "monthlyInterest": 117,
+          "totalLoanAmount": 21600,
+          "downPayment": 5400,
+          "closingCosts": 810,
+          "totalCashRequired": 6210
+        },
+        "cashOnCashReturn": 95.36,
+        "capRate": 28,
+        "totalReturn": 68502.14,
+        "appreciationValue": 9285.74,
+        "totalCashInvested": 6210,
+        "grossRentMultiplier": 2.53,
+        "debtServiceCoverageRatio": 4.61,
+        "netOperatingIncome": 7560,
+        "monthlyPrincipalPayment": 19.53,
+        "monthlyInterestPayment": 117,
+        "projectedValue": 36285.74,
+        "totalCashFlowProjected": 59216.4,
+        "totalReturnProjected": 68502.14,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 142773,
+        "percentAboveMarket": -81.09,
+        "soldCompsCount": 15,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 166229,
+        "pricePerSqFt": 52,
+        "avgPricePerSqFt": null
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "2067256093",
+      "analysisDate": "2026-01-11T00:11:00.107Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 176.98,
+        "monthlyOperatingExpenses": 272.33,
+        "monthlyCashFlow": 441.69,
+        "annualCashFlow": 5300.28,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 14.58,
+          "propertyTax": 35,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 272.33
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 176.98,
+          "monthlyPrincipal": 25.31,
+          "monthlyInterest": 151.67,
+          "totalLoanAmount": 28000,
+          "downPayment": 7000,
+          "closingCosts": 1050,
+          "totalCashRequired": 8050
+        },
+        "cashOnCashReturn": 65.84,
+        "capRate": 21.21,
+        "totalReturn": 65039.87,
+        "appreciationValue": 12037.07,
+        "totalCashInvested": 8050,
+        "grossRentMultiplier": 3.27,
+        "debtServiceCoverageRatio": 3.5,
+        "netOperatingIncome": 7424.04,
+        "monthlyPrincipalPayment": 25.31,
+        "monthlyInterestPayment": 151.67,
+        "projectedValue": 47037.07,
+        "totalCashFlowProjected": 53002.799999999996,
+        "totalReturnProjected": 65039.87,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 135758,
+        "percentAboveMarket": -74.22,
+        "soldCompsCount": 9,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 129081,
+        "pricePerSqFt": 42,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "454241578",
+      "analysisDate": "2026-01-11T00:10:59.935Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 302.89,
+        "monthlyOperatingExpenses": 307.61,
+        "monthlyCashFlow": 280.5,
+        "annualCashFlow": 3366,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 24.96,
+          "propertyTax": 59.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 307.61
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 302.89,
+          "monthlyPrincipal": 43.32,
+          "monthlyInterest": 259.57,
+          "totalLoanAmount": 47920,
+          "downPayment": 11980,
+          "closingCosts": 1797,
+          "totalCashRequired": 13777
+        },
+        "cashOnCashReturn": 24.43,
+        "capRate": 11.69,
+        "totalReturn": 54260.59,
+        "appreciationValue": 20600.59,
+        "totalCashInvested": 13777,
+        "grossRentMultiplier": 5.6,
+        "debtServiceCoverageRatio": 1.93,
+        "netOperatingIncome": 7000.68,
+        "monthlyPrincipalPayment": 43.32,
+        "monthlyInterestPayment": 259.57,
+        "projectedValue": 80500.59,
+        "totalCashFlowProjected": 33660,
+        "totalReturnProjected": 54260.59,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148852,
+        "percentAboveMarket": -59.76,
+        "soldCompsCount": 12,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 60,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "455360049",
+      "analysisDate": "2026-01-11T00:11:00.052Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 404.02,
+        "monthlyOperatingExpenses": 335.94,
+        "monthlyCashFlow": 151.04,
+        "annualCashFlow": 1812.48,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 33.29,
+          "propertyTax": 79.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 335.94
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 404.02,
+          "monthlyPrincipal": 57.78,
+          "monthlyInterest": 346.23,
+          "totalLoanAmount": 63920,
+          "downPayment": 15980,
+          "closingCosts": 2397,
+          "totalCashRequired": 18377
+        },
+        "cashOnCashReturn": 9.86,
+        "capRate": 8.34,
+        "totalReturn": 45603.72,
+        "appreciationValue": 27478.92,
+        "totalCashInvested": 18377,
+        "grossRentMultiplier": 7.47,
+        "debtServiceCoverageRatio": 1.37,
+        "netOperatingIncome": 6660.72,
+        "monthlyPrincipalPayment": 57.78,
+        "monthlyInterestPayment": 346.23,
+        "projectedValue": 107378.92,
+        "totalCashFlowProjected": 18124.8,
+        "totalReturnProjected": 45603.72,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 140039,
+        "percentAboveMarket": -42.94,
+        "soldCompsCount": 10,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 147655,
+        "pricePerSqFt": 91,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33944166",
+      "analysisDate": "2026-01-11T00:10:59.734Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 429.81,
+        "monthlyOperatingExpenses": 343.17,
+        "monthlyCashFlow": 118.02,
+        "annualCashFlow": 1416.24,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 35.42,
+          "propertyTax": 85,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 343.17
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 429.81,
+          "monthlyPrincipal": 61.47,
+          "monthlyInterest": 368.33,
+          "totalLoanAmount": 68000,
+          "downPayment": 17000,
+          "closingCosts": 2550,
+          "totalCashRequired": 19550
+        },
+        "cashOnCashReturn": 7.24,
+        "capRate": 7.73,
+        "totalReturn": 43395.29,
+        "appreciationValue": 29232.89,
+        "totalCashInvested": 19550,
+        "grossRentMultiplier": 7.95,
+        "debtServiceCoverageRatio": 1.27,
+        "netOperatingIncome": 6573.96,
+        "monthlyPrincipalPayment": 61.47,
+        "monthlyInterestPayment": 368.33,
+        "projectedValue": 114232.89,
+        "totalCashFlowProjected": 14162.4,
+        "totalReturnProjected": 43395.29,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148852,
+        "percentAboveMarket": -42.9,
+        "soldCompsCount": 12,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 88,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33944178",
+      "analysisDate": "2026-01-11T00:11:00.023Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 449.53,
+        "monthlyOperatingExpenses": 348.69,
+        "monthlyCashFlow": 92.78,
+        "annualCashFlow": 1113.36,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 37.04,
+          "propertyTax": 88.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 348.69
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 449.53,
+          "monthlyPrincipal": 64.29,
+          "monthlyInterest": 385.23,
+          "totalLoanAmount": 71120,
+          "downPayment": 17780,
+          "closingCosts": 2667,
+          "totalCashRequired": 20447
+        },
+        "cashOnCashReturn": 5.45,
+        "capRate": 7.32,
+        "totalReturn": 41707.77,
+        "appreciationValue": 30574.17,
+        "totalCashInvested": 20447,
+        "grossRentMultiplier": 8.31,
+        "debtServiceCoverageRatio": 1.21,
+        "netOperatingIncome": 6507.72,
+        "monthlyPrincipalPayment": 64.29,
+        "monthlyInterestPayment": 385.23,
+        "projectedValue": 119474.17,
+        "totalCashFlowProjected": 11133.599999999999,
+        "totalReturnProjected": 41707.77,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 140039,
+        "percentAboveMarket": -36.52,
+        "soldCompsCount": 10,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 147655,
+        "pricePerSqFt": 101,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "456221872",
+      "analysisDate": "2026-01-11T00:10:59.969Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 469.75,
+        "monthlyOperatingExpenses": 354.36,
+        "monthlyCashFlow": 66.89,
+        "annualCashFlow": 802.68,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 38.71,
+          "propertyTax": 92.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 354.36
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 469.75,
+          "monthlyPrincipal": 67.19,
+          "monthlyInterest": 402.57,
+          "totalLoanAmount": 74320,
+          "downPayment": 18580,
+          "closingCosts": 2787,
+          "totalCashRequired": 21367
+        },
+        "cashOnCashReturn": 3.76,
+        "capRate": 6.93,
+        "totalReturn": 39976.63,
+        "appreciationValue": 31949.83,
+        "totalCashInvested": 21367,
+        "grossRentMultiplier": 8.69,
+        "debtServiceCoverageRatio": 1.14,
+        "netOperatingIncome": 6439.68,
+        "monthlyPrincipalPayment": 67.19,
+        "monthlyInterestPayment": 402.57,
+        "projectedValue": 124849.83,
+        "totalCashFlowProjected": 8026.799999999999,
+        "totalReturnProjected": 39976.63,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 135758,
+        "percentAboveMarket": -31.57,
+        "soldCompsCount": 9,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 129081,
+        "pricePerSqFt": 113,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "34027205",
+      "analysisDate": "2026-01-11T00:11:00.157Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 0,
+        "monthlyOperatingExpenses": 0.25,
+        "monthlyCashFlow": 0.75,
+        "annualCashFlow": 9,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 0,
+          "propertyTax": 0,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 0.25
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 0,
+          "monthlyPrincipal": 0,
+          "monthlyInterest": 0,
+          "totalLoanAmount": 0,
+          "downPayment": 0,
+          "closingCosts": 0,
+          "totalCashRequired": 0
+        },
+        "cashOnCashReturn": 0,
+        "capRate": 0,
+        "totalReturn": 90,
+        "appreciationValue": 0,
+        "totalCashInvested": 0,
+        "grossRentMultiplier": 0,
+        "debtServiceCoverageRatio": 0,
+        "netOperatingIncome": 9,
+        "monthlyPrincipalPayment": 0,
+        "monthlyInterestPayment": 0,
+        "projectedValue": 0,
+        "totalCashFlowProjected": 90,
+        "totalReturnProjected": 90,
+        "annualizedReturn": null
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 1 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 1,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 1 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 114611,
+        "percentAboveMarket": -100,
+        "soldCompsCount": 4,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 133947,
+        "pricePerSqFt": 0,
+        "avgPricePerSqFt": 177
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": true,
+        "hasPriceHistory": true,
+        "missingDataFields": []
+      }
+    },
+    {
+      "propertyId": "34026567",
+      "analysisDate": "2026-01-11T00:11:00.168Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 0,
+        "monthlyOperatingExpenses": 0.25,
+        "monthlyCashFlow": 0.75,
+        "annualCashFlow": 9,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 0,
+          "propertyTax": 0,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 0.25
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 0,
+          "monthlyPrincipal": 0,
+          "monthlyInterest": 0,
+          "totalLoanAmount": 0,
+          "downPayment": 0,
+          "closingCosts": 0,
+          "totalCashRequired": 0
+        },
+        "cashOnCashReturn": 0,
+        "capRate": 0,
+        "totalReturn": 90,
+        "appreciationValue": 0,
+        "totalCashInvested": 0,
+        "grossRentMultiplier": 0,
+        "debtServiceCoverageRatio": 0,
+        "netOperatingIncome": 9,
+        "monthlyPrincipalPayment": 0,
+        "monthlyInterestPayment": 0,
+        "projectedValue": 0,
+        "totalCashFlowProjected": 90,
+        "totalReturnProjected": 90,
+        "annualizedReturn": null
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 146659,
+        "percentAboveMarket": -100,
+        "soldCompsCount": 10,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 0,
+        "avgPricePerSqFt": 145
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": true,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33943265",
+      "analysisDate": "2026-01-11T00:11:00.063Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 530.94,
+        "monthlyOperatingExpenses": 371.5,
+        "monthlyCashFlow": -11.44,
+        "annualCashFlow": -137.28,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 43.75,
+          "propertyTax": 105,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 371.5
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 530.94,
+          "monthlyPrincipal": 75.94,
+          "monthlyInterest": 455,
+          "totalLoanAmount": 84000,
+          "downPayment": 21000,
+          "closingCosts": 3150,
+          "totalCashRequired": 24150
+        },
+        "cashOnCashReturn": -0.57,
+        "capRate": 5.94,
+        "totalReturn": 34738.42,
+        "appreciationValue": 36111.22,
+        "totalCashInvested": 24150,
+        "grossRentMultiplier": 9.82,
+        "debtServiceCoverageRatio": 0.98,
+        "netOperatingIncome": 6234,
+        "monthlyPrincipalPayment": 75.94,
+        "monthlyInterestPayment": 455,
+        "projectedValue": 141111.22,
+        "totalCashFlowProjected": -1372.8,
+        "totalReturnProjected": 34738.42,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148852,
+        "percentAboveMarket": -29.46,
+        "soldCompsCount": 12,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 109,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33887312",
+      "analysisDate": "2026-01-11T00:10:59.615Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 581,
+        "monthlyOperatingExpenses": 385.53,
+        "monthlyCashFlow": -75.53,
+        "annualCashFlow": -906.36,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 47.88,
+          "propertyTax": 114.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 385.53
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 581,
+          "monthlyPrincipal": 83.1,
+          "monthlyInterest": 497.9,
+          "totalLoanAmount": 91920,
+          "downPayment": 22980,
+          "closingCosts": 3447,
+          "totalCashRequired": 26427
+        },
+        "cashOnCashReturn": -3.43,
+        "capRate": 5.28,
+        "totalReturn": 30452.39,
+        "appreciationValue": 39515.99,
+        "totalCashInvested": 26427,
+        "grossRentMultiplier": 10.75,
+        "debtServiceCoverageRatio": 0.87,
+        "netOperatingIncome": 6065.64,
+        "monthlyPrincipalPayment": 83.1,
+        "monthlyInterestPayment": 497.9,
+        "projectedValue": 154415.99,
+        "totalCashFlowProjected": -9063.6,
+        "totalReturnProjected": 30452.39,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 122182,
+        "percentAboveMarket": -5.96,
+        "soldCompsCount": 10,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 128935,
+        "pricePerSqFt": 141,
+        "avgPricePerSqFt": 142
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33878212",
+      "analysisDate": "2026-01-11T00:11:00.043Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 632.07,
+        "monthlyOperatingExpenses": 399.83,
+        "monthlyCashFlow": -140.9,
+        "annualCashFlow": -1690.8,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 52.08,
+          "propertyTax": 125,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 399.83
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 632.07,
+          "monthlyPrincipal": 90.4,
+          "monthlyInterest": 541.67,
+          "totalLoanAmount": 100000,
+          "downPayment": 25000,
+          "closingCosts": 3750,
+          "totalCashRequired": 28750
+        },
+        "cashOnCashReturn": -5.88,
+        "capRate": 4.72,
+        "totalReturn": 26081.55,
+        "appreciationValue": 42989.55,
+        "totalCashInvested": 28750,
+        "grossRentMultiplier": 11.69,
+        "debtServiceCoverageRatio": 0.78,
+        "netOperatingIncome": 5894.04,
+        "monthlyPrincipalPayment": 90.4,
+        "monthlyInterestPayment": 541.67,
+        "projectedValue": 167989.55,
+        "totalCashFlowProjected": -16908,
+        "totalReturnProjected": 26081.55,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 142773,
+        "percentAboveMarket": -12.45,
+        "soldCompsCount": 15,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 166229,
+        "pricePerSqFt": 244,
+        "avgPricePerSqFt": null
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33939801",
+      "analysisDate": "2026-01-11T00:10:59.947Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 682.63,
+        "monthlyOperatingExpenses": 414,
+        "monthlyCashFlow": -205.63,
+        "annualCashFlow": -2467.56,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 56.25,
+          "propertyTax": 135,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 414
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 682.63,
+          "monthlyPrincipal": 97.63,
+          "monthlyInterest": 585,
+          "totalLoanAmount": 108000,
+          "downPayment": 27000,
+          "closingCosts": 4050,
+          "totalCashRequired": 31050
+        },
+        "cashOnCashReturn": -7.95,
+        "capRate": 4.24,
+        "totalReturn": 21753.11,
+        "appreciationValue": 46428.71,
+        "totalCashInvested": 31050,
+        "grossRentMultiplier": 12.63,
+        "debtServiceCoverageRatio": 0.7,
+        "netOperatingIncome": 5724,
+        "monthlyPrincipalPayment": 97.63,
+        "monthlyInterestPayment": 585,
+        "projectedValue": 181428.71,
+        "totalCashFlowProjected": -24675.6,
+        "totalReturnProjected": 21753.11,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 140039,
+        "percentAboveMarket": -3.6,
+        "soldCompsCount": 10,
+        "marketCondition": "BALANCED",
+        "medianSoldPrice": 147655,
+        "pricePerSqFt": 151,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "34026511",
+      "analysisDate": "2026-01-11T00:10:59.747Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 732.69,
+        "monthlyOperatingExpenses": 428.03,
+        "monthlyCashFlow": -269.72,
+        "annualCashFlow": -3236.64,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 60.38,
+          "propertyTax": 144.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 428.03
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 732.69,
+          "monthlyPrincipal": 104.79,
+          "monthlyInterest": 627.9,
+          "totalLoanAmount": 115920,
+          "downPayment": 28980,
+          "closingCosts": 4347,
+          "totalCashRequired": 33327
+        },
+        "cashOnCashReturn": -9.71,
+        "capRate": 3.83,
+        "totalReturn": 17467.08,
+        "appreciationValue": 49833.48,
+        "totalCashInvested": 33327,
+        "grossRentMultiplier": 13.55,
+        "debtServiceCoverageRatio": 0.63,
+        "netOperatingIncome": 5555.64,
+        "monthlyPrincipalPayment": 104.79,
+        "monthlyInterestPayment": 627.9,
+        "projectedValue": 194733.48,
+        "totalCashFlowProjected": -32366.399999999998,
+        "totalReturnProjected": 17467.08,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 113943,
+        "percentAboveMarket": 27.17,
+        "soldCompsCount": 7,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 129081,
+        "pricePerSqFt": 204,
+        "avgPricePerSqFt": 156
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33878257",
+      "analysisDate": "2026-01-11T00:10:59.892Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 859.11,
+        "monthlyOperatingExpenses": 463.44,
+        "monthlyCashFlow": -431.55,
+        "annualCashFlow": -5178.6,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 70.79,
+          "propertyTax": 169.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 463.44
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 859.11,
+          "monthlyPrincipal": 122.87,
+          "monthlyInterest": 736.23,
+          "totalLoanAmount": 135920,
+          "downPayment": 33980,
+          "closingCosts": 5097,
+          "totalCashRequired": 39077
+        },
+        "cashOnCashReturn": -13.25,
+        "capRate": 3.02,
+        "totalReturn": 6645.39,
+        "appreciationValue": 58431.39,
+        "totalCashInvested": 39077,
+        "grossRentMultiplier": 15.89,
+        "debtServiceCoverageRatio": 0.5,
+        "netOperatingIncome": 5130.72,
+        "monthlyPrincipalPayment": 122.87,
+        "monthlyInterestPayment": 736.23,
+        "projectedValue": 228331.39,
+        "totalCashFlowProjected": -51786,
+        "totalReturnProjected": 6645.39,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 130001,
+        "percentAboveMarket": 30.69,
+        "soldCompsCount": 9,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 129081,
+        "pricePerSqFt": 224,
+        "avgPricePerSqFt": 152
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "34027584",
+      "analysisDate": "2026-01-11T00:10:59.999Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 897.54,
+        "monthlyOperatingExpenses": 474.21,
+        "monthlyCashFlow": -480.75,
+        "annualCashFlow": -5769,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 73.96,
+          "propertyTax": 177.5,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 474.21
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 897.54,
+          "monthlyPrincipal": 128.37,
+          "monthlyInterest": 769.17,
+          "totalLoanAmount": 142000,
+          "downPayment": 35500,
+          "closingCosts": 5325,
+          "totalCashRequired": 40825
+        },
+        "cashOnCashReturn": -14.13,
+        "capRate": 2.82,
+        "totalReturn": 3355.16,
+        "appreciationValue": 61045.16,
+        "totalCashInvested": 40825,
+        "grossRentMultiplier": 16.6,
+        "debtServiceCoverageRatio": 0.46,
+        "netOperatingIncome": 5001.48,
+        "monthlyPrincipalPayment": 128.37,
+        "monthlyInterestPayment": 769.17,
+        "projectedValue": 238545.16,
+        "totalCashFlowProjected": -57690,
+        "totalReturnProjected": 3355.16,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 151871,
+        "percentAboveMarket": 16.88,
+        "soldCompsCount": 6,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 132,
+        "avgPricePerSqFt": 140
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "34027151",
+      "analysisDate": "2026-01-11T00:11:00.084Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 952.65,
+        "monthlyOperatingExpenses": 489.65,
+        "monthlyCashFlow": -551.3,
+        "annualCashFlow": -6615.6,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 78.5,
+          "propertyTax": 188.4,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 489.65
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 952.65,
+          "monthlyPrincipal": 136.25,
+          "monthlyInterest": 816.4,
+          "totalLoanAmount": 150720,
+          "downPayment": 37680,
+          "closingCosts": 5652,
+          "totalCashRequired": 43332
+        },
+        "cashOnCashReturn": -15.27,
+        "capRate": 2.56,
+        "totalReturn": -1362.15,
+        "appreciationValue": 64793.85,
+        "totalCashInvested": 43332,
+        "grossRentMultiplier": 17.62,
+        "debtServiceCoverageRatio": 0.42,
+        "netOperatingIncome": 4816.2,
+        "monthlyPrincipalPayment": 136.25,
+        "monthlyInterestPayment": 816.4,
+        "projectedValue": 253193.85,
+        "totalCashFlowProjected": -66156,
+        "totalReturnProjected": -1362.15,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 131115,
+        "percentAboveMarket": 43.69,
+        "soldCompsCount": 9,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 138813,
+        "pricePerSqFt": 255,
+        "avgPricePerSqFt": 167
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33878260",
+      "analysisDate": "2026-01-11T00:10:59.905Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 960.24,
+        "monthlyOperatingExpenses": 491.78,
+        "monthlyCashFlow": -561.02,
+        "annualCashFlow": -6732.24,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 79.13,
+          "propertyTax": 189.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 491.78
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 960.24,
+          "monthlyPrincipal": 137.34,
+          "monthlyInterest": 822.9,
+          "totalLoanAmount": 151920,
+          "downPayment": 37980,
+          "closingCosts": 5697,
+          "totalCashRequired": 43677
+        },
+        "cashOnCashReturn": -15.41,
+        "capRate": 2.52,
+        "totalReturn": -2012.68,
+        "appreciationValue": 65309.72,
+        "totalCashInvested": 43677,
+        "grossRentMultiplier": 17.76,
+        "debtServiceCoverageRatio": 0.42,
+        "netOperatingIncome": 4790.64,
+        "monthlyPrincipalPayment": 137.34,
+        "monthlyInterestPayment": 822.9,
+        "projectedValue": 255209.72,
+        "totalCashFlowProjected": -67322.4,
+        "totalReturnProjected": -2012.68,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148852,
+        "percentAboveMarket": 27.58,
+        "soldCompsCount": 12,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 198,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33877481",
+      "analysisDate": "2026-01-11T00:10:59.960Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 1018.89,
+        "monthlyOperatingExpenses": 508.21,
+        "monthlyCashFlow": -636.1,
+        "annualCashFlow": -7633.2,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 83.96,
+          "propertyTax": 201.5,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 508.21
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1018.89,
+          "monthlyPrincipal": 145.73,
+          "monthlyInterest": 873.17,
+          "totalLoanAmount": 161200,
+          "downPayment": 40300,
+          "closingCosts": 6045,
+          "totalCashRequired": 46345
+        },
+        "cashOnCashReturn": -16.47,
+        "capRate": 2.28,
+        "totalReturn": -7032.85,
+        "appreciationValue": 69299.15,
+        "totalCashInvested": 46345,
+        "grossRentMultiplier": 18.85,
+        "debtServiceCoverageRatio": 0.38,
+        "netOperatingIncome": 4593.48,
+        "monthlyPrincipalPayment": 145.73,
+        "monthlyInterestPayment": 873.17,
+        "projectedValue": 270799.15,
+        "totalCashFlowProjected": -76332,
+        "totalReturnProjected": -7032.85,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 126726,
+        "percentAboveMarket": 59,
+        "soldCompsCount": 8,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 133947,
+        "pricePerSqFt": 280,
+        "avgPricePerSqFt": 166
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "34026687",
+      "analysisDate": "2026-01-11T00:11:00.095Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 1061.37,
+        "monthlyOperatingExpenses": 520.11,
+        "monthlyCashFlow": -690.48,
+        "annualCashFlow": -8285.76,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 87.46,
+          "propertyTax": 209.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 520.11
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1061.37,
+          "monthlyPrincipal": 151.8,
+          "monthlyInterest": 909.57,
+          "totalLoanAmount": 167920,
+          "downPayment": 41980,
+          "closingCosts": 6297,
+          "totalCashRequired": 48277
+        },
+        "cashOnCashReturn": -17.16,
+        "capRate": 2.12,
+        "totalReturn": -10669.55,
+        "appreciationValue": 72188.05,
+        "totalCashInvested": 48277,
+        "grossRentMultiplier": 19.63,
+        "debtServiceCoverageRatio": 0.35,
+        "netOperatingIncome": 4450.68,
+        "monthlyPrincipalPayment": 151.8,
+        "monthlyInterestPayment": 909.57,
+        "projectedValue": 282088.05,
+        "totalCashFlowProjected": -82857.6,
+        "totalReturnProjected": -10669.55,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 122182,
+        "percentAboveMarket": 71.79,
+        "soldCompsCount": 10,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 128935,
+        "pricePerSqFt": 265,
+        "avgPricePerSqFt": 142
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33876046",
+      "analysisDate": "2026-01-11T00:10:59.914Z",
+      "financialMetrics": {
+        "monthlyRent": 891,
+        "monthlyMortgagePayment": 1188.29,
+        "monthlyOperatingExpenses": 555.67,
+        "monthlyCashFlow": -852.96,
+        "annualCashFlow": -10235.52,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 89.1,
+          "maintenance": 71.28,
+          "vacancy": 44.55,
+          "insurance": 97.92,
+          "propertyTax": 235,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 17.82,
+          "total": 555.67
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1188.29,
+          "monthlyPrincipal": 169.95,
+          "monthlyInterest": 1018.33,
+          "totalLoanAmount": 188000,
+          "downPayment": 47000,
+          "closingCosts": 7050,
+          "totalCashRequired": 54050
+        },
+        "cashOnCashReturn": -18.94,
+        "capRate": 1.71,
+        "totalReturn": -21534.85,
+        "appreciationValue": 80820.35,
+        "totalCashInvested": 54050,
+        "grossRentMultiplier": 21.98,
+        "debtServiceCoverageRatio": 0.28,
+        "netOperatingIncome": 4023.96,
+        "monthlyPrincipalPayment": 169.95,
+        "monthlyInterestPayment": 1018.33,
+        "projectedValue": 315820.35,
+        "totalCashFlowProjected": -102355.20000000001,
+        "totalReturnProjected": -21534.85,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 891,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 891,
+          "matchCriteria": "Exact match: 43224, 2 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 2,
+            "fairMarketRent": 891,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $891/month (Exact match: 43224, 2 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 146659,
+        "percentAboveMarket": 60.24,
+        "soldCompsCount": 10,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 212,
+        "avgPricePerSqFt": 145
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33878273",
+      "analysisDate": "2026-01-11T00:10:59.630Z",
+      "financialMetrics": {
+        "monthlyRent": 71,
+        "monthlyMortgagePayment": 1010.8,
+        "monthlyOperatingExpenses": 300.94,
+        "monthlyCashFlow": -1240.74,
+        "annualCashFlow": -14888.88,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 7.1,
+          "maintenance": 5.68,
+          "vacancy": 3.55,
+          "insurance": 83.29,
+          "propertyTax": 199.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.42,
+          "total": 300.94
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1010.8,
+          "monthlyPrincipal": 144.57,
+          "monthlyInterest": 866.23,
+          "totalLoanAmount": 159920,
+          "downPayment": 39980,
+          "closingCosts": 5997,
+          "totalCashRequired": 45977
+        },
+        "cashOnCashReturn": -32.38,
+        "capRate": -1.38,
+        "totalReturn": -80139.92,
+        "appreciationValue": 68748.88,
+        "totalCashInvested": 45977,
+        "grossRentMultiplier": 234.62,
+        "debtServiceCoverageRatio": -0.23,
+        "netOperatingIncome": -2759.28,
+        "monthlyPrincipalPayment": 144.57,
+        "monthlyInterestPayment": 866.23,
+        "projectedValue": 268648.88,
+        "totalCashFlowProjected": -148888.8,
+        "totalReturnProjected": -80139.92,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 71,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 71,
+          "matchCriteria": "Exact match: 43224, 4 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 4,
+            "fairMarketRent": 71,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $71/month (Exact match: 43224, 4 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 173298,
+        "percentAboveMarket": 15.35,
+        "soldCompsCount": 4,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 180358,
+        "pricePerSqFt": 148,
+        "avgPricePerSqFt": 153
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33888175",
+      "analysisDate": "2026-01-11T00:10:59.567Z",
+      "financialMetrics": {
+        "monthlyRent": 71,
+        "monthlyMortgagePayment": 1263.63,
+        "monthlyOperatingExpenses": 371.78,
+        "monthlyCashFlow": -1564.41,
+        "annualCashFlow": -18772.92,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 7.1,
+          "maintenance": 5.68,
+          "vacancy": 3.55,
+          "insurance": 104.13,
+          "propertyTax": 249.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.42,
+          "total": 371.78
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1263.63,
+          "monthlyPrincipal": 180.73,
+          "monthlyInterest": 1082.9,
+          "totalLoanAmount": 199920,
+          "downPayment": 49980,
+          "closingCosts": 7497,
+          "totalCashRequired": 57477
+        },
+        "cashOnCashReturn": -32.66,
+        "capRate": -1.44,
+        "totalReturn": -101784.5,
+        "appreciationValue": 85944.7,
+        "totalCashInvested": 57477,
+        "grossRentMultiplier": 293.31,
+        "debtServiceCoverageRatio": -0.24,
+        "netOperatingIncome": -3609.36,
+        "monthlyPrincipalPayment": 180.73,
+        "monthlyInterestPayment": 1082.9,
+        "projectedValue": 335844.7,
+        "totalCashFlowProjected": -187729.19999999998,
+        "totalReturnProjected": -101784.5,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 71,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 71,
+          "matchCriteria": "Exact match: 43224, 4 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 4,
+            "fairMarketRent": 71,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $71/month (Exact match: 43224, 4 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 142773,
+        "percentAboveMarket": 75.03,
+        "soldCompsCount": 15,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 166229,
+        "pricePerSqFt": 127,
+        "avgPricePerSqFt": null
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33877049",
+      "analysisDate": "2026-01-11T00:10:59.708Z",
+      "financialMetrics": {
+        "monthlyRent": 71,
+        "monthlyMortgagePayment": 1259.08,
+        "monthlyOperatingExpenses": 370.5,
+        "monthlyCashFlow": -1558.58,
+        "annualCashFlow": -18702.96,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 7.1,
+          "maintenance": 5.68,
+          "vacancy": 3.55,
+          "insurance": 103.75,
+          "propertyTax": 249,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 1.42,
+          "total": 370.5
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1259.08,
+          "monthlyPrincipal": 180.08,
+          "monthlyInterest": 1079,
+          "totalLoanAmount": 199200,
+          "downPayment": 49800,
+          "closingCosts": 7470,
+          "totalCashRequired": 57270
+        },
+        "cashOnCashReturn": -32.66,
+        "capRate": -1.44,
+        "totalReturn": -101394.42,
+        "appreciationValue": 85635.18,
+        "totalCashInvested": 57270,
+        "grossRentMultiplier": 292.25,
+        "debtServiceCoverageRatio": -0.24,
+        "netOperatingIncome": -3594,
+        "monthlyPrincipalPayment": 180.08,
+        "monthlyInterestPayment": 1079,
+        "projectedValue": 334635.18,
+        "totalCashFlowProjected": -187029.59999999998,
+        "totalReturnProjected": -101394.42,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 71,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 71,
+          "matchCriteria": "Exact match: 43224, 4 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 4,
+            "fairMarketRent": 71,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $71/month (Exact match: 43224, 4 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 188135,
+        "percentAboveMarket": 32.35,
+        "soldCompsCount": 3,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 182143,
+        "pricePerSqFt": 175,
+        "avgPricePerSqFt": 160
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33878130",
+      "analysisDate": "2026-01-11T00:11:00.142Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 176.47,
+        "monthlyOperatingExpenses": 49.69,
+        "monthlyCashFlow": -225.16,
+        "annualCashFlow": -2701.92,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 14.54,
+          "propertyTax": 34.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 49.69
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 176.47,
+          "monthlyPrincipal": 25.24,
+          "monthlyInterest": 151.23,
+          "totalLoanAmount": 27920,
+          "downPayment": 6980,
+          "closingCosts": 1047,
+          "totalCashRequired": 8027
+        },
+        "cashOnCashReturn": -33.66,
+        "capRate": -1.67,
+        "totalReturn": -15016.52,
+        "appreciationValue": 12002.68,
+        "totalCashInvested": 8027,
+        "grossRentMultiplier": 2908.33,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -584.28,
+        "monthlyPrincipalPayment": 25.24,
+        "monthlyInterestPayment": 151.23,
+        "projectedValue": 46902.68,
+        "totalCashFlowProjected": -27019.2,
+        "totalReturnProjected": -15016.52,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "MEDIUM",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Fallback match: 43224, 1 bedrooms (property has null), 2024",
+          "confidence": "MEDIUM",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 1,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Fallback match: 43224, 1 bedrooms (property has null), 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 142773,
+        "percentAboveMarket": -75.56,
+        "soldCompsCount": 15,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 166229,
+        "pricePerSqFt": null,
+        "avgPricePerSqFt": null
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33879632",
+      "analysisDate": "2026-01-11T00:10:59.926Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 697.8,
+        "monthlyOperatingExpenses": 195.75,
+        "monthlyCashFlow": -892.55,
+        "annualCashFlow": -10710.6,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 57.5,
+          "propertyTax": 138,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 195.75
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 697.8,
+          "monthlyPrincipal": 99.8,
+          "monthlyInterest": 598,
+          "totalLoanAmount": 110400,
+          "downPayment": 27600,
+          "closingCosts": 4140,
+          "totalCashRequired": 31740
+        },
+        "cashOnCashReturn": -33.74,
+        "capRate": -1.69,
+        "totalReturn": -59645.54,
+        "appreciationValue": 47460.46,
+        "totalCashInvested": 31740,
+        "grossRentMultiplier": 11500,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -2337,
+        "monthlyPrincipalPayment": 99.8,
+        "monthlyInterestPayment": 598,
+        "projectedValue": 185460.46,
+        "totalCashFlowProjected": -107106,
+        "totalReturnProjected": -59645.54,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148852,
+        "percentAboveMarket": -7.29,
+        "soldCompsCount": 12,
+        "marketCondition": "HOT",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 141,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": true,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33877978",
+      "analysisDate": "2026-01-11T00:11:00.118Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 656.85,
+        "monthlyOperatingExpenses": 184.28,
+        "monthlyCashFlow": -840.13,
+        "annualCashFlow": -10081.56,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 54.13,
+          "propertyTax": 129.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 184.28
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 656.85,
+          "monthlyPrincipal": 93.95,
+          "monthlyInterest": 562.9,
+          "totalLoanAmount": 103920,
+          "downPayment": 25980,
+          "closingCosts": 3897,
+          "totalCashRequired": 29877
+        },
+        "cashOnCashReturn": -33.74,
+        "capRate": -1.69,
+        "totalReturn": -56140.86,
+        "appreciationValue": 44674.74,
+        "totalCashInvested": 29877,
+        "grossRentMultiplier": 10825,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -2199.36,
+        "monthlyPrincipalPayment": 93.95,
+        "monthlyInterestPayment": 562.9,
+        "projectedValue": 174574.74,
+        "totalCashFlowProjected": -100815.59999999999,
+        "totalReturnProjected": -56140.86,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 1 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 1,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 1 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 114611,
+        "percentAboveMarket": 13.34,
+        "soldCompsCount": 4,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 133947,
+        "pricePerSqFt": 212,
+        "avgPricePerSqFt": 177
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33892251",
+      "analysisDate": "2026-01-11T00:10:59.508Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1005.75,
+        "monthlyOperatingExpenses": 282.02,
+        "monthlyCashFlow": -1286.77,
+        "annualCashFlow": -15441.24,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 82.88,
+          "propertyTax": 198.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 282.02
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1005.75,
+          "monthlyPrincipal": 143.85,
+          "monthlyInterest": 861.9,
+          "totalLoanAmount": 159120,
+          "downPayment": 39780,
+          "closingCosts": 5967,
+          "totalCashRequired": 45747
+        },
+        "cashOnCashReturn": -33.75,
+        "capRate": -1.7,
+        "totalReturn": -86007.43,
+        "appreciationValue": 68404.97,
+        "totalCashInvested": 45747,
+        "grossRentMultiplier": 16575,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3372.24,
+        "monthlyPrincipalPayment": 143.85,
+        "monthlyInterestPayment": 861.9,
+        "projectedValue": 267304.97,
+        "totalCashFlowProjected": -154412.4,
+        "totalReturnProjected": -86007.43,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 146659,
+        "percentAboveMarket": 35.62,
+        "soldCompsCount": 10,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 179,
+        "avgPricePerSqFt": 145
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33876074",
+      "analysisDate": "2026-01-11T00:10:59.764Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1087.15,
+        "monthlyOperatingExpenses": 304.83,
+        "monthlyCashFlow": -1390.98,
+        "annualCashFlow": -16691.76,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 89.58,
+          "propertyTax": 215,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 304.83
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1087.15,
+          "monthlyPrincipal": 155.49,
+          "monthlyInterest": 931.66,
+          "totalLoanAmount": 171999.2,
+          "downPayment": 42999.8,
+          "closingCosts": 6449.969999999999,
+          "totalCashRequired": 49449.770000000004
+        },
+        "cashOnCashReturn": -33.75,
+        "capRate": -1.7,
+        "totalReturn": -92975.92,
+        "appreciationValue": 73941.68,
+        "totalCashInvested": 49449.77,
+        "grossRentMultiplier": 17916.58,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3645.96,
+        "monthlyPrincipalPayment": 155.49,
+        "monthlyInterestPayment": 931.66,
+        "projectedValue": 288940.68,
+        "totalCashFlowProjected": -166917.59999999998,
+        "totalReturnProjected": -92975.92,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148852,
+        "percentAboveMarket": 44.44,
+        "soldCompsCount": 12,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 214,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33887657",
+      "analysisDate": "2026-01-11T00:10:59.776Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 910.18,
+        "monthlyOperatingExpenses": 255.25,
+        "monthlyCashFlow": -1164.43,
+        "annualCashFlow": -13973.16,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 75,
+          "propertyTax": 180,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 255.25
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 910.18,
+          "monthlyPrincipal": 130.18,
+          "monthlyInterest": 780,
+          "totalLoanAmount": 144000,
+          "downPayment": 36000,
+          "closingCosts": 5400,
+          "totalCashRequired": 41400
+        },
+        "cashOnCashReturn": -33.75,
+        "capRate": -1.69,
+        "totalReturn": -77826.65,
+        "appreciationValue": 61904.95,
+        "totalCashInvested": 41400,
+        "grossRentMultiplier": 15000,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3051,
+        "monthlyPrincipalPayment": 130.18,
+        "monthlyInterestPayment": 780,
+        "projectedValue": 241904.95,
+        "totalCashFlowProjected": -139731.6,
+        "totalReturnProjected": -77826.65,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 146659,
+        "percentAboveMarket": 22.73,
+        "soldCompsCount": 10,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 160,
+        "avgPricePerSqFt": 145
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "34026593",
+      "analysisDate": "2026-01-11T00:10:59.790Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1036.59,
+        "monthlyOperatingExpenses": 290.67,
+        "monthlyCashFlow": -1326.26,
+        "annualCashFlow": -15915.12,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 85.42,
+          "propertyTax": 205,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 290.67
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1036.59,
+          "monthlyPrincipal": 148.26,
+          "monthlyInterest": 888.33,
+          "totalLoanAmount": 164000,
+          "downPayment": 41000,
+          "closingCosts": 6150,
+          "totalCashRequired": 47150
+        },
+        "cashOnCashReturn": -33.75,
+        "capRate": -1.7,
+        "totalReturn": -88648.34,
+        "appreciationValue": 70502.86,
+        "totalCashInvested": 47150,
+        "grossRentMultiplier": 17083.33,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3476.04,
+        "monthlyPrincipalPayment": 148.26,
+        "monthlyInterestPayment": 888.33,
+        "projectedValue": 275502.86,
+        "totalCashFlowProjected": -159151.2,
+        "totalReturnProjected": -88648.34,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 146659,
+        "percentAboveMarket": 39.78,
+        "soldCompsCount": 10,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 181,
+        "avgPricePerSqFt": 145
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33878154",
+      "analysisDate": "2026-01-11T00:10:59.801Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 986.03,
+        "monthlyOperatingExpenses": 276.5,
+        "monthlyCashFlow": -1261.53,
+        "annualCashFlow": -15138.36,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 81.25,
+          "propertyTax": 195,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 276.5
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 986.03,
+          "monthlyPrincipal": 141.03,
+          "monthlyInterest": 845,
+          "totalLoanAmount": 156000,
+          "downPayment": 39000,
+          "closingCosts": 5850,
+          "totalCashRequired": 44850
+        },
+        "cashOnCashReturn": -33.75,
+        "capRate": -1.7,
+        "totalReturn": -84319.91,
+        "appreciationValue": 67063.69,
+        "totalCashInvested": 44850,
+        "grossRentMultiplier": 16250,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3306,
+        "monthlyPrincipalPayment": 141.03,
+        "monthlyInterestPayment": 845,
+        "projectedValue": 262063.69,
+        "totalCashFlowProjected": -151383.6,
+        "totalReturnProjected": -84319.91,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148852,
+        "percentAboveMarket": 31,
+        "soldCompsCount": 12,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 210,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "34027052",
+      "analysisDate": "2026-01-11T00:10:59.814Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1066.93,
+        "monthlyOperatingExpenses": 299.17,
+        "monthlyCashFlow": -1365.1,
+        "annualCashFlow": -16381.2,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 87.92,
+          "propertyTax": 211,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 299.17
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1066.93,
+          "monthlyPrincipal": 152.6,
+          "monthlyInterest": 914.33,
+          "totalLoanAmount": 168800,
+          "downPayment": 42200,
+          "closingCosts": 6330,
+          "totalCashRequired": 48530
+        },
+        "cashOnCashReturn": -33.75,
+        "capRate": -1.7,
+        "totalReturn": -91245.64,
+        "appreciationValue": 72566.36,
+        "totalCashInvested": 48530,
+        "grossRentMultiplier": 17583.33,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3578.04,
+        "monthlyPrincipalPayment": 152.6,
+        "monthlyInterestPayment": 914.33,
+        "projectedValue": 283566.36,
+        "totalCashFlowProjected": -163812,
+        "totalReturnProjected": -91245.64,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 140039,
+        "percentAboveMarket": 50.67,
+        "soldCompsCount": 10,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 147655,
+        "pricePerSqFt": 231,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33875012",
+      "analysisDate": "2026-01-11T00:10:59.835Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1061.82,
+        "monthlyOperatingExpenses": 297.74,
+        "monthlyCashFlow": -1358.56,
+        "annualCashFlow": -16302.72,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 87.5,
+          "propertyTax": 209.99,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 297.74
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1061.82,
+          "monthlyPrincipal": 151.87,
+          "monthlyInterest": 909.96,
+          "totalLoanAmount": 167992,
+          "downPayment": 41998,
+          "closingCosts": 6299.7,
+          "totalCashRequired": 48297.7
+        },
+        "cashOnCashReturn": -33.75,
+        "capRate": -1.7,
+        "totalReturn": -90808.2,
+        "appreciationValue": 72219,
+        "totalCashInvested": 48297.7,
+        "grossRentMultiplier": 17499.17,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3560.88,
+        "monthlyPrincipalPayment": 151.87,
+        "monthlyInterestPayment": 909.96,
+        "projectedValue": 282209,
+        "totalCashFlowProjected": -163027.19999999998,
+        "totalReturnProjected": -90808.2,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 142773,
+        "percentAboveMarket": 47.08,
+        "soldCompsCount": 15,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 166229,
+        "pricePerSqFt": 115,
+        "avgPricePerSqFt": null
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33896699",
+      "analysisDate": "2026-01-11T00:10:59.847Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1036.09,
+        "monthlyOperatingExpenses": 290.52,
+        "monthlyCashFlow": -1325.61,
+        "annualCashFlow": -15907.32,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 85.38,
+          "propertyTax": 204.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 290.52
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1036.09,
+          "monthlyPrincipal": 148.19,
+          "monthlyInterest": 887.9,
+          "totalLoanAmount": 163920,
+          "downPayment": 40980,
+          "closingCosts": 6147,
+          "totalCashRequired": 47127
+        },
+        "cashOnCashReturn": -33.75,
+        "capRate": -1.7,
+        "totalReturn": -88604.73,
+        "appreciationValue": 70468.47,
+        "totalCashInvested": 47127,
+        "grossRentMultiplier": 17075,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3474.24,
+        "monthlyPrincipalPayment": 148.19,
+        "monthlyInterestPayment": 887.9,
+        "projectedValue": 275368.47,
+        "totalCashFlowProjected": -159073.2,
+        "totalReturnProjected": -88604.73,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 168478,
+        "percentAboveMarket": 21.62,
+        "soldCompsCount": 8,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 180358,
+        "pricePerSqFt": 171,
+        "avgPricePerSqFt": 164
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": true,
+        "hasPriceHistory": true,
+        "missingDataFields": []
+      }
+    },
+    {
+      "propertyId": "33888794",
+      "analysisDate": "2026-01-11T00:10:59.860Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1061.87,
+        "monthlyOperatingExpenses": 297.75,
+        "monthlyCashFlow": -1358.62,
+        "annualCashFlow": -16303.44,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 87.5,
+          "propertyTax": 210,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 297.75
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1061.87,
+          "monthlyPrincipal": 151.87,
+          "monthlyInterest": 910,
+          "totalLoanAmount": 168000,
+          "downPayment": 42000,
+          "closingCosts": 6300,
+          "totalCashRequired": 48300
+        },
+        "cashOnCashReturn": -33.75,
+        "capRate": -1.7,
+        "totalReturn": -90811.96,
+        "appreciationValue": 72222.44,
+        "totalCashInvested": 48300,
+        "grossRentMultiplier": 17500,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3561,
+        "monthlyPrincipalPayment": 151.87,
+        "monthlyInterestPayment": 910,
+        "projectedValue": 282222.44,
+        "totalCashFlowProjected": -163034.4,
+        "totalReturnProjected": -90811.96,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148852,
+        "percentAboveMarket": 41.08,
+        "soldCompsCount": 12,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 227,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "34027025",
+      "analysisDate": "2026-01-11T00:10:59.980Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 757.98,
+        "monthlyOperatingExpenses": 212.61,
+        "monthlyCashFlow": -969.59,
+        "annualCashFlow": -11635.08,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 62.46,
+          "propertyTax": 149.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 212.61
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 757.98,
+          "monthlyPrincipal": 108.41,
+          "monthlyInterest": 649.57,
+          "totalLoanAmount": 119920,
+          "downPayment": 29980,
+          "closingCosts": 4497,
+          "totalCashRequired": 34477
+        },
+        "cashOnCashReturn": -33.75,
+        "capRate": -1.69,
+        "totalReturn": -64797.73,
+        "appreciationValue": 51553.07,
+        "totalCashInvested": 34477,
+        "grossRentMultiplier": 12491.67,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -2539.32,
+        "monthlyPrincipalPayment": 108.41,
+        "monthlyInterestPayment": 649.57,
+        "projectedValue": 201453.07,
+        "totalCashFlowProjected": -116350.8,
+        "totalReturnProjected": -64797.73,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 1 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 1,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 1 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 142773,
+        "percentAboveMarket": 4.99,
+        "soldCompsCount": 15,
+        "marketCondition": "BALANCED",
+        "medianSoldPrice": 166229,
+        "pricePerSqFt": 284,
+        "avgPricePerSqFt": null
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33894478",
+      "analysisDate": "2026-01-11T00:10:59.518Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1111.43,
+        "monthlyOperatingExpenses": 311.63,
+        "monthlyCashFlow": -1422.06,
+        "annualCashFlow": -17064.72,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 91.58,
+          "propertyTax": 219.8,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 311.63
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1111.43,
+          "monthlyPrincipal": 158.96,
+          "monthlyInterest": 952.47,
+          "totalLoanAmount": 175840,
+          "downPayment": 43960,
+          "closingCosts": 6594,
+          "totalCashRequired": 50554
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -95054.38,
+        "appreciationValue": 75592.82,
+        "totalCashInvested": 50554,
+        "grossRentMultiplier": 18316.67,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3727.56,
+        "monthlyPrincipalPayment": 158.96,
+        "monthlyInterestPayment": 952.47,
+        "projectedValue": 295392.82,
+        "totalCashFlowProjected": -170647.2,
+        "totalReturnProjected": -95054.38,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148852,
+        "percentAboveMarket": 47.66,
+        "soldCompsCount": 12,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 231,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33888195",
+      "analysisDate": "2026-01-11T00:10:59.532Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1112.44,
+        "monthlyOperatingExpenses": 311.92,
+        "monthlyCashFlow": -1423.36,
+        "annualCashFlow": -17080.32,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 91.67,
+          "propertyTax": 220,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 311.92
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1112.44,
+          "monthlyPrincipal": 159.11,
+          "monthlyInterest": 953.33,
+          "totalLoanAmount": 176000,
+          "downPayment": 44000,
+          "closingCosts": 6600,
+          "totalCashRequired": 50600
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -95141.6,
+        "appreciationValue": 75661.6,
+        "totalCashInvested": 50600,
+        "grossRentMultiplier": 18333.33,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3731.04,
+        "monthlyPrincipalPayment": 159.11,
+        "monthlyInterestPayment": 953.33,
+        "projectedValue": 295661.6,
+        "totalCashFlowProjected": -170803.2,
+        "totalReturnProjected": -95141.6,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 146659,
+        "percentAboveMarket": 50.01,
+        "soldCompsCount": 10,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 193,
+        "avgPricePerSqFt": 145
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33905287",
+      "analysisDate": "2026-01-11T00:10:59.550Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1213.06,
+        "monthlyOperatingExpenses": 340.11,
+        "monthlyCashFlow": -1552.17,
+        "annualCashFlow": -18626.04,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 99.96,
+          "propertyTax": 239.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 340.11
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1213.06,
+          "monthlyPrincipal": 173.5,
+          "monthlyInterest": 1039.57,
+          "totalLoanAmount": 191920,
+          "downPayment": 47980,
+          "closingCosts": 7197,
+          "totalCashRequired": 55177
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -103754.86,
+        "appreciationValue": 82505.54,
+        "totalCashInvested": 55177,
+        "grossRentMultiplier": 19991.67,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -4069.32,
+        "monthlyPrincipalPayment": 173.5,
+        "monthlyInterestPayment": 1039.57,
+        "projectedValue": 322405.54,
+        "totalCashFlowProjected": -186260.40000000002,
+        "totalReturnProjected": -103754.86,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148852,
+        "percentAboveMarket": 61.17,
+        "soldCompsCount": 12,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 256,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33890207",
+      "analysisDate": "2026-01-11T00:10:59.602Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1112.44,
+        "monthlyOperatingExpenses": 311.92,
+        "monthlyCashFlow": -1423.36,
+        "annualCashFlow": -17080.32,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 91.67,
+          "propertyTax": 220,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 311.92
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1112.44,
+          "monthlyPrincipal": 159.11,
+          "monthlyInterest": 953.33,
+          "totalLoanAmount": 176000,
+          "downPayment": 44000,
+          "closingCosts": 6600,
+          "totalCashRequired": 50600
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -95141.6,
+        "appreciationValue": 75661.6,
+        "totalCashInvested": 50600,
+        "grossRentMultiplier": 18333.33,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3731.04,
+        "monthlyPrincipalPayment": 159.11,
+        "monthlyInterestPayment": 953.33,
+        "projectedValue": 295661.6,
+        "totalCashFlowProjected": -170803.2,
+        "totalReturnProjected": -95141.6,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 153165,
+        "percentAboveMarket": 43.64,
+        "soldCompsCount": 9,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 178573,
+        "pricePerSqFt": 185,
+        "avgPricePerSqFt": 150
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": true,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33933568",
+      "analysisDate": "2026-01-11T00:10:59.649Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1213.57,
+        "monthlyOperatingExpenses": 340.25,
+        "monthlyCashFlow": -1552.82,
+        "annualCashFlow": -18633.84,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 100,
+          "propertyTax": 240,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 340.25
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1213.57,
+          "monthlyPrincipal": 173.57,
+          "monthlyInterest": 1040,
+          "totalLoanAmount": 192000,
+          "downPayment": 48000,
+          "closingCosts": 7200,
+          "totalCashRequired": 55200
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -103798.47,
+        "appreciationValue": 82539.93,
+        "totalCashInvested": 55200,
+        "grossRentMultiplier": 20000,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -4071,
+        "monthlyPrincipalPayment": 173.57,
+        "monthlyInterestPayment": 1040,
+        "projectedValue": 322539.93,
+        "totalCashFlowProjected": -186338.4,
+        "totalReturnProjected": -103798.47,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148999,
+        "percentAboveMarket": 61.07,
+        "soldCompsCount": 5,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 178573,
+        "pricePerSqFt": 173,
+        "avgPricePerSqFt": 133
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33919347",
+      "analysisDate": "2026-01-11T00:10:59.680Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1264.14,
+        "monthlyOperatingExpenses": 354.42,
+        "monthlyCashFlow": -1617.56,
+        "annualCashFlow": -19410.72,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 104.17,
+          "propertyTax": 250,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 354.42
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1264.14,
+          "monthlyPrincipal": 180.8,
+          "monthlyInterest": 1083.33,
+          "totalLoanAmount": 200000,
+          "downPayment": 50000,
+          "closingCosts": 7500,
+          "totalCashRequired": 57500
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -108128.11,
+        "appreciationValue": 85979.09,
+        "totalCashInvested": 57500,
+        "grossRentMultiplier": 20833.33,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -4241.04,
+        "monthlyPrincipalPayment": 180.8,
+        "monthlyInterestPayment": 1083.33,
+        "projectedValue": 335979.09,
+        "totalCashFlowProjected": -194107.2,
+        "totalReturnProjected": -108128.11,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "MEDIUM",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Fallback match: 43224, 1 bedrooms (property has null), 2024",
+          "confidence": "MEDIUM",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 1,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Fallback match: 43224, 1 bedrooms (property has null), 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 142773,
+        "percentAboveMarket": 75.1,
+        "soldCompsCount": 15,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 166229,
+        "pricePerSqFt": null,
+        "avgPricePerSqFt": null
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "34047057",
+      "analysisDate": "2026-01-11T00:10:59.692Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1137.72,
+        "monthlyOperatingExpenses": 319,
+        "monthlyCashFlow": -1455.72,
+        "annualCashFlow": -17468.64,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 93.75,
+          "propertyTax": 225,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 319
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1137.72,
+          "monthlyPrincipal": 162.72,
+          "monthlyInterest": 975,
+          "totalLoanAmount": 180000,
+          "downPayment": 45000,
+          "closingCosts": 6750,
+          "totalCashRequired": 51750
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -97305.21,
+        "appreciationValue": 77381.19,
+        "totalCashInvested": 51750,
+        "grossRentMultiplier": 18750,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3816,
+        "monthlyPrincipalPayment": 162.72,
+        "monthlyInterestPayment": 975,
+        "projectedValue": 302381.19,
+        "totalCashFlowProjected": -174686.4,
+        "totalReturnProjected": -97305.21,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 153165,
+        "percentAboveMarket": 46.9,
+        "soldCompsCount": 9,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 178573,
+        "pricePerSqFt": 190,
+        "avgPricePerSqFt": 150
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": true,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33897199",
+      "analysisDate": "2026-01-11T00:10:59.722Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1157.95,
+        "monthlyOperatingExpenses": 324.67,
+        "monthlyCashFlow": -1481.62,
+        "annualCashFlow": -17779.44,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 95.42,
+          "propertyTax": 229,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 324.67
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1157.95,
+          "monthlyPrincipal": 165.62,
+          "monthlyInterest": 992.33,
+          "totalLoanAmount": 183200,
+          "downPayment": 45800,
+          "closingCosts": 6870,
+          "totalCashRequired": 52670
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -99037.55,
+        "appreciationValue": 78756.85,
+        "totalCashInvested": 52670,
+        "grossRentMultiplier": 19083.33,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3884.04,
+        "monthlyPrincipalPayment": 165.62,
+        "monthlyInterestPayment": 992.33,
+        "projectedValue": 307756.85,
+        "totalCashFlowProjected": -177794.4,
+        "totalReturnProjected": -99037.55,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 146659,
+        "percentAboveMarket": 56.14,
+        "soldCompsCount": 10,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 216,
+        "avgPricePerSqFt": 145
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33889004",
+      "analysisDate": "2026-01-11T00:10:59.826Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1263.63,
+        "monthlyOperatingExpenses": 354.28,
+        "monthlyCashFlow": -1616.91,
+        "annualCashFlow": -19402.92,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 104.13,
+          "propertyTax": 249.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 354.28
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1263.63,
+          "monthlyPrincipal": 180.73,
+          "monthlyInterest": 1082.9,
+          "totalLoanAmount": 199920,
+          "downPayment": 49980,
+          "closingCosts": 7497,
+          "totalCashRequired": 57477
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -108084.5,
+        "appreciationValue": 85944.7,
+        "totalCashInvested": 57477,
+        "grossRentMultiplier": 20825,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -4239.36,
+        "monthlyPrincipalPayment": 180.73,
+        "monthlyInterestPayment": 1082.9,
+        "projectedValue": 335844.7,
+        "totalCashFlowProjected": -194029.19999999998,
+        "totalReturnProjected": -108084.5,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 140039,
+        "percentAboveMarket": 78.45,
+        "soldCompsCount": 10,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 147655,
+        "pricePerSqFt": 274,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33847035",
+      "analysisDate": "2026-01-11T00:10:59.869Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1162.5,
+        "monthlyOperatingExpenses": 325.94,
+        "monthlyCashFlow": -1487.44,
+        "annualCashFlow": -17849.28,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 95.79,
+          "propertyTax": 229.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 325.94
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1162.5,
+          "monthlyPrincipal": 166.27,
+          "monthlyInterest": 996.23,
+          "totalLoanAmount": 183920,
+          "downPayment": 45980,
+          "closingCosts": 6897,
+          "totalCashRequired": 52877
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -99426.42,
+        "appreciationValue": 79066.38,
+        "totalCashInvested": 52877,
+        "grossRentMultiplier": 19158.33,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -3899.28,
+        "monthlyPrincipalPayment": 166.27,
+        "monthlyInterestPayment": 996.23,
+        "projectedValue": 308966.38,
+        "totalCashFlowProjected": -178492.8,
+        "totalReturnProjected": -99426.42,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 146659,
+        "percentAboveMarket": 56.76,
+        "soldCompsCount": 10,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 207,
+        "avgPricePerSqFt": 145
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33875030",
+      "analysisDate": "2026-01-11T00:10:59.880Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1213.06,
+        "monthlyOperatingExpenses": 340.11,
+        "monthlyCashFlow": -1552.17,
+        "annualCashFlow": -18626.04,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 99.96,
+          "propertyTax": 239.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 340.11
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1213.06,
+          "monthlyPrincipal": 173.5,
+          "monthlyInterest": 1039.57,
+          "totalLoanAmount": 191920,
+          "downPayment": 47980,
+          "closingCosts": 7197,
+          "totalCashRequired": 55177
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -103754.86,
+        "appreciationValue": 82505.54,
+        "totalCashInvested": 55177,
+        "grossRentMultiplier": 19991.67,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -4069.32,
+        "monthlyPrincipalPayment": 173.5,
+        "monthlyInterestPayment": 1039.57,
+        "projectedValue": 322405.54,
+        "totalCashFlowProjected": -186260.40000000002,
+        "totalReturnProjected": -103754.86,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 168478,
+        "percentAboveMarket": 42.39,
+        "soldCompsCount": 8,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 180358,
+        "pricePerSqFt": 190,
+        "avgPricePerSqFt": 164
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33906464",
+      "analysisDate": "2026-01-11T00:10:59.991Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1213.57,
+        "monthlyOperatingExpenses": 340.25,
+        "monthlyCashFlow": -1552.82,
+        "annualCashFlow": -18633.84,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 100,
+          "propertyTax": 240,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 340.25
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1213.57,
+          "monthlyPrincipal": 173.57,
+          "monthlyInterest": 1040,
+          "totalLoanAmount": 192000,
+          "downPayment": 48000,
+          "closingCosts": 7200,
+          "totalCashRequired": 55200
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -103798.47,
+        "appreciationValue": 82539.93,
+        "totalCashInvested": 55200,
+        "grossRentMultiplier": 20000,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -4071,
+        "monthlyPrincipalPayment": 173.57,
+        "monthlyInterestPayment": 1040,
+        "projectedValue": 322539.93,
+        "totalCashFlowProjected": -186338.4,
+        "totalReturnProjected": -103798.47,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148999,
+        "percentAboveMarket": 61.07,
+        "soldCompsCount": 5,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 178573,
+        "pricePerSqFt": 172,
+        "avgPricePerSqFt": 133
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "34027158",
+      "analysisDate": "2026-01-11T00:11:00.012Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1263.63,
+        "monthlyOperatingExpenses": 354.28,
+        "monthlyCashFlow": -1616.91,
+        "annualCashFlow": -19402.92,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 104.13,
+          "propertyTax": 249.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 354.28
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1263.63,
+          "monthlyPrincipal": 180.73,
+          "monthlyInterest": 1082.9,
+          "totalLoanAmount": 199920,
+          "downPayment": 49980,
+          "closingCosts": 7497,
+          "totalCashRequired": 57477
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -108084.5,
+        "appreciationValue": 85944.7,
+        "totalCashInvested": 57477,
+        "grossRentMultiplier": 20825,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -4239.36,
+        "monthlyPrincipalPayment": 180.73,
+        "monthlyInterestPayment": 1082.9,
+        "projectedValue": 335844.7,
+        "totalCashFlowProjected": -194029.19999999998,
+        "totalReturnProjected": -108084.5,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148852,
+        "percentAboveMarket": 67.89,
+        "soldCompsCount": 12,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 264,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": true,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate"
+        ]
+      }
+    },
+    {
+      "propertyId": "33888227",
+      "analysisDate": "2026-01-11T00:11:00.032Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1213.06,
+        "monthlyOperatingExpenses": 340.11,
+        "monthlyCashFlow": -1552.17,
+        "annualCashFlow": -18626.04,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 99.96,
+          "propertyTax": 239.9,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 340.11
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1213.06,
+          "monthlyPrincipal": 173.5,
+          "monthlyInterest": 1039.57,
+          "totalLoanAmount": 191920,
+          "downPayment": 47980,
+          "closingCosts": 7197,
+          "totalCashRequired": 55177
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -103754.86,
+        "appreciationValue": 82505.54,
+        "totalCashInvested": 55177,
+        "grossRentMultiplier": 19991.67,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -4069.32,
+        "monthlyPrincipalPayment": 173.5,
+        "monthlyInterestPayment": 1039.57,
+        "projectedValue": 322405.54,
+        "totalCashFlowProjected": -186260.40000000002,
+        "totalReturnProjected": -103754.86,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 148852,
+        "percentAboveMarket": 61.17,
+        "soldCompsCount": 12,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 245,
+        "avgPricePerSqFt": 158
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    },
+    {
+      "propertyId": "33889547",
+      "analysisDate": "2026-01-11T00:11:00.075Z",
+      "financialMetrics": {
+        "monthlyRent": 1,
+        "monthlyMortgagePayment": 1259.08,
+        "monthlyOperatingExpenses": 353,
+        "monthlyCashFlow": -1611.08,
+        "annualCashFlow": -19332.96,
+        "operatingExpensesBreakdown": {
+          "propertyManagement": 0.1,
+          "maintenance": 0.08,
+          "vacancy": 0.05,
+          "insurance": 103.75,
+          "propertyTax": 249,
+          "hoaFees": 0,
+          "utilities": 0,
+          "other": 0.02,
+          "total": 353
+        },
+        "mortgageDetails": {
+          "monthlyPayment": 1259.08,
+          "monthlyPrincipal": 180.08,
+          "monthlyInterest": 1079,
+          "totalLoanAmount": 199200,
+          "downPayment": 49800,
+          "closingCosts": 7470,
+          "totalCashRequired": 57270
+        },
+        "cashOnCashReturn": -33.76,
+        "capRate": -1.7,
+        "totalReturn": -107694.42,
+        "appreciationValue": 85635.18,
+        "totalCashInvested": 57270,
+        "grossRentMultiplier": 20750,
+        "debtServiceCoverageRatio": -0.28,
+        "netOperatingIncome": -4224,
+        "monthlyPrincipalPayment": 180.08,
+        "monthlyInterestPayment": 1079,
+        "projectedValue": 334635.18,
+        "totalCashFlowProjected": -193329.59999999998,
+        "totalReturnProjected": -107694.42,
+        "annualizedReturn": 3
+      },
+      "rentalEstimate": {
+        "monthlyRent": 1,
+        "source": "HUD",
+        "confidence": "HIGH",
+        "hudMatch": {
+          "matched": true,
+          "hudRent": 1,
+          "matchCriteria": "Exact match: 43224, 3 bedrooms, 2024",
+          "confidence": "HIGH",
+          "hudData": {
+            "zipCode": "43224",
+            "bedrooms": 3,
+            "fairMarketRent": 1,
+            "year": 2024,
+            "county": "",
+            "state": "OH"
+          }
+        },
+        "details": "HUD Fair Market Rent: $1/month (Exact match: 43224, 3 bedrooms, 2024)"
+      },
+      "priceComparison": {
+        "avgRecentlySoldPrice": 146659,
+        "percentAboveMarket": 69.78,
+        "soldCompsCount": 10,
+        "marketCondition": "COLD",
+        "medianSoldPrice": 172401,
+        "pricePerSqFt": 224,
+        "avgPricePerSqFt": 145
+      },
+      "assumptions": {
+        "mortgageRate": 6.5,
+        "downPaymentPercent": 20,
+        "propertyManagementPercent": 10,
+        "maintenancePercent": 8,
+        "vacancyRate": 5,
+        "insurancePercent": 0.5,
+        "propertyTaxPercent": 1.2,
+        "annualAppreciationPercent": 3
+      },
+      "dataQuality": {
+        "hasRentalData": true,
+        "hasZestimate": false,
+        "hasPriceHistory": false,
+        "missingDataFields": [
+          "rentZestimate",
+          "zestimate",
+          "priceChange",
+          "datePriceChanged"
+        ]
+      }
+    }
+  ]
+}

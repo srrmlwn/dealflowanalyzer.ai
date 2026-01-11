@@ -206,13 +206,13 @@ const PropertyDetail: NextPage = () => {
               Back to Analysis
             </Link>
 
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
+                <div className="flex-1">
+                  <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
                     {property.address}
                   </h1>
-                  <div className="flex items-center space-x-4 text-gray-600">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-gray-600 space-y-1 sm:space-y-0">
                     <span className="flex items-center">
                       <MapPinIcon className="h-4 w-4 mr-1" />
                       {property.zipCode}
@@ -223,8 +223,8 @@ const PropertyDetail: NextPage = () => {
                     </span>
                   </div>
                 </div>
-                <div className="text-right">
-                  <div className="text-3xl font-bold text-gray-900">
+                <div className="text-left sm:text-right mt-4 sm:mt-0">
+                  <div className="text-2xl sm:text-3xl font-bold text-gray-900">
                     ${property.price?.toLocaleString() || 'N/A'}
                   </div>
                   {property.zillowUrl && (
@@ -243,7 +243,7 @@ const PropertyDetail: NextPage = () => {
           </div>
 
           {/* Key Metrics Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <div className="bg-white rounded-lg shadow-md p-4">
               <div className="text-sm text-gray-600 mb-1">Monthly Cash Flow</div>
               <div className={`text-2xl font-bold ${property.monthlyCashFlow >= 0 ? 'text-green-600' : 'text-red-600'}`}>
@@ -276,9 +276,9 @@ const PropertyDetail: NextPage = () => {
 
           {/* Price Comparison */}
           {property.priceComparison && (
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
               <h2 className="text-xl font-bold text-gray-900 mb-4">Price vs Market</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div>
                   <div className="text-sm text-gray-600 mb-1">vs. Recent Sales</div>
                   <div className={`text-2xl font-bold ${
@@ -316,7 +316,7 @@ const PropertyDetail: NextPage = () => {
           )}
 
           {/* Monthly Cash Flow Breakdown */}
-          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+          <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Monthly Cash Flow Breakdown</h2>
             <div className="space-y-3">
               <div className="flex justify-between items-center pb-3 border-b">
@@ -342,9 +342,9 @@ const PropertyDetail: NextPage = () => {
 
           {/* Operating Expenses Breakdown */}
           {property.operatingExpensesBreakdown && (
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
               <h2 className="text-xl font-bold text-gray-900 mb-4">Operating Expenses Breakdown</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {property.operatingExpensesBreakdown?.propertyManagement > 0 && (
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Property Management</span>
@@ -403,9 +403,12 @@ const PropertyDetail: NextPage = () => {
 
           {/* Mortgage Details */}
           {property.mortgageDetails && (
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
               <h2 className="text-xl font-bold text-gray-900 mb-4">Mortgage Details</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="text-sm text-gray-500 mb-4">
+                Note: "N/A" values indicate data not available from the analysis or property source.
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <div className="text-sm text-gray-600 mb-1">Loan Amount</div>
                   <div className="text-xl font-semibold text-gray-900">
@@ -435,7 +438,7 @@ const PropertyDetail: NextPage = () => {
           )}
 
           {/* Rental Estimate Info */}
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Rental Estimate</h2>
             <div className="space-y-2">
               <div className="flex justify-between items-center">
