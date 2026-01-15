@@ -1,10 +1,8 @@
 import * as cron from 'node-cron';
-import { PropertyService, PropertyServiceConfig } from './propertyService.js';
-import { RecentlySoldService, FetchRecentlySoldOptions } from './recentlySoldService.js';
-import { FinancialAnalysisService } from './financialAnalysisService.js';
-import { AnalysisStorageService } from './analysisStorageService.js';
-import { ZillowApiService } from './zillowService.js';
-import { config } from '../config/config.js';
+import { PropertyService, PropertyServiceConfig } from './propertyService';
+import { RecentlySoldService, FetchRecentlySoldOptions } from './recentlySoldService';
+import { ZillowApiService } from './zillowService';
+import { config } from '../config/config';
 
 export interface SchedulerConfig {
   cronSchedule: string;
@@ -23,8 +21,6 @@ function logSection(title: string): void {
 export class DataCollectionScheduler {
   private propertyService: PropertyService;
   private recentlySoldService: RecentlySoldService;
-  private financialAnalysisService: FinancialAnalysisService;
-  private analysisStorageService: AnalysisStorageService;
   private zillowService: ZillowApiService;
   private schedulerConfig: SchedulerConfig;
   private task: cron.ScheduledTask | null = null;
@@ -42,16 +38,6 @@ export class DataCollectionScheduler {
     this.recentlySoldService = new RecentlySoldService(
       propertyServiceConfig.dataPath,
       this.zillowService
-    );
-
-    const hudDataPath = './data/hud-rental-data.json';
-    this.financialAnalysisService = new FinancialAnalysisService(
-      hudDataPath,
-      propertyServiceConfig.dataPath
-    );
-
-    this.analysisStorageService = new AnalysisStorageService(
-      propertyServiceConfig.dataPath
     );
 
     this.schedulerConfig = schedulerConfig;
@@ -103,7 +89,6 @@ export class DataCollectionScheduler {
 
     try {
       const buyboxConfig = config.getBuyboxConfig();
-      const financialConfig = config.getFinancialConfig();
 
       if (!process.env['RAPIDAPI_KEY']) {
         console.error('RAPIDAPI_KEY not configured. Skipping data collection.');
@@ -124,11 +109,8 @@ export class DataCollectionScheduler {
       // STEP 2: Fetch recently sold data
       await this.fetchRecentlySold(buyboxConfig);
 
-      // STEP 3: Run financial analysis
-      const analysisStats = await this.runAnalysis(buyboxConfig, financialConfig);
-
       // Final summary
-      this.logPipelineSummary(startTime, listingsResult.stats, analysisStats);
+      this.logPipelineSummary(startTime, listingsResult.stats);
 
       // Clean up old data (keep last 30 days)
       console.log(`\nCleaning up old data (keeping last 30 days)...`);
@@ -192,66 +174,19 @@ export class DataCollectionScheduler {
     }
   }
 
-  private async runAnalysis(
-    buyboxConfig: ReturnType<typeof config.getBuyboxConfig>,
-    financialConfig: ReturnType<typeof config.getFinancialConfig>
-  ): Promise<{ analyzed: number; successful: number; failed: number }> {
-    logSection('STEP 3: Running financial analysis');
-
-    const stats = { analyzed: 0, successful: 0, failed: 0 };
-
-    for (const zipCode of buyboxConfig.zipCodes) {
-      try {
-        console.log(`\nAnalyzing properties in zip code ${zipCode}...`);
-
-        const properties = this.propertyService.loadPropertiesFromDisk(zipCode);
-        if (properties.length === 0) {
-          console.log(`No properties found for ${zipCode}`);
-          continue;
-        }
-
-        const result = await this.financialAnalysisService.analyzeBatch(properties, financialConfig);
-
-        await this.analysisStorageService.saveAnalysisResults(
-          zipCode,
-          result.results,
-          buyboxConfig.name
-        );
-
-        stats.analyzed += result.totalProperties;
-        stats.successful += result.successfulAnalyses;
-        stats.failed += result.failedAnalyses;
-
-        console.log(`${zipCode}: Analyzed ${result.successfulAnalyses}/${result.totalProperties} properties`);
-        console.log(`   - Avg Cash Flow: $${result.summary.averageCashFlow.toFixed(2)}`);
-        console.log(`   - Avg ROI: ${result.summary.averageROI.toFixed(2)}%`);
-        console.log(`   - Avg Cap Rate: ${result.summary.averageCapRate.toFixed(2)}%`);
-
-      } catch (error) {
-        console.error(`Failed to analyze properties in ${zipCode}:`, error);
-        stats.failed++;
-      }
-    }
-
-    return stats;
-  }
 
   private logPipelineSummary(
     startTime: number,
-    listingsStats: { totalProperties: number; apiRequestsUsed: number; remainingRequests: number },
-    analysisStats: { analyzed: number; successful: number; failed: number }
+    listingsStats: { totalProperties: number; apiRequestsUsed: number; remainingRequests: number }
   ): void {
     const durationSeconds = (Date.now() - startTime) / 1000;
 
     logSection('PIPELINE SUMMARY');
     console.log(`Pipeline completed in ${durationSeconds.toFixed(2)} seconds`);
     console.log(`\nListings: ${listingsStats.totalProperties} properties fetched`);
-    console.log(`Analysis: ${analysisStats.successful}/${analysisStats.analyzed} properties analyzed`);
-    if (analysisStats.failed > 0) {
-      console.log(`Failures: ${analysisStats.failed} properties failed analysis`);
-    }
     console.log(`API Requests: ${listingsStats.apiRequestsUsed} used, ${listingsStats.remainingRequests} remaining`);
-    console.log(`\nData saved to: ${this.propertyService.getDataPath()}/analysis/`);
+    console.log(`\nData saved to: ${this.propertyService.getDataPath()}/properties/`);
+    console.log(`Note: Financial analysis will be computed on-demand when requested via API`);
   }
 
   /**
