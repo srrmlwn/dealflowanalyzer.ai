@@ -1,5 +1,5 @@
-import { ZillowApiService, ZillowApiConfig } from './zillowService';
-import { DataStorageService } from './dataStorage';
+import { ZillowApiService, ZillowApiConfig } from './zillowService.js';
+import { DataStorageService } from './dataStorage.js';
 import { Property, BuyboxConfig, ErrorRecord } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types';
 
 export interface PropertyServiceConfig {
@@ -168,23 +168,44 @@ export class PropertyService {
   }
 
   /**
-   * Group properties by zip code
+   * Get data path
+   */
+  getDataPath(): string {
+    return this.config.dataPath;
+  }
+
+  /**
+   * Load properties from disk for a zip code (most recent date)
+   */
+  loadPropertiesFromDisk(zipCode: string): Property[] {
+    const availableDates = this.dataStorage.getAvailableDates(zipCode);
+
+    if (availableDates.length === 0) {
+      console.log(`No data found for zip code ${zipCode}`);
+      return [];
+    }
+
+    const mostRecentDate = availableDates[0];
+    console.log(`Loading properties for ${zipCode} from ${mostRecentDate}`);
+
+    return this.dataStorage.loadProperties(zipCode, mostRecentDate) ?? [];
+  }
+
+  /**
+   * Group properties by zip code extracted from address
+   * Address format: "123 Main St, City, State ZIP"
    */
   private groupPropertiesByZipCode(properties: Property[]): Record<string, Property[]> {
-    const grouped: Record<string, Property[]> = {};
-
-    properties.forEach(property => {
-      // Extract zip code from address (assuming format: "123 Main St, City, State ZIP")
+    return properties.reduce<Record<string, Property[]>>((grouped, property) => {
       const addressParts = property.address.split(',');
-      const zipCode = addressParts[addressParts.length - 1]?.trim().split(' ').pop() || 'unknown';
-      
+      const zipCode = addressParts[addressParts.length - 1]?.trim().split(' ').pop() ?? 'unknown';
+
       if (!grouped[zipCode]) {
         grouped[zipCode] = [];
       }
       grouped[zipCode].push(property);
-    });
-
-    return grouped;
+      return grouped;
+    }, {});
   }
 
   /**
@@ -204,44 +225,20 @@ export class PropertyService {
     const invalidProperties: Property[] = [];
     const missingDataFields: Record<string, number> = {};
 
-    properties.forEach(property => {
-      let isValid = true;
-      const missingFields: string[] = [];
+    for (const property of properties) {
+      const missingFields = this.getMissingFields(property);
 
-      // Check required fields
-      if (!property.zpid) {
-        missingFields.push('zpid');
-        isValid = false;
-      }
-      if (!property.address) {
-        missingFields.push('address');
-        isValid = false;
-      }
-      if (!property.price || property.price <= 0) {
-        missingFields.push('price');
-        isValid = false;
-      }
-      if (!property.livingArea || property.livingArea <= 0) {
-        missingFields.push('livingArea');
-        isValid = false;
+      for (const field of missingFields) {
+        missingDataFields[field] = (missingDataFields[field] ?? 0) + 1;
       }
 
-      // Track missing optional fields
-      if (!property.rentZestimate) missingFields.push('rentZestimate');
-      if (!property.zestimate) missingFields.push('zestimate');
-      if (!property.imgSrc) missingFields.push('imgSrc');
-
-      // Count missing fields
-      missingFields.forEach(field => {
-        missingDataFields[field] = (missingDataFields[field] || 0) + 1;
-      });
-
-      if (isValid) {
+      const hasRequiredFields = this.hasRequiredFields(property);
+      if (hasRequiredFields) {
         validProperties.push(property);
       } else {
         invalidProperties.push(property);
       }
-    });
+    }
 
     return {
       validProperties,
@@ -253,5 +250,31 @@ export class PropertyService {
         missingDataFields
       }
     };
+  }
+
+  private hasRequiredFields(property: Property): boolean {
+    return Boolean(
+      property.zpid &&
+      property.address &&
+      property.price && property.price > 0 &&
+      property.livingArea && property.livingArea > 0
+    );
+  }
+
+  private getMissingFields(property: Property): string[] {
+    const missing: string[] = [];
+
+    // Required fields
+    if (!property.zpid) missing.push('zpid');
+    if (!property.address) missing.push('address');
+    if (!property.price || property.price <= 0) missing.push('price');
+    if (!property.livingArea || property.livingArea <= 0) missing.push('livingArea');
+
+    // Optional fields
+    if (!property.rentZestimate) missing.push('rentZestimate');
+    if (!property.zestimate) missing.push('zestimate');
+    if (!property.imgSrc) missing.push('imgSrc');
+
+    return missing;
   }
 }

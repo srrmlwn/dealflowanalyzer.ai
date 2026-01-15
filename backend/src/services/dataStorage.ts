@@ -52,21 +52,12 @@ export class DataStorageService {
    */
   saveProperties(zipCode: string, properties: Property[], buyboxName?: string): void {
     try {
-      const dateString = this.getDateString();
-      const zipDir = join(this.config.propertiesPath, zipCode);
-      const dateDir = join(zipDir, dateString);
-      
-      // Ensure directories exist
-      if (!existsSync(zipDir)) {
-        mkdirSync(zipDir, { recursive: true });
-      }
-      if (!existsSync(dateDir)) {
-        mkdirSync(dateDir, { recursive: true });
-      }
+      const dateDir = join(this.config.propertiesPath, zipCode, this.getDateString());
+      this.ensureDir(dateDir);
 
       const filename = buyboxName ? `${buyboxName}.json` : 'properties.json';
       const filePath = join(dateDir, filename);
-      
+
       const data = {
         timestamp: this.getTimestampString(),
         zipCode,
@@ -83,32 +74,55 @@ export class DataStorageService {
     }
   }
 
+  private ensureDir(dir: string): void {
+    if (!existsSync(dir)) {
+      mkdirSync(dir, { recursive: true });
+    }
+  }
+
   /**
-   * Load properties data for a specific zip code and date
+   * Load properties data for a specific zip code and date.
+   * Falls back to any JSON file in the directory if the specific file is not found.
    */
   loadProperties(zipCode: string, date?: string, buyboxName?: string): Property[] | null {
     try {
-      const dateString = date || this.getDateString();
-      const zipDir = join(this.config.propertiesPath, zipCode);
-      const dateDir = join(zipDir, dateString);
-      
+      const dateString = date ?? this.getDateString();
+      const dateDir = join(this.config.propertiesPath, zipCode, dateString);
+
       if (!existsSync(dateDir)) {
         return null;
       }
 
-      const filename = buyboxName ? `${buyboxName}.json` : 'properties.json';
-      const filePath = join(dateDir, filename);
-      
-      if (!existsSync(filePath)) {
+      const filePath = this.resolvePropertiesFile(dateDir, buyboxName);
+      if (!filePath) {
         return null;
       }
 
       const data = JSON.parse(readFileSync(filePath, 'utf-8'));
-      return data.properties || [];
+      return data.properties ?? [];
     } catch (error) {
       console.error(`Error loading properties for zip code ${zipCode}:`, error);
       return null;
     }
+  }
+
+  /**
+   * Resolve the properties file path, falling back to any JSON file if needed
+   */
+  private resolvePropertiesFile(dateDir: string, buyboxName?: string): string | null {
+    const preferredFilename = buyboxName ? `${buyboxName}.json` : 'properties.json';
+    const preferredPath = join(dateDir, preferredFilename);
+
+    if (existsSync(preferredPath)) {
+      return preferredPath;
+    }
+
+    const jsonFiles = readdirSync(dateDir).filter(f => f.endsWith('.json'));
+    if (jsonFiles.length > 0) {
+      return join(dateDir, jsonFiles[0]!);
+    }
+
+    return null;
   }
 
   /**
@@ -138,28 +152,19 @@ export class DataStorageService {
   /**
    * Save analysis results
    */
-  saveAnalysis(zipCode: string, analysisData: any, buyboxName?: string): void {
+  saveAnalysis(zipCode: string, analysisData: unknown, buyboxName?: string): void {
     try {
-      const dateString = this.getDateString();
-      const zipDir = join(this.config.analysisPath, zipCode);
-      const dateDir = join(zipDir, dateString);
-      
-      // Ensure directories exist
-      if (!existsSync(zipDir)) {
-        mkdirSync(zipDir, { recursive: true });
-      }
-      if (!existsSync(dateDir)) {
-        mkdirSync(dateDir, { recursive: true });
-      }
+      const dateDir = join(this.config.analysisPath, zipCode, this.getDateString());
+      this.ensureDir(dateDir);
 
       const filename = buyboxName ? `${buyboxName}-analysis.json` : 'analysis.json';
       const filePath = join(dateDir, filename);
-      
+
       const data = {
         timestamp: this.getTimestampString(),
         zipCode,
         buyboxName,
-        ...analysisData
+        ...(analysisData as object)
       };
 
       writeFileSync(filePath, JSON.stringify(data, null, 2));
@@ -175,16 +180,12 @@ export class DataStorageService {
    */
   saveError(error: ErrorRecord): void {
     try {
-      const dateString = this.getDateString();
-      const errorDir = join(this.config.errorsPath, dateString);
-      
-      if (!existsSync(errorDir)) {
-        mkdirSync(errorDir, { recursive: true });
-      }
+      const errorDir = join(this.config.errorsPath, this.getDateString());
+      this.ensureDir(errorDir);
 
-      const filename = `errors-${this.getTimestampString().replace(/[:.]/g, '-')}.json`;
-      const filePath = join(errorDir, filename);
-      
+      const sanitizedTimestamp = this.getTimestampString().replace(/[:.]/g, '-');
+      const filePath = join(errorDir, `errors-${sanitizedTimestamp}.json`);
+
       writeFileSync(filePath, JSON.stringify(error, null, 2));
       console.log(`Saved error record to ${filePath}`);
     } catch (err) {
