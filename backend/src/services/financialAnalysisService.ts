@@ -1,4 +1,4 @@
-import { Property, FinancialConfig, AnalysisResult, ErrorRecord } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types';
+import { Property, FinancialConfig, AnalysisResult, ErrorRecord } from '../../../shared/dist/types';
 import { FinancialCalculatorService, MortgageCalculation, OperatingExpenses, CashFlowMetrics, ROIMetrics, AppreciationMetrics } from './financialCalculator';
 import { RentalEstimationService, RentalEstimate } from './rentalEstimationService';
 import { RecentlySoldService, PriceComparisonMetrics } from './recentlySoldService';

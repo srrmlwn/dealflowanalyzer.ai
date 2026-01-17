@@ -1,6 +1,6 @@
 import { writeFileSync, readFileSync, existsSync, mkdirSync, readdirSync } from 'fs';
 import { join } from 'path';
-import { Property, ErrorRecord } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types';
+import { Property, ErrorRecord } from '../../../shared/dist/types';
 
 export interface StorageConfig {
   dataPath: string;

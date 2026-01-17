@@ -1,6 +1,6 @@
 import { ZillowApiService, ZillowApiConfig } from './zillowService.js';
 import { DataStorageService } from './dataStorage.js';
-import { Property, BuyboxConfig, ErrorRecord } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types';
+import { Property, BuyboxConfig, ErrorRecord } from '../../../shared/dist/types';
 
 export interface PropertyServiceConfig {
   apiKey: string;

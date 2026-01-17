@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosResponse } from 'axios';
-import { ZillowApiResponse, Property, BuyboxConfig } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types';
+import { ZillowApiResponse, Property, BuyboxConfig } from '../../../shared/dist/types';
 
 export interface ZillowApiConfig {
   apiKey: string;

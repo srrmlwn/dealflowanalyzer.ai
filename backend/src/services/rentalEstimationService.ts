@@ -1,4 +1,4 @@
-import { Property, FinancialConfig } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types';
+import { Property, FinancialConfig } from '../../../shared/dist/types';
 import { HudDataService, HudMatch } from './hudDataService';
 
 export interface RentalEstimate {

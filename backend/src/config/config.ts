@@ -1,5 +1,5 @@
-import { ConfigLoader } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/utils/configLoader';
-import { ConfigFile } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types';
+import { ConfigLoader } from '../../../shared/dist/utils/configLoader';
+import { ConfigFile } from '../../../shared/dist/types';
 
 export class Config {
   private configLoader: ConfigLoader;

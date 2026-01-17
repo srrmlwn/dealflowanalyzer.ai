@@ -3,7 +3,7 @@ import { join } from 'path';
 import { FinancialAnalysisService } from '../services/financialAnalysisService';
 import { PropertyService } from '../services/propertyService';
 import { config } from '../config/config';
-import { Property, FinancialConfig } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types';
+import { Property, FinancialConfig } from '../../../shared/dist/types';
 
 const router = Router();
 

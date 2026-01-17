@@ -1,4 +1,4 @@
-import { FinancialConfig } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types';
+import { FinancialConfig } from '../../../shared/dist/types';
 
 export interface MortgageCalculation {
   monthlyPayment: number;

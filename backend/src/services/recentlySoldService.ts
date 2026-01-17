@@ -1,6 +1,6 @@
 import { readFileSync, existsSync, readdirSync, mkdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { Property } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types';
+import { Property } from '../../../shared/dist/types';
 import { ZillowApiService, SearchParams } from './zillowService';
 
 export interface PriceComparisonMetrics {

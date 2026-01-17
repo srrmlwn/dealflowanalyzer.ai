@@ -1,6 +1,6 @@
 import { readFileSync, existsSync } from 'fs';
 import { z } from 'zod';
-import { Property } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types';
+import { Property } from '../../../shared/dist/types';
 
 // HUD Rental Data Schema
 export const HudRentalDataSchema = z.object({
