@@ -17,7 +17,7 @@ const analysisService = new FinancialAnalysisService(
 // Module-level PropertyService instance (reused across requests)
 const propertyService = new PropertyService({
   apiKey: process.env['RAPIDAPI_KEY'] || '',
-  apiHost: process.env['RAPIDAPI_HOST'] || '',
+  apiHost: process.env['RAPIDAPI_HOST'] || 'realty-in-us.p.rapidapi.com',
   rateLimit: parseInt(process.env['API_RATE_LIMIT'] || '100'),
   rateWindow: parseInt(process.env['API_RATE_WINDOW'] || '86400'),
   dataPath: dataPath

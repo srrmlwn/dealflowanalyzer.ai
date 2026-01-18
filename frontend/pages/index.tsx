@@ -36,10 +36,26 @@ const Home: NextPage = () => {
   const [config, setConfig] = useState<Config | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [lastFetchTime, setLastFetchTime] = useState<string | null>(null);
 
   useEffect(() => {
     fetchConfig();
+    fetchLastFetchTime();
   }, []);
+
+  const fetchLastFetchTime = async () => {
+    try {
+      const response = await fetch('http://localhost:8000/api/properties/stats');
+      if (response.ok) {
+        const data = await response.json();
+        if (data.lastFetchTimestamp) {
+          setLastFetchTime(data.lastFetchTimestamp);
+        }
+      }
+    } catch (error) {
+      // Silently fail - this is optional info
+    }
+  };
 
   const fetchConfig = async () => {
     try {
@@ -91,7 +107,21 @@ const Home: NextPage = () => {
 
           {config && (
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-semibold mb-4">Configuration</h2>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl font-semibold">Configuration</h2>
+                {lastFetchTime && (
+                  <div className="text-sm text-gray-500">
+                    <span className="font-medium">Data last refreshed:</span>{' '}
+                    {new Date(lastFetchTime).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric',
+                      hour: '2-digit',
+                      minute: '2-digit'
+                    })}
+                  </div>
+                )}
+              </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -132,6 +162,12 @@ const Home: NextPage = () => {
               Phase 1 setup complete! Backend and frontend are connected.
             </p>
             <div className="space-x-4">
+              <a 
+                href="/config" 
+                className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
+              >
+                Fetch Properties
+              </a>
               <a 
                 href="/analysis" 
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"

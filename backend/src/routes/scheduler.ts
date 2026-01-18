@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
-import { DataCollectionScheduler, SchedulerConfig } from '../services/scheduler';
-import { PropertyServiceConfig } from '../services/propertyService';
+import { DataCollectionScheduler, SchedulerConfig } from '../services/scheduler.js';
+import { PropertyServiceConfig } from '../services/propertyService.js';
 import dotenv from 'dotenv';
 
 // Load environment variables first
@@ -8,10 +8,10 @@ dotenv.config();
 
 const router = Router();
 
-// Initialize scheduler
+// Initialize scheduler with Realtor.com API configuration
 const propertyServiceConfig: PropertyServiceConfig = {
   apiKey: process.env['RAPIDAPI_KEY'] || '',
-  apiHost: process.env['RAPIDAPI_HOST'] || 'zillow-com1.p.rapidapi.com',
+  apiHost: process.env['RAPIDAPI_HOST'] || 'realty-in-us.p.rapidapi.com',
   rateLimit: parseInt(process.env['API_RATE_LIMIT'] || '100'),
   rateWindow: parseInt(process.env['API_RATE_WINDOW'] || '86400'),
   dataPath: process.env['DATA_PATH'] || './data'

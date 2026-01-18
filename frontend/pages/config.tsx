@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import { CogIcon, SaveIcon, RefreshCwIcon } from 'lucide-react';
+import { CogIcon, SaveIcon, RefreshCwIcon, DownloadIcon } from 'lucide-react';
 
 interface BuyboxConfig {
   name: string;
@@ -69,11 +69,35 @@ const Configuration: NextPage = () => {
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [fetching, setFetching] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [fetchStats, setFetchStats] = useState<{
+    totalProperties: number;
+    zipCodesProcessed: number;
+    apiRequestsUsed: number;
+    remainingRequests: number;
+    timestamp?: string;
+  } | null>(null);
+  const [lastFetchTime, setLastFetchTime] = useState<string | null>(null);
 
   useEffect(() => {
     loadConfigurations();
+    loadLastFetchTime();
   }, []);
+
+  const loadLastFetchTime = async () => {
+    try {
+      const response = await fetch('http://localhost:8000/api/properties/stats');
+      if (response.ok) {
+        const data = await response.json();
+        if (data.lastFetchTimestamp) {
+          setLastFetchTime(data.lastFetchTimestamp);
+        }
+      }
+    } catch (error) {
+      console.error('Error loading last fetch time:', error);
+    }
+  };
 
   const loadConfigurations = async () => {
     try {
@@ -116,6 +140,47 @@ const Configuration: NextPage = () => {
       setMessage({ type: 'error', text: 'Failed to save configurations' });
     } finally {
       setSaving(false);
+    }
+  };
+
+  const fetchProperties = async () => {
+    try {
+      setFetching(true);
+      setMessage(null);
+      setFetchStats(null);
+
+      const response = await fetch('http://localhost:8000/api/properties/fetch', {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (data.success) {
+        setFetchStats(data.stats);
+        if (data.stats.timestamp) {
+          setLastFetchTime(data.stats.timestamp);
+        }
+        setMessage({ 
+          type: 'success', 
+          text: `Successfully fetched ${data.stats.totalProperties} properties from ${data.stats.zipCodesProcessed} zip code(s)!` 
+        });
+      } else {
+        setMessage({ type: 'error', text: data.message || 'Failed to fetch properties' });
+      }
+    } catch (error) {
+      console.error('Error fetching properties:', error);
+      setMessage({ 
+        type: 'error', 
+        text: error instanceof Error ? error.message : 'Failed to fetch properties. Make sure the backend is running and RAPIDAPI_KEY is set.' 
+      });
+    } finally {
+      setFetching(false);
     }
   };
 
@@ -445,6 +510,65 @@ const Configuration: NextPage = () => {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Fetch Properties Section */}
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl font-bold text-gray-900">Fetch Properties</h2>
+                {lastFetchTime && (
+                  <div className="text-sm text-gray-500">
+                    <span className="font-medium">Last refreshed:</span>{' '}
+                    {new Date(lastFetchTime).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric',
+                      hour: '2-digit',
+                      minute: '2-digit'
+                    })}
+                  </div>
+                )}
+              </div>
+              <p className="text-gray-600 mb-4">
+                Fetch the latest property listings from Realtor.com API based on your buybox configuration.
+              </p>
+              
+              {fetchStats && (
+                <div className="mb-4 p-4 bg-blue-50 rounded-md">
+                  <h3 className="text-sm font-semibold text-blue-900 mb-2">Last Fetch Results:</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                    <div>
+                      <span className="text-blue-700 font-medium">Properties:</span>
+                      <span className="ml-2 text-blue-900">{fetchStats.totalProperties}</span>
+                    </div>
+                    <div>
+                      <span className="text-blue-700 font-medium">Zip Codes:</span>
+                      <span className="ml-2 text-blue-900">{fetchStats.zipCodesProcessed}</span>
+                    </div>
+                    <div>
+                      <span className="text-blue-700 font-medium">API Requests:</span>
+                      <span className="ml-2 text-blue-900">{fetchStats.apiRequestsUsed}</span>
+                    </div>
+                    <div>
+                      <span className="text-blue-700 font-medium">Remaining:</span>
+                      <span className="ml-2 text-blue-900">{fetchStats.remainingRequests}</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <button
+                onClick={fetchProperties}
+                disabled={fetching || loading}
+                className="inline-flex items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <DownloadIcon className={`h-5 w-5 mr-2 ${fetching ? 'animate-spin' : ''}`} />
+                {fetching ? 'Fetching Properties...' : 'Fetch Properties from API'}
+              </button>
+              
+              <p className="mt-3 text-xs text-gray-500">
+                This will fetch properties for zip codes: {buyboxConfig.zipCodes.join(', ') || 'none configured'}
+              </p>
             </div>
 
             {/* Save Button */}

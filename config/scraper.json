@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "headless": true,
+  "minDelayMs": 3000,
+  "maxDelayMs": 5000,
+  "userAgentRotation": true,
+  "maxRetries": 3,
+  "timeout": 30000,
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  }
+}

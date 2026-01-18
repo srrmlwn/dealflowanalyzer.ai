@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
-import { PropertyService, PropertyServiceConfig } from '../services/propertyService';
-import { config } from '../config/config';
+import { PropertyService, PropertyServiceConfig } from '../services/propertyService.js';
+import { config } from '../config/config.js';
 import dotenv from 'dotenv';
 
 // Load environment variables first
@@ -8,11 +8,11 @@ dotenv.config();
 
 const router = Router();
 
-// Initialize property service
+// Initialize property service with Realtor.com API configuration
 const propertyServiceConfig: PropertyServiceConfig = {
   apiKey: process.env['RAPIDAPI_KEY'] || '',
-  apiHost: process.env['RAPIDAPI_HOST'] || 'zillow-com1.p.rapidapi.com',
-  rateLimit: parseInt(process.env['API_RATE_LIMIT'] || '10'),
+  apiHost: process.env['RAPIDAPI_HOST'] || 'realty-in-us.p.rapidapi.com',
+  rateLimit: parseInt(process.env['API_RATE_LIMIT'] || '100'),
   rateWindow: parseInt(process.env['API_RATE_WINDOW'] || '86400'),
   dataPath: process.env['DATA_PATH'] || './data'
 };
@@ -21,12 +21,12 @@ const propertyService = new PropertyService(propertyServiceConfig);
 
 /**
  * GET /api/properties/fetch
- * Fetch properties for the configured buybox
+ * Fetch properties for the configured buybox using Realtor.com API
  */
 router.get('/fetch', async (req: Request, res: Response) => {
   try {
     const buyboxConfig = config.getBuyboxConfig();
-    
+
     if (!process.env['RAPIDAPI_KEY']) {
       return res.status(400).json({
         error: 'API key not configured',
@@ -35,10 +35,10 @@ router.get('/fetch', async (req: Request, res: Response) => {
     }
 
     const result = await propertyService.fetchAndSaveProperties(buyboxConfig);
-    
+
     return res.json({
       success: result.success,
-      message: result.success 
+      message: result.success
         ? `Successfully fetched ${result.stats.totalProperties} properties`
         : 'Failed to fetch properties',
       stats: result.stats,
@@ -148,14 +148,16 @@ router.get('/dates/:zipCode', async (req: Request, res: Response) => {
 
 /**
  * GET /api/properties/stats
- * Get API usage statistics
+ * Get API usage statistics and last fetch timestamp
  */
 router.get('/stats', async (req: Request, res: Response) => {
   try {
     const stats = propertyService.getApiStats();
-    
+    const lastFetchTimestamp = propertyService.getLastFetchTimestamp();
+
     res.json({
       apiStats: stats,
+      lastFetchTimestamp,
       timestamp: new Date().toISOString()
     });
 
@@ -170,12 +172,12 @@ router.get('/stats', async (req: Request, res: Response) => {
 
 /**
  * POST /api/properties/adhoc
- * Adhoc fetch of listings from Zillow API with custom parameters
+ * Adhoc fetch of listings from Realtor.com with custom parameters
  */
 router.post('/adhoc', async (req: Request, res: Response) => {
   try {
     const { zipCodes, minPrice, maxPrice, statusType } = req.body;
-    
+
     if (!process.env['RAPIDAPI_KEY']) {
       return res.status(400).json({
         error: 'API key not configured',
@@ -202,10 +204,10 @@ router.post('/adhoc', async (req: Request, res: Response) => {
     };
 
     const result = await propertyService.fetchAndSaveProperties(adhocBuybox);
-    
+
     return res.json({
       success: result.success,
-      message: result.success 
+      message: result.success
         ? `Successfully fetched ${result.stats.totalProperties} properties`
         : 'Failed to fetch properties',
       stats: result.stats,

@@ -1,4 +1,4 @@
-import { ZillowApiService, ZillowApiConfig } from './zillowService.js';
+import { RealtorApiService, RealtorApiConfig } from './realtorApiService.js';
 import { DataStorageService } from './dataStorage.js';
 import { Property, BuyboxConfig, ErrorRecord } from '../../../shared/dist/types';
 
@@ -11,26 +11,26 @@ export interface PropertyServiceConfig {
 }
 
 export class PropertyService {
-  private zillowApi: ZillowApiService;
+  private realtorApi: RealtorApiService;
   private dataStorage: DataStorageService;
   private config: PropertyServiceConfig;
 
   constructor(config: PropertyServiceConfig) {
     this.config = config;
-    
-    const apiConfig: ZillowApiConfig = {
+
+    const apiConfig: RealtorApiConfig = {
       apiKey: config.apiKey,
       host: config.apiHost,
       rateLimit: config.rateLimit,
       rateWindow: config.rateWindow
     };
 
-    this.zillowApi = new ZillowApiService(apiConfig);
+    this.realtorApi = new RealtorApiService(apiConfig);
     this.dataStorage = new DataStorageService(config.dataPath);
   }
 
   /**
-   * Fetch and save properties for a buybox
+   * Fetch and save properties for a buybox using Realtor.com API
    */
   async fetchAndSaveProperties(buybox: BuyboxConfig): Promise<{
     success: boolean;
@@ -41,23 +41,24 @@ export class PropertyService {
       zipCodesProcessed: number;
       apiRequestsUsed: number;
       remainingRequests: number;
+      timestamp: string;
     };
   }> {
     const errors: ErrorRecord[] = [];
     const allProperties: Property[] = [];
     let totalApiRequests = 0;
 
-    console.log(`Fetching properties for buybox: ${buybox.name}`);
+    console.log(`Fetching properties for buybox: ${buybox.name} (using Realtor.com API)`);
 
     try {
       // Fetch properties for all zip codes in the buybox
-      const properties = await this.zillowApi.searchPropertiesForBuybox(buybox);
+      const properties = await this.realtorApi.searchPropertiesForBuybox(buybox);
       allProperties.push(...properties);
-      totalApiRequests = this.zillowApi.getRequestCount();
+      totalApiRequests = this.realtorApi.getRequestCount();
 
       // Save properties grouped by zip code
       const propertiesByZip = this.groupPropertiesByZipCode(properties);
-      
+
       for (const [zipCode, zipProperties] of Object.entries(propertiesByZip)) {
         try {
           this.dataStorage.saveProperties(zipCode, zipProperties, buybox.name);
@@ -82,7 +83,8 @@ export class PropertyService {
         totalProperties: allProperties.length,
         zipCodesProcessed: Object.keys(propertiesByZip).length,
         apiRequestsUsed: totalApiRequests,
-        remainingRequests: this.zillowApi.getRemainingRequests()
+        remainingRequests: this.realtorApi.getRemainingRequests(),
+        timestamp: new Date().toISOString()
       };
 
       console.log(`Property fetch completed for buybox: ${buybox.name}`, stats);
@@ -118,7 +120,8 @@ export class PropertyService {
           totalProperties: allProperties.length,
           zipCodesProcessed: 0,
           apiRequestsUsed: totalApiRequests,
-          remainingRequests: this.zillowApi.getRemainingRequests()
+          remainingRequests: this.realtorApi.getRemainingRequests(),
+          timestamp: new Date().toISOString()
         }
       };
     }
@@ -154,10 +157,63 @@ export class PropertyService {
     timeUntilReset: number;
   } {
     return {
-      requestsUsed: this.zillowApi.getRequestCount(),
-      remainingRequests: this.zillowApi.getRemainingRequests(),
-      timeUntilReset: this.zillowApi.getTimeUntilReset()
+      requestsUsed: this.realtorApi.getRequestCount(),
+      remainingRequests: this.realtorApi.getRemainingRequests(),
+      timeUntilReset: this.realtorApi.getTimeUntilReset()
     };
+  }
+
+  /**
+   * Get the timestamp of the most recent property fetch
+   */
+  getLastFetchTimestamp(): string | null {
+    try {
+      const zipCodes = this.dataStorage.getAvailableZipCodes();
+      if (zipCodes.length === 0) {
+        return null;
+      }
+
+      // Check all zip codes to find the most recent timestamp
+      let mostRecentTimestamp: string | null = null;
+      
+      for (const zipCode of zipCodes) {
+        const dates = this.dataStorage.getAvailableDates(zipCode);
+        if (dates.length > 0) {
+          const latestDate = dates[0];
+          const properties = this.loadProperties(zipCode, latestDate);
+          
+          if (properties && properties.length > 0) {
+            // Try to read the actual file to get the timestamp
+            try {
+              const fs = require('fs');
+              const path = require('path');
+              const dateDir = path.join(this.config.dataPath, 'properties', zipCode, latestDate);
+              
+              if (fs.existsSync(dateDir)) {
+                const files = fs.readdirSync(dateDir).filter((f: string) => f.endsWith('.json'));
+                if (files.length > 0) {
+                  const filePath = path.join(dateDir, files[0]);
+                  const fileData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+                  if (fileData.timestamp) {
+                    const timestamp = fileData.timestamp;
+                    if (!mostRecentTimestamp || timestamp > mostRecentTimestamp) {
+                      mostRecentTimestamp = timestamp;
+                    }
+                  }
+                }
+              }
+            } catch (e) {
+              // Ignore errors for individual files
+            }
+          }
+        }
+      }
+
+      return mostRecentTimestamp;
+    } catch (error) {
+      console.error('Error getting last fetch timestamp:', error);
+      return null;
+    }
   }
 
   /**
@@ -193,17 +249,42 @@ export class PropertyService {
 
   /**
    * Group properties by zip code extracted from address
-   * Address format: "123 Main St, City, State ZIP"
+   * Address format: "123 Main St, City, State ZIP" or "123 Main St, City, State, ZIP"
+   * Handles various address formats and validates zip codes
    */
   private groupPropertiesByZipCode(properties: Property[]): Record<string, Property[]> {
     return properties.reduce<Record<string, Property[]>>((grouped, property) => {
-      const addressParts = property.address.split(',');
-      const zipCode = addressParts[addressParts.length - 1]?.trim().split(' ').pop() ?? 'unknown';
+      let zipCode = 'unknown';
 
-      if (!grouped[zipCode]) {
-        grouped[zipCode] = [];
+      try {
+        // Try to extract zip code from address
+        // Common formats:
+        // "123 Main St, City, State 12345"
+        // "123 Main St, City, State, 12345"
+        // "123 Main St, City, State ZIP 12345"
+        const addressParts = property.address.split(',');
+        const lastPart = addressParts[addressParts.length - 1]?.trim() || '';
+        
+        // Try to find 5-digit zip code
+        const zipMatch = lastPart.match(/\b(\d{5})\b/);
+        if (zipMatch?.[1]) {
+          zipCode = zipMatch[1];
+        } else {
+          // Fallback: try to extract from the entire address
+          const fullZipMatch = property.address.match(/\b(\d{5})\b/);
+          if (fullZipMatch?.[1]) {
+            zipCode = fullZipMatch[1];
+          } else {
+            console.warn(`Could not extract zip code from address: ${property.address}`);
+          }
+        }
+      } catch (error) {
+        console.warn(`Error extracting zip code from property ${property.zpid}:`, error);
       }
-      grouped[zipCode].push(property);
+
+      const zipArray = grouped[zipCode] || [];
+      grouped[zipCode] = zipArray;
+      zipArray.push(property);
       return grouped;
     }, {});
   }

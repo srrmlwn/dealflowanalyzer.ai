@@ -1,8 +1,6 @@
 import * as cron from 'node-cron';
-import { PropertyService, PropertyServiceConfig } from './propertyService';
-import { RecentlySoldService, FetchRecentlySoldOptions } from './recentlySoldService';
-import { ZillowApiService } from './zillowService';
-import { config } from '../config/config';
+import { PropertyService, PropertyServiceConfig } from './propertyService.js';
+import { config } from '../config/config.js';
 
 export interface SchedulerConfig {
   cronSchedule: string;
@@ -20,27 +18,19 @@ function logSection(title: string): void {
 
 export class DataCollectionScheduler {
   private propertyService: PropertyService;
-  private recentlySoldService: RecentlySoldService;
-  private zillowService: ZillowApiService;
   private schedulerConfig: SchedulerConfig;
   private task: cron.ScheduledTask | null = null;
 
   constructor(propertyServiceConfig: PropertyServiceConfig, schedulerConfig: SchedulerConfig) {
     this.propertyService = new PropertyService(propertyServiceConfig);
-
-    this.zillowService = new ZillowApiService({
-      apiKey: propertyServiceConfig.apiKey,
-      host: propertyServiceConfig.apiHost,
-      rateLimit: propertyServiceConfig.rateLimit,
-      rateWindow: propertyServiceConfig.rateWindow
-    });
-
-    this.recentlySoldService = new RecentlySoldService(
-      propertyServiceConfig.dataPath,
-      this.zillowService
-    );
-
     this.schedulerConfig = schedulerConfig;
+  }
+
+  /**
+   * Get the property service instance
+   */
+  getPropertyService(): PropertyService {
+    return this.propertyService;
   }
 
   /**
@@ -81,19 +71,14 @@ export class DataCollectionScheduler {
   }
 
   /**
-   * Run data collection manually - Complete pipeline
+   * Run data collection manually - Complete pipeline using Realtor.com API
    */
   async runDataCollection(): Promise<void> {
     const startTime = Date.now();
-    logSection(`Starting complete data pipeline at ${new Date(startTime).toISOString()}`);
+    logSection(`Starting data collection pipeline (Realtor.com API) at ${new Date(startTime).toISOString()}`);
 
     try {
       const buyboxConfig = config.getBuyboxConfig();
-
-      if (!process.env['RAPIDAPI_KEY']) {
-        console.error('RAPIDAPI_KEY not configured. Skipping data collection.');
-        return;
-      }
 
       const apiStats = this.propertyService.getApiStats();
       if (apiStats.remainingRequests <= 0) {
@@ -102,12 +87,9 @@ export class DataCollectionScheduler {
       }
       console.log(`API requests remaining: ${apiStats.remainingRequests}\n`);
 
-      // STEP 1: Fetch current listings
+      // Fetch current listings using Realtor.com API
       const listingsResult = await this.fetchListings(buyboxConfig);
       if (!listingsResult) return;
-
-      // STEP 2: Fetch recently sold data
-      await this.fetchRecentlySold(buyboxConfig);
 
       // Final summary
       this.logPipelineSummary(startTime, listingsResult.stats);
@@ -124,7 +106,7 @@ export class DataCollectionScheduler {
   }
 
   private async fetchListings(buyboxConfig: ReturnType<typeof config.getBuyboxConfig>): Promise<Awaited<ReturnType<PropertyService['fetchAndSaveProperties']>> | null> {
-    logSection('STEP 1: Fetching current property listings');
+    logSection('Fetching current property listings via Realtor.com API');
 
     const result = await this.propertyService.fetchAndSaveProperties(buyboxConfig);
 
@@ -140,40 +122,6 @@ export class DataCollectionScheduler {
     console.log(`Used ${result.stats.apiRequestsUsed} API requests, ${result.stats.remainingRequests} remaining\n`);
     return result;
   }
-
-  private async fetchRecentlySold(buyboxConfig: ReturnType<typeof config.getBuyboxConfig>): Promise<void> {
-    logSection('STEP 2: Fetching recently sold properties for comparison');
-
-    try {
-      const fetchOptions: Omit<FetchRecentlySoldOptions, 'zipCode'> = {
-        daysBack: 180,
-        saveToFile: true
-      };
-
-      if (buyboxConfig.priceRange?.min !== undefined) {
-        fetchOptions.minPrice = buyboxConfig.priceRange.min;
-      }
-      if (buyboxConfig.priceRange?.max !== undefined) {
-        fetchOptions.maxPrice = buyboxConfig.priceRange.max;
-      }
-
-      const results = await this.recentlySoldService.fetchRecentlySoldBatch(
-        buyboxConfig.zipCodes,
-        fetchOptions
-      );
-
-      let total = 0;
-      for (const [zipCode, properties] of results) {
-        console.log(`${zipCode}: ${properties.length} recently sold properties`);
-        total += properties.length;
-      }
-      console.log(`Fetched ${total} recently sold properties\n`);
-    } catch (error) {
-      console.error('Failed to fetch recently sold data:', error);
-      console.log('Continuing with analysis without recently sold data...\n');
-    }
-  }
-
 
   private logPipelineSummary(
     startTime: number,

@@ -512,3 +512,11 @@ npm run build
 **Last Updated:** 2026-01-12
 **Status:** Phase 1 (Automation) Ready to Start
 **Branch:** `claude/compress-codebase-context-Z3u7l`
+
+
+MY COMMENTS - 
+1. Why do certain imports use absolute paths? e.g. import { ZillowApiResponse, Property, BuyboxConfig } from '/Users/sriram/projects/dealflowanalyzer.ai/shared/dist/types'; in propertyService.ts? Clean everything up to use relative importas so they work when deployed to prod.
+
+2. I want to move away from an API based approach, to scraping zillow. Can you develop a plan to use our user defined buybox config to scrape zillow for matching listings? Eventually, we can scrape an entire city etc. 
+
+
